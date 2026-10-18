@@ -66,8 +66,8 @@ jobs:
       # 步驟 5:有變動才 commit + push
       - name: Commit changes
         run: |
-          git config user.name  "pluck-bot"
-          git config user.email "pluck-bot@users.noreply.github.com"
+          git config user.name  "pluckskill-bot"
+          git config user.email "pluckskill-bot@users.noreply.github.com"
           git add Docs/knowledge.json Docs/link_report.json knowledge.json sitemap.xml index.html
           git add -A topics/ sources/
           if git diff --cached --quiet; then
