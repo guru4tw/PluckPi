@@ -1,0 +1,141 @@
+{
+  "checked_at": "2026-10-18",
+  "total": 19,
+  "broken": 0,
+  "broken_list": [],
+  "rows": [
+    {
+      "id": "pikipedia-8607",
+      "title": "Day",
+      "url": "https://www.pikminwiki.com/Day",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "id": "pikipedia-1377",
+      "title": "Onion",
+      "url": "https://www.pikminwiki.com/Onion",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "id": "pikipedia-1253",
+      "title": "Pikmin family",
+      "url": "https://www.pikminwiki.com/Pikmin_family",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "id": "pikipedia-1338",
+      "title": "Pikmin series",
+      "url": "https://www.pikminwiki.com/Pikmin_series",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "id": "pikipedia-758",
+      "title": "Leader",
+      "url": "https://www.pikminwiki.com/Leader",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "id": "pikipedia-1078",
+      "title": "Pellet",
+      "url": "https://www.pikminwiki.com/Pellet",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "id": "pikipedia-1188",
+      "title": "Red Pikmin",
+      "url": "https://www.pikminwiki.com/Red_Pikmin",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "id": "pikipedia-40",
+      "title": "Blue Pikmin",
+      "url": "https://www.pikminwiki.com/Blue_Pikmin",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "id": "pikipedia-1757",
+      "title": "Yellow Pikmin",
+      "url": "https://www.pikminwiki.com/Yellow_Pikmin",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "id": "pikipedia-31822",
+      "title": "Ice Pikmin",
+      "url": "https://www.pikminwiki.com/Ice_Pikmin",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "id": "pikipedia-7833",
+      "title": "Rock Pikmin",
+      "url": "https://www.pikminwiki.com/Rock_Pikmin",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "id": "pikipedia-32799",
+      "title": "Glow Pikmin",
+      "url": "https://www.pikminwiki.com/Glow_Pikmin",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "id": "pikipedia-1455",
+      "title": "White Pikmin",
+      "url": "https://www.pikminwiki.com/White_Pikmin",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "id": "pikipedia-1101",
+      "title": "Purple Pikmin",
+      "url": "https://www.pikminwiki.com/Purple_Pikmin",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "id": "pikipedia-8140",
+      "title": "Winged Pikmin",
+      "url": "https://www.pikminwiki.com/Winged_Pikmin",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "id": "pikipedia-195",
+      "title": "Bulbmin",
+      "url": "https://www.pikminwiki.com/Bulbmin",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "id": "pikipedia-691",
+      "title": "Fiery Blowhog",
+      "url": "https://www.pikminwiki.com/Fiery_Blowhog",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "id": "pikipedia-379",
+      "title": "Dwarf Bulborb",
+      "url": "https://www.pikminwiki.com/Dwarf_Bulborb",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "id": "pikipedia-1184",
+      "title": "Bulborb",
+      "url": "https://www.pikminwiki.com/Bulborb",
+      "ok": true,
+      "status": 200
+    }
+  ]
+}

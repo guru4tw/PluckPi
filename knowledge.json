@@ -1,0 +1,715 @@
+{
+ "site": "拔拔道場 PluckAcademy",
+ "updated_at": "2026-10-18",
+ "count": 19,
+ "license": {
+  "name": "CC BY-SA 4.0",
+  "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+ },
+ "topics": [
+  {
+   "order": 1,
+   "slug": "basics",
+   "name": "入門基礎",
+   "desc": "第一次接觸皮克敏要先知道的事:這是什麼遊戲、基本單位是什麼、一天怎麼過。",
+   "level": "入門",
+   "count": 6
+  },
+  {
+   "order": 2,
+   "slug": "pikmin",
+   "name": "皮克敏圖鑑",
+   "desc": "各色皮克敏的特性、免疫與用途。選對顏色就是成功的一半。",
+   "level": "入門",
+   "count": 10
+  },
+  {
+   "order": 3,
+   "slug": "creatures",
+   "name": "原生生物",
+   "desc": "PNF-404 上的生物圖鑑:常見敵人、頭目與牠們的弱點。",
+   "level": "進階",
+   "count": 3
+  },
+  {
+   "order": 4,
+   "slug": "collectibles",
+   "name": "寶物與收集",
+   "desc": "每代要收的東西不一樣:太空船零件、寶物、水果、遇難者。",
+   "level": "入門",
+   "count": 0
+  },
+  {
+   "order": 5,
+   "slug": "strategy",
+   "name": "戰術與攻略",
+   "desc": "怎麼把皮克敏用得又快又省:投擲、衝鋒、分隊、段取り(Dandori)。",
+   "level": "進階",
+   "count": 0
+  },
+  {
+   "order": 6,
+   "slug": "lore",
+   "name": "世界觀與考據",
+   "desc": "角色、星球與公司:歐利瑪、Hocotate 運輸、PNF-404 的真相。",
+   "level": "達人",
+   "count": 0
+  },
+  {
+   "order": 7,
+   "slug": "games",
+   "name": "系列作品",
+   "desc": "每一代的定位與差異,想入坑從哪一代開始。",
+   "level": "入門",
+   "count": 0
+  }
+ ],
+ "entries": [
+  {
+   "id": "pikipedia-8607",
+   "topic": "basics",
+   "level": "入門",
+   "title_zh": "一天的循環與日落",
+   "title_en": "Day",
+   "summary_zh": "主系列以「一天」為單位推進,夜晚有危險生物,探索只在白天;一代限 30 天、三代看果汁存量最多 99 天,二、四代無天數限制。",
+   "key_points_zh": [
+    "夜間危險生物出沒,探索只在白天進行",
+    "一代:歐利瑪(Olimar)30 天內要修好維生系統,否則永困星球",
+    "三代:剩餘天數取決於果汁瓶數,上限 99 天",
+    "二代與四代沒有天數上限(四代「歐利瑪漂流記」模式限 15 天)"
+   ],
+   "excerpt_en": "The main Pikmin games take place over the course of several in-game days (日, lit.: \"Day\"). Dangerous creatures roam at nighttime, so exploration on PNF-404 generally only happens during the daytime. The number of days spent on the planet is also important in some games: in Pikmin, Captain Olimar has 30 days before his life-support systems fail and he's stranded on the planet permanently, and in Pikmin 3, the number of days left is determined by how many bottles of fruit juice are left, for a maximum of 99 days. Pikmin 2 and Pikmin 4 have no day limit (though the alternative game mode \"Olimar's Shipwreck Tale\" in Pikmin 4 has a 15 day time limit), and in New Play Control! Pikmin, the Nintendo Switch port of Pikmin, and Pikmin 3, the player is given the ability to go back in time and retry from a certain day of their adventure, through an option in the saved game selection menu in the case of New Play Control! Pikmin and the Nintendo Switch port of Pikmin, or a dedicated day selection menu in the case of Pikmin 3. A common challenge run in the Pikmin games is to complete the game taking the least amount of days possible.\nThe Sun Meter at the top of the HUD indicates the amount of daylight left, or in Pikmin 4's case, the clock, so effectively, the time the player has left on the current day. A number on the top right corner indicates the current day. In the Story Mode of Pikmin games, a day lasts between 13 and 18 real-life minutes, depending on the game, version, and difficulty mode, as explained here. Alternative game modes have days with varying lengths. As the day goes by, the lighting in the area changes much as it does on Earth, but enemy behavior and area layout remains constant throughout (save for the Serene Shores in Pikmin 4 where the tide changes at noon).\nAny important collectible object, such as a treasure, that is moved from its original spot, will remain in the new spot on any following day. In Pikmin, Pikmin 2, and Pikmin 3, when an enemy is killed, it usually respawns in its original place after some number of days, and if an enemy's corpse isn't brought back to an Onion before the end of the day, the corpse will disappear. In Pikmin 4, enemy corpses will remain in the location they were left at every day until brought back to an Onion, and enemies in overground areas do not respawn. Some enemies only appear on certain days. Some of the most notable enemies with this characteristic are the Smoky Progg, which disappears after day 15, the Ujadani, which only appear every 30 days, and the Goolix and Mamuta on The Impact Site, that appear on alternating days. For a list of all enemies that appear on exclusive days, please read the list of enemies in the corresponding area article.",
+   "games": [
+    "Pikmin 1",
+    "Pikmin 2",
+    "Pikmin 3",
+    "Pikmin 4"
+   ],
+   "source": {
+    "key": "pikipedia",
+    "name": "Pikipedia",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "url": "https://www.pikminwiki.com/Day",
+    "revid": 353816,
+    "accessed": "2026-10-18"
+   },
+   "status": "curated",
+   "fetched_at": "2026-10-18",
+   "link_ok": true,
+   "hidden": false
+  },
+  {
+   "id": "pikipedia-1377",
+   "topic": "basics",
+   "level": "入門",
+   "title_zh": "洋蔥(皮克敏的母艦)",
+   "title_en": "Onion",
+   "summary_zh": "洋蔥(Onion)是皮克敏的母艦,一種顏色一顆;寄生與發光皮克敏沒有洋蔥。三代起已發現的洋蔥會合體成一顆。",
+   "key_points_zh": [
+    "八種主要洋蔥:紅、黃、藍、紫、白、岩石、飛行、冰",
+    "到四代為止,寄生皮克敏(Bulbmin)與發光皮克敏沒有已知的洋蔥",
+    "三代中發現的洋蔥會在當晚合併成一顆通用洋蔥,收放多色皮克敏更方便"
+   ],
+   "excerpt_en": "Onions (オニヨン, lit.: \"Oniyon\") are large, round life forms that act as mother ships for the Pikmin. There are eight main types of Onion nests, each with unique coloration corresponding to either Red, Yellow, Blue, Purple, White, Rock, Winged, and Ice. As of Pikmin 4, Bulbmin and Glow Pikmin are the only Pikmin types to have no known Onions.\nIn Pikmin 3, all discovered Onions merge together the night after they are discovered, and become a single, universal Onion, greatly simplifying the act of withdrawing and retrieving multiple Pikmin types at once. It also appears that the Onions in this game are much more free in regards to which Pikmin species they will hold than their Pikmin and Pikmin 2 counterparts. In Pikmin 3, if a new Onion color is discovered, and Pikmin from that new type are left on the landing site at the end of the day, the master Onion there will accommodate them until the Onions fuse at the end of the day.\nIn Pikmin 4, it's revealed they are part of the candypop family. Onions merge in this game much like in Pikmin 3, but discovered Onions remain dormant upon being found and must be manually carried back to the master Onion in order for them to merge. Since some Pikmin types have duplicate Onions in Pikmin 4, collecting a type that has already been obtained will result in its absorption by the master Onion, converting it into 20 Pikmin of the Onion's color. Flarlic can also be brought to the Onion to increase the Pikmin limit by 10.\nDuring the daytime, Pikmin hunt and bring food, such as pellets or defeated enemies, to their Onion, which in turn produces new Pikmin seeds. If there are fewer Pikmin on the field than the allowed Pikmin limit, the seeds are ejected from its flower's head and take root in the ground as sprouts; if not, they are added to that type's Pikmin reserves as leaf Pikmin. Unlike in the area, however, the number of Pikmin that can be stored inside an Onion is unlimited, as a general rule. When night falls and all the Pikmin have returned, the Onion folds or sucks in its legs and lifts off from the ground, joining the ship in low orbit.",
+   "games": [
+    "Pikmin 1",
+    "Pikmin 2",
+    "Pikmin 3",
+    "Pikmin 4",
+    "Hey! Pikmin"
+   ],
+   "source": {
+    "key": "pikipedia",
+    "name": "Pikipedia",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "url": "https://www.pikminwiki.com/Onion",
+    "revid": 349969,
+    "accessed": "2026-10-18"
+   },
+   "status": "curated",
+   "fetched_at": "2026-10-18",
+   "link_ok": true,
+   "hidden": false
+  },
+  {
+   "id": "pikipedia-1253",
+   "topic": "basics",
+   "level": "入門",
+   "title_zh": "皮克敏是什麼(物種總覽)",
+   "title_en": "Pikmin family",
+   "summary_zh": "皮克敏是 PNF-404 上半植物半動物的生物:洋蔥產出種子、落地成芽,隊長拔起後就會跟著你,可以投擲、解散、群攻、衝鋒,吹哨能召回。",
+   "key_points_zh": [
+    "半植物半動物,棲息於 PNF-404(Hey! Pikmin 則在另一顆星球)",
+    "由洋蔥產出種子 → 落地成芽 → 隊長拔起才會加入隊伍",
+    "指令:投擲、解散、群攻、衝鋒;離隊時吹哨召回"
+   ],
+   "excerpt_en": "Pikmin (ピクミン) are plant-animal hybrid creatures that are found on PNF-404 and the planet in Hey! Pikmin. As the titular creatures of the Pikmin series, they are the main feature of gameplay in all games in the series.\nIn the main games, Pikmin are created by Onions, which produce them as seeds, which in turn fall to the ground and become sprouts. A leader can then pluck one of these sprouts. Once plucked, Pikmin follow a leader around in their squad, and the leader can throw them at objects, as well as dismiss, swarm, and charge them. When out of a leader's squad, they can be whistled back into it. Through these basic actions, Pikmin can be ordered to carry items or fight enemies, among other abilities.\nPikmin come in several types, each with certain unique abilities (such as resistance to a specific hazard). Most are 1.2cm tall head to toe (around 3cm if the stem and top are included), and have a generally humanoid shape. On top of a Pikmin's head is either a leaf, bud, or flower, representing its maturity.\nOn its own, a Pikmin is not particularly strong, but in large groups (usually up to 100), they are capable of accomplishing many things. Pikmin can be lost to enemies and hazards, and losing all Pikmin, either of a specific type or in total, is known as a Pikmin extinction. However, Pikmin can be grown easily by carrying defeated enemies or pellets to the Onion. In addition, Candypop Buds can convert Pikmin from one type to another.",
+   "games": [
+    "Pikmin 1",
+    "Pikmin 2",
+    "Pikmin 3",
+    "Pikmin 4",
+    "Hey! Pikmin",
+    "Pikmin Bloom"
+   ],
+   "source": {
+    "key": "pikipedia",
+    "name": "Pikipedia",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "url": "https://www.pikminwiki.com/Pikmin_family",
+    "revid": 354139,
+    "accessed": "2026-10-18"
+   },
+   "status": "curated",
+   "fetched_at": "2026-10-18",
+   "link_ok": true,
+   "hidden": false
+  },
+  {
+   "id": "pikipedia-1338",
+   "topic": "basics",
+   "level": "入門",
+   "title_zh": "皮克敏系列總覽",
+   "title_en": "Pikmin series",
+   "summary_zh": "任天堂的遊戲系列,核心是指揮皮克敏搬東西、打敵人;共 4 部本傳、5 部重製、2 部外傳。",
+   "key_points_zh": [
+    "玩法核心:讓皮克敏執行搬運與戰鬥等任務",
+    "4 部本傳、5 部重製版、2 部外傳,另有其他周邊媒體"
+   ],
+   "excerpt_en": "The Pikmin series is a video game series owned by Nintendo that focuses on using Pikmin to perform various tasks, such as carrying objects and fighting enemies. It consists of 4 main games, 5 re-releases, 2 spin-off games, and various other media.",
+   "games": [
+    "Pikmin 1",
+    "Pikmin 2",
+    "Pikmin 3",
+    "Pikmin 4",
+    "Hey! Pikmin",
+    "Pikmin Bloom"
+   ],
+   "source": {
+    "key": "pikipedia",
+    "name": "Pikipedia",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "url": "https://www.pikminwiki.com/Pikmin_series",
+    "revid": 354956,
+    "accessed": "2026-10-18"
+   },
+   "status": "curated",
+   "fetched_at": "2026-10-18",
+   "link_ok": true,
+   "hidden": false
+  },
+  {
+   "id": "pikipedia-758",
+   "topic": "basics",
+   "level": "入門",
+   "title_zh": "隊長(玩家操作的角色)",
+   "title_en": "Leader",
+   "summary_zh": "隊長(Leader)是玩家操作的角色,靠投擲與哨聲指揮皮克敏;全系列 11 位,多數是外星探險者。",
+   "key_points_zh": [
+    "指揮方式:投擲、吹哨等動作",
+    "全系列共 11 位隊長,其中歐慶(Oatchi)與 Moss 是太空狗",
+    "部分作品可切換多位隊長,同時管理多支隊伍",
+    "一代只有歐利瑪(Olimar):Hocotate 運輸的員工,迫降在 PNF-404"
+   ],
+   "excerpt_en": "Leaders (リーダー, lit.: \"Leader\"), unofficially also called captains, are the characters the player controls in the Pikmin games. Leaders have the ability to lead a squad of Pikmin, and can command the squad through throwing, whistling, and other actions. Each of the  11 leaders in the series is an alien explorer with some role in the mission, with the exception of Oatchi and Moss who are space dogs. Some games have multiple leaders which can be switched between, allowing multiple squads to be managed at a time.\nIn Pikmin, there is only one leader, Olimar, an employee of Hocotate Freight who crash-landed on PNF-404. In Pikmin 2, Louie is added as a second playable character; it is possible to switch between the two playable leaders by pressing  /  / . Louie is replaced by the President after the debt is cleared. In Pikmin 3 there are three new leaders: the engineer Alph, the botanist Brittany, and the crew's captain, Charlie.  /  /  is used to switch in the original Pikmin 3 and the action menu left and right is used to switch in Pikmin 3 Deluxe. Pikmin 4 has several playable leaders across its game modes, though the main story features the rookie Rescue Officer and Oatchi as the leaders. Hey! Pikmin again features only Olimar as a playable character.\nPuffstools, Antenna Beetles, mature Bulbmin, the Scornet Maestro, and Moss act as naturally occurring enemy leaders, in each of the four main Pikmin games, stealing the player's Pikmin or scouting with their own type of underlings.",
+   "games": [
+    "Pikmin 1",
+    "Pikmin 2",
+    "Pikmin 3",
+    "Pikmin 4",
+    "Hey! Pikmin"
+   ],
+   "source": {
+    "key": "pikipedia",
+    "name": "Pikipedia",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "url": "https://www.pikminwiki.com/Leader",
+    "revid": 347308,
+    "accessed": "2026-10-18"
+   },
+   "status": "curated",
+   "fetched_at": "2026-10-18",
+   "link_ok": true,
+   "hidden": false
+  },
+  {
+   "id": "pikipedia-1078",
+   "topic": "basics",
+   "level": "入門",
+   "title_zh": "顆粒(增加皮克敏的基本資源)",
+   "title_en": "Pellet",
+   "summary_zh": "顆粒(Pellet)是結晶化的花蜜,搬回洋蔥就能長出皮克敏,是開局最主要的種子來源。",
+   "key_points_zh": [
+    "顆粒上的數字代表重量,有 1、5、8、10、20 五種",
+    "顏色與洋蔥相同時,產出同數量的皮克敏(1 號例外,產 2 隻)",
+    "顏色不同時只產一半"
+   ],
+   "excerpt_en": "A pellet (ペレット, lit.: \"Pellet\") is a crystallized chunk of nectar that contains vitamins and other nutrition. Pellets are used to produce Pikmin, by bringing them to the Onion, and are the main source of seeds at the start of the games, as large creatures require many Pikmin to kill safely.\nPellets come in a variety of sizes, and each one produces a different amount of Pikmin. An Arabic numeral is seen atop each one, reflecting its weight. Pellets with the numbers 1, 5, 8, 10, and 20 exist. If the color of the pellet matches the color of the Onion it is brought to, that same number of Pikmin is produced (the exception being the number 1, which creates two Pikmin). If not, only half that number, rounded up, will appear. According to the Japanese version of Pikmin 2, this is due to a better absorption of the nutrients in the pellet.\nThey are found on the top of Pellet Posies and sometimes on the ground. According to the Japanese Pikmin Garden website, pellets are a type of fruit. Certain creatures of PNF-404 also leave pellets as spoils at times. They have presumably eaten pellets, which could indicate the possibility that the same creatures are herbivores, if not omnivores.",
+   "games": [
+    "Pikmin 1",
+    "Pikmin 2",
+    "Pikmin 3",
+    "Pikmin 4",
+    "Hey! Pikmin"
+   ],
+   "source": {
+    "key": "pikipedia",
+    "name": "Pikipedia",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "url": "https://www.pikminwiki.com/Pellet",
+    "revid": 355841,
+    "accessed": "2026-10-18"
+   },
+   "status": "curated",
+   "fetched_at": "2026-10-18",
+   "link_ok": true,
+   "hidden": false
+  },
+  {
+   "id": "pikipedia-1188",
+   "topic": "pikmin",
+   "level": "入門",
+   "title_zh": "紅色皮克敏",
+   "title_en": "Red Pikmin",
+   "summary_zh": "紅色皮克敏耐火、攻擊力強,是每一代最先遇到的皮克敏,公認的「基本款」。",
+   "key_points_zh": [
+    "免疫火焰",
+    "攻擊力強",
+    "由紅色洋蔥培育,花苞與花朵為白色",
+    "全系列所有模式都登場,僅四代夜間探索(發光皮克敏專屬)除外"
+   ],
+   "excerpt_en": "Red Pikmin (赤ピクミン) are a red species of Pikmin with the special abilities of fire resistance and strong attack power. They are the first Pikmin type seen or discovered in all games by the main playable leaders, and are usually considered the \"main\" type of Pikmin due to their relatively simple traits and early discovery. They are cultivated via the Red Onion (or the master Onion), and like Yellow Pikmin, Blue Pikmin and Bulbmin, their buds and flowers are white. These Pikmin are present in all games of the series, and make an appearance in all game modes, excluding Pikmin 4's night expeditions, which are Glow Pikmin-exclusive.",
+   "games": [
+    "Pikmin 1",
+    "Pikmin 2",
+    "Pikmin 3",
+    "Pikmin 4",
+    "Hey! Pikmin",
+    "Pikmin Bloom"
+   ],
+   "source": {
+    "key": "pikipedia",
+    "name": "Pikipedia",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "url": "https://www.pikminwiki.com/Red_Pikmin",
+    "revid": 353014,
+    "accessed": "2026-10-18"
+   },
+   "status": "curated",
+   "fetched_at": "2026-10-18",
+   "link_ok": true,
+   "hidden": false
+  },
+  {
+   "id": "pikipedia-40",
+   "topic": "pikmin",
+   "level": "入門",
+   "title_zh": "藍色皮克敏",
+   "title_en": "Blue Pikmin",
+   "summary_zh": "藍色皮克敏能在水中活動,一到三代都是最後發現的種類;粉紅色的嘴是牠們獨有的特徵。",
+   "key_points_zh": [
+    "免疫水,可在水下與陸上呼吸",
+    "一、二、三代故事模式最後發現的種類;四代則是第四種",
+    "獨有的粉紅色嘴巴用來吸水、經鰓過濾氧氣"
+   ],
+   "excerpt_en": "Blue Pikmin (青ピクミン) are a blue species of Pikmin that reside on PNF-404. They have the special ability of water resistance. This type of Pikmin is present in all game modes of all Pikmin games, and is the last type to be discovered in the Story mode of Pikmin, Pikmin 2, and Pikmin 3, as well as the fourth type discovered in Pikmin 4. Besides their coloration, these Pikmin are distinguishable from other Pikmin species by their pink mouths, a trait seen in no other Pikmin species. These mouths are used to take in water, which filters oxygen through gills, giving them the ability to breathe both underwater and on dry land. Producing more Blue Pikmin can be done by carrying pellets or enemy carcasses to the Blue Onion (or the Master Onion), or by throwing other species into a Lapis Lazuli Candypop Bud or a Candypop Bud. As with Red Pikmin, Yellow Pikmin and Bulbmin, their buds and flowers are white.\nThe exact location of their gills is not consistently explained in the series, having been said to be on the cheeks, near the cheeks, their mouths, and not even visible. Pikmin 4 consistently says that the mouths are the gills.",
+   "games": [
+    "Pikmin 1",
+    "Pikmin 2",
+    "Pikmin 3",
+    "Pikmin 4",
+    "Hey! Pikmin",
+    "Pikmin Bloom"
+   ],
+   "source": {
+    "key": "pikipedia",
+    "name": "Pikipedia",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "url": "https://www.pikminwiki.com/Blue_Pikmin",
+    "revid": 354525,
+    "accessed": "2026-10-18"
+   },
+   "status": "curated",
+   "fetched_at": "2026-10-18",
+   "link_ok": true,
+   "hidden": false
+  },
+  {
+   "id": "pikipedia-1757",
+   "topic": "pikmin",
+   "level": "入門",
+   "title_zh": "黃色皮克敏",
+   "title_en": "Yellow Pikmin",
+   "summary_zh": "黃色皮克敏丟得比較高,二代起免疫電擊;一代還能搬炸彈岩。",
+   "key_points_zh": [
+    "投擲高度較高,可拿到高處的太空船零件",
+    "一代可搬運炸彈岩(bomb-rock)",
+    "一代之後的每一作都免疫電",
+    "像大耳朵的葉片(lamellae)是辨識特徵"
+   ],
+   "excerpt_en": "Yellow Pikmin (黄ピクミン) are a yellow species of Pikmin, with the special abilities of increased throw height, bomb-rock carrying (in Pikmin), and electricity resistance (in every game after Pikmin). They are the second type discovered by Captain Olimar in Pikmin, the fourth type identified in Pikmin 2, and the first type found by Captain Charlie in Pikmin 3. In Pikmin 4, Pikmin can be discovered in any order (with the exception of Red Pikmin). These Pikmin have lamellae, which resemble large ears; these are the means by which they are primarily identifiable aside from their yellow-coloring. Yellow Pikmin can be thrown higher – an ability that is needed to retrieve certain elevated ship parts, treasures and fruits – and are immune to electricity. Additionally, Yellow Pikmin appear to like being in elevated places, such as trees – this can be concluded from the places they are first found in Pikmin 2 and Pikmin 3. Their main method of production is through the Yellow Onion (or the Master Onion), and like Red Pikmin, Blue Pikmin, and Bulbmin, their buds and flowers are white. Also like Red Pikmin and Blue Pikmin, they appear in all games of the series, and the only game mode they are missing from in comparison to the other two, is 2-Player Battle.",
+   "games": [
+    "Pikmin 1",
+    "Pikmin 2",
+    "Pikmin 3",
+    "Pikmin 4",
+    "Hey! Pikmin",
+    "Pikmin Bloom"
+   ],
+   "source": {
+    "key": "pikipedia",
+    "name": "Pikipedia",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "url": "https://www.pikminwiki.com/Yellow_Pikmin",
+    "revid": 350121,
+    "accessed": "2026-10-18"
+   },
+   "status": "curated",
+   "fetched_at": "2026-10-18",
+   "link_ok": true,
+   "hidden": false
+  },
+  {
+   "id": "pikipedia-31822",
+   "topic": "pikmin",
+   "level": "進階",
+   "title_zh": "冰凍皮克敏",
+   "title_en": "Ice Pikmin",
+   "summary_zh": "冰凍皮克敏(四代、Bloom)免疫冰凍,能把敵人和水面、泥地凍住;但攻擊力較低、遇火燒得更快。",
+   "key_points_zh": [
+    "免疫所有冰凍效果",
+    "能凍住敵人、水域與泥地",
+    "攻擊力較低,被火點燃後死得比其他種類快",
+    "花苞與花朵為黃色"
+   ],
+   "excerpt_en": "Ice Pikmin (氷ピクミン) are a type of Pikmin that appear in Pikmin 4 and Pikmin Bloom. They have light blue and blocky bodies, seemingly made of chunks of ice. Their defining characteristics are their immunity to all types of freezing, and their ability to freeze enemies and bodies of water and mud. They have lower attack power in battle, and burn to death faster than other Pikmin types when lit aflame by sources of fire. They leave small snow and water vapor particles around them as they move, and their buds and flowers are yellow.",
+   "games": [
+    "Pikmin 4",
+    "Pikmin Bloom"
+   ],
+   "source": {
+    "key": "pikipedia",
+    "name": "Pikipedia",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "url": "https://www.pikminwiki.com/Ice_Pikmin",
+    "revid": 346409,
+    "accessed": "2026-10-18"
+   },
+   "status": "curated",
+   "fetched_at": "2026-10-18",
+   "link_ok": true,
+   "hidden": false
+  },
+  {
+   "id": "pikipedia-7833",
+   "topic": "pikmin",
+   "level": "進階",
+   "title_zh": "岩石皮克敏",
+   "title_en": "Rock Pikmin",
+   "summary_zh": "岩石皮克敏(三代起)像顆小石頭,免疫壓碎與刺穿,攻擊方式也與其他皮克敏不同。",
+   "key_points_zh": [
+    "免疫壓碎(柔軟表面)與刺穿",
+    "攻擊方式與其他皮克敏不同",
+    "花苞與花朵為薰衣草紫,與飛行皮克敏相同",
+    "登場:三代、四代、Hey! Pikmin、Pikmin Bloom"
+   ],
+   "excerpt_en": "Rock Pikmin (岩ピクミン) are a species of Pikmin appearing in Pikmin 3, Pikmin 4, Hey! Pikmin and Pikmin Bloom, with the special abilities of crush (on soft surfaces) and stab immunity and a different method of attacking. They resemble small polished rocks with Pikmin eyes and limbs, and have lavender-purple buds and flowers like the Winged Pikmin. The main part of their bodies seem to be a dark gray texture of graphite that reflects light, whereas their stems, arms, and legs appear to be smooth and gray. When Rock Pikmin are dismissed, their sprouts glow gray, oddily from Pikmin 4, they glow as a grayish cyan. Their ghosts are also shaped like small gray rocks with eyes. Just like all other types of Pikmin in Pikmin 3, Rock Pikmin have an Onion, which later in the story merges with the Master Onion, and are reproduced through collecting nutrients from pellets and corpses. In Hey! Pikmin, like all other types, they are found in certain levels and go to the Pikmin Park after a level is done.",
+   "games": [
+    "Pikmin 3",
+    "Pikmin 4",
+    "Hey! Pikmin",
+    "Pikmin Bloom"
+   ],
+   "source": {
+    "key": "pikipedia",
+    "name": "Pikipedia",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "url": "https://www.pikminwiki.com/Rock_Pikmin",
+    "revid": 351733,
+    "accessed": "2026-10-18"
+   },
+   "status": "curated",
+   "fetched_at": "2026-10-18",
+   "link_ok": true,
+   "hidden": false
+  },
+  {
+   "id": "pikipedia-32799",
+   "topic": "pikmin",
+   "level": "進階",
+   "title_zh": "發光皮克敏",
+   "title_en": "Glow Pikmin",
+   "summary_zh": "發光皮克敏是四代夜間探索專用:會漂浮、瞬移到玩家身邊、合體成會爆炸的 Glowmob,抗多數危害,但見不得太陽。",
+   "key_points_zh": [
+    "主要在夜間探索使用;洞窟中可用 Glow Seeds 召喚",
+    "能漂浮、瞬移到玩家身旁、合體為爆炸球 Glowmob",
+    "抗多數危害,但白天戶外無法使用",
+    "沒有洋蔥,棲息於 Lumiknoll"
+   ],
+   "excerpt_en": "Glow Pikmin (ヒカリピクミン, lit.: \"Light Pikmin\") are a type of Pikmin found in Pikmin 4. They are unlocked and mainly used during night expeditions, though they can also be summoned in caves via Glow Seeds and in Dandori Battles via the Quick Glow Pik item.\nBecause of their ghostly traits, they are able to float slightly above ground, teleport to the player's side, meld themselves into an explosive blob called a Glowmob, and resist most manners of hazard. On the other hand, they cannot be out in the sun, and so cannot be used when outdoors during the day.\nAs of Pikmin 4, Glow Pikmin are the only Pikmin types to not have an Onion or an associated Candypop Bud. Rather, they inhabit in Lumiknolls.",
+   "games": [
+    "Pikmin 4"
+   ],
+   "source": {
+    "key": "pikipedia",
+    "name": "Pikipedia",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "url": "https://www.pikminwiki.com/Glow_Pikmin",
+    "revid": 355764,
+    "accessed": "2026-10-18"
+   },
+   "status": "curated",
+   "fetched_at": "2026-10-18",
+   "link_ok": true,
+   "hidden": false
+  },
+  {
+   "id": "pikipedia-1455",
+   "topic": "pikmin",
+   "level": "進階",
+   "title_zh": "白色皮克敏",
+   "title_en": "White Pikmin",
+   "summary_zh": "白色皮克敏跑得快、免疫毒,還能挖出完全埋在地下的東西;二代起登場,體型最小、紅眼。",
+   "key_points_zh": [
+    "速度比其他皮克敏快",
+    "免疫毒",
+    "能找出完全埋在地下的物品",
+    "二代只能透過特定的 Candypop Bud 取得"
+   ],
+   "excerpt_en": "White Pikmin (白ピクミン) are a type of Pikmin found in Pikmin 2, Pikmin 4, Pikmin Bloom, and non-story game modes in Pikmin 3. They are the third type of Pikmin found in Pikmin 2, the first of which are found in the White Flower Garden. Their most noteworthy characteristics are their faster speed compared to other Pikmin, ability to find buried objects that are completely hidden underground, and their immunity to poison. Their defining physical characteristics are their red eyes, white color, and smaller size.\nWhite Pikmin share a number of similarities with Purple Pikmin. Their flowers (as well as buds) are magenta rather than white. In Pikmin 2, they can only be obtained via certain Candypop Buds, in this case Ivory Candypop Buds, and they are stored in the Hocotate ship. In Pikmin 4, they are stored in the master Onion, and a White Onion can be obtained to produce White Pikmin by completing the 5th story of the Trial of the Sage Leaf.",
+   "games": [
+    "Pikmin 2",
+    "Pikmin 3",
+    "Pikmin 4",
+    "Pikmin Bloom"
+   ],
+   "source": {
+    "key": "pikipedia",
+    "name": "Pikipedia",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "url": "https://www.pikminwiki.com/White_Pikmin",
+    "revid": 355847,
+    "accessed": "2026-10-18"
+   },
+   "status": "curated",
+   "fetched_at": "2026-10-18",
+   "link_ok": true,
+   "hidden": false
+  },
+  {
+   "id": "pikipedia-1101",
+   "topic": "pikmin",
+   "level": "進階",
+   "title_zh": "紫色皮克敏",
+   "title_en": "Purple Pikmin",
+   "summary_zh": "紫色皮克敏的重量與搬運力是一般皮克敏的 10 倍,但速度慢;二代有獨特的重擊攻擊,部分寶物非牠不可。",
+   "key_points_zh": [
+    "重量與搬運力等於 10 隻普通皮克敏",
+    "移動較慢",
+    "二代以重擊(pound)攻擊敵人",
+    "二代有數件寶物必須靠牠取得,是通關必需"
+   ],
+   "excerpt_en": "Purple Pikmin (紫ピクミン) are a type of Pikmin found in Pikmin 2, Pikmin 4, Pikmin Bloom, and non-story game modes in Pikmin 3. They are the second type of Pikmin found in Pikmin 2, the first of which are found in the Emergence Cave. Their most noteworthy characteristics are their massive weight and carrying strength – 10 times those of a regular Pikmin. They are also slower than other Pikmin types, and have a unique way of attacking enemies in Pikmin 2 through a pound. They are specifically required to obtain a number of treasures, two of which are needed to gain access to new areas, making them necessary to complete the game. Their defining physical characteristics are their purple color, as the name would imply, as well as their bulbous physique when compared to other Pikmin, in addition to the straight trichomes atop their heads. Similarly to White Pikmin, Purple Pikmin feature magenta buds and flowers, rather than white.\nIn Pikmin 2, Purple Pikmin do not have an Onion and can only be harvested through Violet Candypop Buds, found in various caves. At the end of each day, they are stored in the Hocotate ship, much like White Pikmin in the same game. They do not have an Onion in Pikmin 3 either, appearing in non-story game modes only. In Pikmin 4, they are also only harvestable with Purple Candypop Buds, but when the Purple Onion is obtained by completing the final story of the Trial of the Sage Leaf, they can be grown like the other Pikmin types.",
+   "games": [
+    "Pikmin 2",
+    "Pikmin 3",
+    "Pikmin 4",
+    "Pikmin Bloom"
+   ],
+   "source": {
+    "key": "pikipedia",
+    "name": "Pikipedia",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "url": "https://www.pikminwiki.com/Purple_Pikmin",
+    "revid": 353333,
+    "accessed": "2026-10-18"
+   },
+   "status": "curated",
+   "fetched_at": "2026-10-18",
+   "link_ok": true,
+   "hidden": false
+  },
+  {
+   "id": "pikipedia-8140",
+   "topic": "pikmin",
+   "level": "進階",
+   "title_zh": "飛行皮克敏",
+   "title_en": "Winged Pikmin",
+   "summary_zh": "飛行皮克敏(三代起)有透明翅膀,大多時間在空中,搬運與戰鬥時特別好用。",
+   "key_points_zh": [
+    "能力:飛行",
+    "粉紅身體、藍色大眼、兩條深粉紅條紋,像蜜蜂",
+    "花苞與花朵為薰衣草紫",
+    "由洋蔥產出,出現在遊戲所有模式"
+   ],
+   "excerpt_en": "Winged Pikmin (羽ピクミン) are a Pikmin type that appear in Pikmin 3, Pikmin 4, Hey! Pikmin, and Pikmin Bloom, with the special ability of flight. They are pink with large blue eyes, their bodies have two dark pink stripes, resembling real-world bees, and they have lavender-purple buds and flowers, like Rock Pikmin. Their name comes from the transparent wings on their backs, which allow them to be airborne most of the time. This is particularly useful in combat and while carrying. Like other main Pikmin types, they are produced in an Onion and appear in all of the game's modes.",
+   "games": [
+    "Pikmin 3",
+    "Pikmin 4",
+    "Hey! Pikmin",
+    "Pikmin Bloom"
+   ],
+   "source": {
+    "key": "pikipedia",
+    "name": "Pikipedia",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "url": "https://www.pikminwiki.com/Winged_Pikmin",
+    "revid": 354154,
+    "accessed": "2026-10-18"
+   },
+   "status": "curated",
+   "fetched_at": "2026-10-18",
+   "link_ok": true,
+   "hidden": false
+  },
+  {
+   "id": "pikipedia-195",
+   "topic": "pikmin",
+   "level": "達人",
+   "title_zh": "寄生皮克敏",
+   "title_en": "Bulbmin",
+   "summary_zh": "寄生皮克敏(二代限定)是寄生在查比身上的皮克敏,只在洞窟出現、無法帶出,四種危害全免疫。",
+   "key_points_zh": [
+    "只在洞窟出現,無法存放,只能在該洞窟使用",
+    "免疫遊戲定義的四種危害",
+    "剛出現時是敵人:成體像紅查比,後面跟著最多 10 隻幼體",
+    "是洞窟中少數能增加皮克敏的方式"
+   ],
+   "excerpt_en": "Bulbmin (adults: ハチャッピー, lit.: \"Leaf Chappy\", juvenile: コッパチャッピー, lit.: \"Small Leaf Chappy\") are a parasitic species of Pikmin in Pikmin 2 that infect Bulborbs, hence the name. They are only found in caves and there is no way to store them, meaning Bulbmin can only be used in the cave they are found in. They are resistant to all four hazards defined by the game, and are one of the only ways to gain Pikmin in a cave, making them a valuable asset.\nUniquely for a Pikmin type, they start out as enemies when they appear in a cave. An adult Bulbmin, closely resembling a Red Bulborb, is followed by up to 10 juvenile Bulbmin, which take on a more unique appearance (having completely black eyes rather than the blue or purple eyes of the dwarf and true Bulborbs, uniquely proportioned and colored legs, and relatively fewer and larger white spots which are positioned differently than those of other Bulborbs) with a stem and leaf (or bud or flower) atop their back. They can be found wandering the floors of certain caves and behave much like the Spotty Bulbear, patrolling an established path. The adult Bulbmin is quite aggressive, but can be defeated quickly. When the adult Bulbmin is defeated, the juvenile Bulbmin will panic until whistled, at which point they will join the player's squad. At this point, they can be used like normal Pikmin. When the player uses a geyser to exit the cave, all Bulbmin in their squad are left behind. It is implied that other creatures can be infected by the parasitic species of Pikmin.",
+   "games": [
+    "Pikmin 2"
+   ],
+   "source": {
+    "key": "pikipedia",
+    "name": "Pikipedia",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "url": "https://www.pikminwiki.com/Bulbmin",
+    "revid": 355799,
+    "accessed": "2026-10-18"
+   },
+   "status": "curated",
+   "fetched_at": "2026-10-18",
+   "link_ok": true,
+   "hidden": false
+  },
+  {
+   "id": "pikipedia-691",
+   "topic": "creatures",
+   "level": "進階",
+   "title_zh": "噴火豬",
+   "title_en": "Fiery Blowhog",
+   "summary_zh": "噴火豬(Fiery Blowhog)是一到四代都有的豬型敵人,會從紅鼻子噴火;一、二代被皮克敏攻擊時會先甩開再噴火。",
+   "key_points_zh": [
+    "會從紅色鼻子噴火,紅色皮克敏不怕",
+    "一代只出現在 The Forest Navel,體型比後作大;二、三代很常見",
+    "Hey! Pikmin 中是頭目,只在 Blazing Winds 出現一隻",
+    "一、二代被挑釁時會把皮克敏甩到前方再噴火"
+   ],
+   "excerpt_en": "The Fiery Blowhog (ブタドックリ, lit.: \"Pig Tokkuri\") is a pig-like enemy in Pikmin, Pikmin 2, Pikmin 3, and Pikmin 4, and a boss in Hey! Pikmin. As the name would imply, Fiery Blowhogs shoot fire from their red snouts. They are only found in The Forest Navel and are larger than in the other main Pikmin games in Pikmin, but are found commonly in Pikmin 2 and Pikmin 3. Like all bosses in Hey! Pikmin, only one appears in the game, in Blazing Winds. In the first two games, when provoked by Pikmin, Fiery Blowhogs will buck them off into an area in front of them and shoot fire. In Pikmin, it can be extremely difficult to save burning Pikmin, but blowing the whistle within the area of the Blowhog's attack will ensure that any Pikmin caught in the flames will instantly be extinguished.\nIn Hey! Pikmin, its behavior is a quite different from the main games in the series: this beast stands on top of a pillar and shoots fire at Olimar down below. It is normally too far up to reach, but can be stunned with a bomb rock, and by sneaking to its backside, the player can throw Pikmin at the part of its body that slipped off the platform. As it is now a boss, it is much larger than in the main Pikmin games. It drops the Shimmering Skull when defeated. A younger variant can be found in this game, the Fiery Blowlet.\nFiery Blowhogs also have lightly colored segments that are barely visible in-game, but more noticeable in the creature's artwork. These became more visible in Pikmin 3 and Hey! Pikmin.",
+   "games": [
+    "Pikmin 1",
+    "Pikmin 2",
+    "Pikmin 3",
+    "Pikmin 4",
+    "Hey! Pikmin"
+   ],
+   "source": {
+    "key": "pikipedia",
+    "name": "Pikipedia",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "url": "https://www.pikminwiki.com/Fiery_Blowhog",
+    "revid": 352977,
+    "accessed": "2026-10-18"
+   },
+   "status": "curated",
+   "fetched_at": "2026-10-18",
+   "link_ok": true,
+   "hidden": false
+  },
+  {
+   "id": "pikipedia-379",
+   "topic": "creatures",
+   "level": "進階",
+   "title_zh": "小查比",
+   "title_en": "Dwarf Bulborb",
+   "summary_zh": "小查比是系列最常見的小型敵人,長得像幼年查比,其實是麵包蟲家族的擬態種;丟一隻皮克敏就能解決。",
+   "key_points_zh": [
+    "二代名為小紅查比(Dwarf Red Bulborb)",
+    "外觀模仿查比以躲避天敵,實為麵包蟲(breadbug)家族",
+    "很弱,丟一隻皮克敏即可擊倒"
+   ],
+   "excerpt_en": "The Dwarf Bulborb (コチャッピー, lit.: \"Small Chappy\"), named the Dwarf Red Bulborb (アカコチャッピー, lit.: \"Red Small Chappy\") in Pikmin 2, is a small and common enemy in the Pikmin series.\nThey are small bipedal creatures equipped with a pair of eyes on stalks, two fangs on either side of their mouth, two toes on each leg; each having a single claw, and a curved snout. Their bodies are beige-colored and their backs are red, which are covered with white spots.\nDwarf Bulborbs strongly resemble juvenile Bulborbs. However, they are actually a different species in the breadbug family, and mimic the appearance of Bulborbs to evade predation. They are rather weak and can be easily defeated by throwing a single Pikmin directly on top of them.\nExclusively in the first game, pestering one for long enough will prompt it to scream for help, waking up the nearest Spotty Bulborb (or Spotty Bulbear in Challenge Mode).",
+   "games": [
+    "Pikmin 1",
+    "Pikmin 2",
+    "Pikmin 3",
+    "Pikmin 4"
+   ],
+   "source": {
+    "key": "pikipedia",
+    "name": "Pikipedia",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "url": "https://www.pikminwiki.com/Dwarf_Bulborb",
+    "revid": 355942,
+    "accessed": "2026-10-18"
+   },
+   "status": "curated",
+   "fetched_at": "2026-10-18",
+   "link_ok": true,
+   "hidden": false
+  },
+  {
+   "id": "pikipedia-1184",
+   "topic": "creatures",
+   "level": "進階",
+   "title_zh": "查比(大嘴怪)",
+   "title_en": "Bulborb",
+   "summary_zh": "查比是系列最具代表性的敵人,四部本傳都有;紅背白點、夜行性,在 Hey! Pikmin 是第一個頭目。",
+   "key_points_zh": [
+    "一代稱斑點查比(Spotty Bulborb),二代稱紅查比(Red Bulborb)",
+    "Grub-dog 家族中最常見的成員",
+    "紅背白點、眼睛長在眼柄上、只有兩根下顎",
+    "大多為夜行性"
+   ],
+   "excerpt_en": "The Bulborb (チャッピー, lit.: \"Chappy\"), known as the Spotty Bulborb in Pikmin and the Red Bulborb (アカチャッピー, lit.: \"Red Chappy\") in Pikmin 2, is a common enemy in the Pikmin series. Bulborbs are the most prominent enemies in the franchise, with images and icons of them often being used to represent enemies in general, and appear in all 4 main-series Pikmin games. In Hey! Pikmin, the Bulborb serves as the game's first boss. Bulborbs are the most commonly encountered member of the Grub-dog family of enemies.\nBulborbs have pointed snouts, eyes on stalks, and red backs with white spots. They only have two mandibles, which are on either side of their mouth. They are largely nocturnal creatures and spend much of their time sleeping, only waking up when detecting potential prey, or during the night. They are often found sleeping near Dwarf Bulborbs, which are actually species of a different family.",
+   "games": [
+    "Pikmin 1",
+    "Pikmin 2",
+    "Pikmin 3",
+    "Pikmin 4",
+    "Hey! Pikmin"
+   ],
+   "source": {
+    "key": "pikipedia",
+    "name": "Pikipedia",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "url": "https://www.pikminwiki.com/Bulborb",
+    "revid": 355937,
+    "accessed": "2026-10-18"
+   },
+   "status": "curated",
+   "fetched_at": "2026-10-18",
+   "link_ok": true,
+   "hidden": false
+  }
+ ]
+}

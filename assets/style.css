@@ -1,0 +1,86 @@
+/* 拔拔道場 — 首頁與 SSG 子頁共用樣式。原則:一眼看懂三層(主題 → 條目 → 出處)。 */
+:root{
+  --bg:#f7f6f1; --card:#ffffff; --ink:#1f2a24; --muted:#5f6b64; --line:#e3e1d8;
+  --accent:#2f7d4f; --accent-soft:#e4f2e9;
+  --lv1:#2f7d4f; --lv2:#b8731a; --lv3:#8a2f6e;
+  --red:#d9463e; --yellow:#e0b322; --blue:#2f6fd9;
+  --radius:12px; --maxw:1040px;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#15191a; --card:#1e2426; --ink:#e8ebe6; --muted:#a3aca6; --line:#2d3538;
+         --accent:#6cc48f; --accent-soft:#1f3328; --lv1:#6cc48f; --lv2:#e3a24a; --lv3:#d67ab9; }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 -apple-system,"PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+
+/* 頁首 */
+.site-head{padding:28px 0 12px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.brand h1{margin:0;font-size:1.9rem;letter-spacing:.02em}
+.brand .en{color:var(--muted);font-size:1rem}
+.tagline{margin:6px 0 0;color:var(--muted)}
+.crumbs{font-size:.9rem;color:var(--muted);margin:14px 0 0}
+.stats{font-size:.9rem;color:var(--muted);margin-top:6px}
+.dots span{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px;vertical-align:middle}
+.dots .r{background:var(--red)}.dots .y{background:var(--yellow)}.dots .b{background:var(--blue)}
+
+/* 三層說明 */
+.how{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:18px 0 0;font-size:.95rem}
+.how .step{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 14px}
+.how .arrow{color:var(--muted)}
+
+/* 道場地圖(主題導覽) */
+.map{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:18px 0 0;padding:0;list-style:none}
+.map li a{display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;color:var(--ink)}
+.map li a:hover{border-color:var(--accent);text-decoration:none}
+.map .n{color:var(--muted);font-size:.8rem}
+.map .t{font-weight:700}
+.map .d{display:block;color:var(--muted);font-size:.85rem;margin-top:2px}
+.map .c{float:right;color:var(--accent);font-size:.85rem}
+
+/* 工具列 */
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:22px 0 6px;position:sticky;top:0;background:var(--bg);padding:10px 0;z-index:5;border-bottom:1px solid var(--line)}
+.toolbar input[type=search]{flex:1 1 220px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font-size:1rem}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 12px;font-size:.9rem;cursor:pointer}
+.chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.count{color:var(--muted);font-size:.9rem;margin-left:auto}
+
+/* 主題區塊 */
+.topic{margin:30px 0 0}
+.topic h2{margin:0;font-size:1.35rem;display:flex;align-items:baseline;gap:10px}
+.topic h2 .n{color:var(--muted);font-size:.9rem;font-weight:400}
+.topic h2 .more{font-size:.85rem;font-weight:400;margin-left:auto}
+.topic .desc{margin:4px 0 12px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+
+/* 條目卡 */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.card .head{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.lv{font-size:.75rem;border-radius:6px;padding:1px 7px;color:#fff;background:var(--lv1)}
+.lv[data-lv="進階"]{background:var(--lv2)}.lv[data-lv="達人"]{background:var(--lv3)}
+.raw{font-size:.75rem;border:1px dashed var(--muted);color:var(--muted);border-radius:6px;padding:0 6px}
+.card h3{margin:0;font-size:1.1rem}
+.card h3 .en{color:var(--muted);font-weight:400;font-size:.85rem;margin-left:6px}
+.card .sum{margin:0}
+.card .sum.en{color:var(--muted);font-size:.92rem}
+.card details{font-size:.92rem}
+.card summary{cursor:pointer;color:var(--accent)}
+.card ul{margin:6px 0 0;padding-left:18px}
+.games{display:flex;gap:4px;flex-wrap:wrap}
+.games span{font-size:.72rem;border:1px solid var(--line);border-radius:4px;padding:0 5px;color:var(--muted)}
+.src{margin-top:auto;padding-top:8px;border-top:1px dashed var(--line);font-size:.8rem;color:var(--muted)}
+.src .ok{color:var(--accent)}.src .warn{color:var(--lv2)}
+.new{font-size:.72rem;background:var(--accent-soft);color:var(--accent);border-radius:4px;padding:0 6px}
+
+/* 來源表 */
+table.sources{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:16px}
+table.sources th,table.sources td{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+table.sources th{color:var(--muted);font-weight:600}
+
+.empty{color:var(--muted);padding:30px 0;text-align:center}
+.site-foot{margin:50px 0 30px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+.site-foot p{margin:4px 0}
