@@ -1,6 +1,6 @@
-# 拔拔道場 PluckSkill
+# 拔拔道場 PluckPi
 
-網站:https://guru4tw.github.io/PluckSkill/
+網站:https://guru4tw.github.io/PluckPi/
 
 每週自動收集皮克敏(Pikmin)知識,整理成中文條目,**每一條都註明出處**。讀者只需理解三層:
 

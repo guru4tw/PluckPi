@@ -1,4 +1,4 @@
-# CLAUDE.md — 拔拔道場 PluckSkill
+# CLAUDE.md — 拔拔道場 PluckPi
 
 > 每週自動收集皮克敏(Pikmin)知識、中文整理、註明出處的靜態網站。GitHub Pages + GitHub Actions + `knowledge.json`,全部免費。
 > 架構與 SatirDaily 同源(三層全靜態),差別在:資料是「知識條目」不是「活動」,排程是每週不是每天。完整計畫見 [Docs/plan.md](Docs/plan.md)。
@@ -74,7 +74,7 @@
 - **人工寫中文** — 可直接編 `Docs/knowledge.json` 的 `summary_zh` / `key_points_zh`,並把 `status` 設 `curated`、`curated_by` 設 `manual`;收集時保留。
 - **新增來源** — 先在 `Docs/sources.md` 確認授權允許轉載摘要;寫一支 `Py/collect_<key>.py`,沿用 `common.py` 與同一資料模型、同樣的合併規則(只更新原料欄位)。
 - **引用規範** — 卡片一律顯示「出處:來源〈頁名〉・版本 revid・授權・查閱日」並連回原頁;`source.revid` 讓讀者對得到被引用的版本。
-- **爬蟲禮儀** — UA `PluckSkillBot/0.1`,請求間隔 1.5 秒,一週一次、每次最多 20 頁,不全站掃描。
+- **爬蟲禮儀** — UA `PluckPiBot/0.1`,請求間隔 1.5 秒,一週一次、每次最多 20 頁,不全站掃描。
 - **卡片 HTML 兩份** — `index.html` 的 JS `card()` 與 `build_site.py` 的 `card_html()` 要同步改。
 - **Python** — UTF-8、`# -*- coding: utf-8 -*-`、dataclass + type hint;腳本用 `__file__` 錨定路徑,任何 cwd 都能跑。本機 Python 3.9 可跑(collect/verify/build 零依賴)。
 
@@ -82,7 +82,7 @@
 
 ## 環境
 
-- 本機預覽:`python3 -m http.server 8766`(或 `.claude/launch.json` 的 `pluckskill-static`),開 http://localhost:8766/
+- 本機預覽:`python3 -m http.server 8766`(或 `.claude/launch.json` 的 `pluckpi-static`),開 http://localhost:8766/
 - 本機跑整條:`python3 Py/collect_pikipedia.py && python3 Py/verify_sources.py && python3 Py/build_site.py`
 - 選配整理:`pip install anthropic`,`export ANTHROPIC_API_KEY=...`,`python3 Py/curate.py --limit 5 --dry-run` 先看結果
-- 網站:https://guru4tw.github.io/PluckSkill/(repo 建好、Pages 設 main 分支根目錄後生效)
+- 網站:https://guru4tw.github.io/PluckPi/(repo 建好、Pages 設 main 分支根目錄後生效)

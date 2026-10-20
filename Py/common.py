@@ -21,9 +21,9 @@ TOPICS_MD = DOCS / "topics.md"
 KNOWLEDGE_JSON = DOCS / "knowledge.json"       # 收集腳本合併寫入的原始資料
 SITE_JSON = ROOT / "knowledge.json"            # 前端讀的正規化資料(build 產)
 
-SITE_BASE = "https://guru4tw.github.io/PluckSkill/"
-SITE_NAME = "拔拔道場 PluckSkill"
-UA = "PluckSkillBot/0.1 (+https://github.com/guru4tw/PluckSkill; weekly knowledge digest)"
+SITE_BASE = "https://guru4tw.github.io/PluckPi/"
+SITE_NAME = "拔拔道場 PluckPi"
+UA = "PluckPiBot/0.1 (+https://github.com/guru4tw/PluckPi; weekly knowledge digest)"
 
 LEVELS = ("入門", "進階", "達人")
 TODAY = datetime.date.today().isoformat()

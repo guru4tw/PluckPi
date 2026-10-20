@@ -89,7 +89,7 @@ def page(title: str, desc: str, canonical: str, body: str, depth: int = 1, jsonl
 </head>
 <body>
 <header class="site-head"><div class="wrap">
-  <div class="brand"><h1><a href="{rel}" style="color:inherit">拔拔道場</a></h1><span class="en">PluckSkill</span>
+  <div class="brand"><h1><a href="{rel}" style="color:inherit">拔拔道場</a></h1><span class="en">PluckPi</span>
     <span class="dots"><span class="r"></span><span class="y"></span><span class="b"></span></span></div>
   <p class="crumbs"><a href="{rel}">首頁</a> › {esc(title)}</p>
 </div></header>

@@ -24,6 +24,6 @@
 
 ## 爬蟲禮儀
 
-- User-Agent:`PluckSkillBot/0.1 (+https://github.com/guru4tw/PluckSkill)`
+- User-Agent:`PluckPiBot/0.1 (+https://github.com/guru4tw/PluckPi)`
 - Pikipedia `robots.txt` 要求 `Crawl-delay: 1`;腳本每次請求間隔 1.5 秒,一次最多 10 個頁名合併查詢。
 - 每週只抓一次、每次最多 20 個新頁面,不做全站掃描。

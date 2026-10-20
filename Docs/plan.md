@@ -1,4 +1,4 @@
-# PluckSkill 拔拔道場・計畫書
+# PluckPi 拔拔道場・計畫書
 
 ## 一句話
 

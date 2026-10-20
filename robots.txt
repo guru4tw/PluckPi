@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://guru4tw.github.io/PluckSkill/sitemap.xml
+Sitemap: https://guru4tw.github.io/PluckPi/sitemap.xml
