@@ -59,7 +59,7 @@ jobs:
         run: python Py/verify_sources.py
         continue-on-error: true
 
-      # 步驟 4:正規化 → 根 knowledge.json + 主題頁 + 來源頁 + sitemap + 首頁注入
+      # 步驟 4:正規化 → 根 knowledge.json + zh-hant/ 主題頁、條目頁、來源頁 + 舊網址轉址頁 + sitemap + 首頁注入
       - name: Build site
         run: python Py/build_site.py
 
@@ -69,7 +69,7 @@ jobs:
           git config user.name  "pluckpi-bot"
           git config user.email "pluckpi-bot@users.noreply.github.com"
           git add Docs/knowledge.json Docs/link_report.json knowledge.json sitemap.xml index.html
-          git add -A topics/ sources/
+          git add -A zh-hant/ topics/ sources/
           if git diff --cached --quiet; then
             echo "無變動,略過 commit"
           else

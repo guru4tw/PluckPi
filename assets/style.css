@@ -44,9 +44,6 @@ a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 /* 工具列 */
 .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:22px 0 6px;position:sticky;top:0;background:var(--bg);padding:10px 0;z-index:5;border-bottom:1px solid var(--line)}
 .toolbar input[type=search]{flex:1 1 220px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font-size:1rem}
-.chips{display:flex;gap:6px;flex-wrap:wrap}
-.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 12px;font-size:.9rem;cursor:pointer}
-.chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
 .count{color:var(--muted);font-size:.9rem;margin-left:auto}
 
 /* 主題區塊 */
@@ -74,7 +71,20 @@ a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 .games span{font-size:.72rem;border:1px solid var(--line);border-radius:4px;padding:0 5px;color:var(--muted)}
 .src{margin-top:auto;padding-top:8px;border-top:1px dashed var(--line);font-size:.8rem;color:var(--muted)}
 .src .ok{color:var(--accent)}.src .warn{color:var(--lv2)}
-.new{font-size:.72rem;background:var(--accent-soft);color:var(--accent);border-radius:4px;padding:0 6px}
+
+/* 首頁搜尋結果(連到條目頁,不是卡片) */
+.results{list-style:none;margin:0;padding:0}
+.results li{padding:10px 0;border-bottom:1px solid var(--line)}
+.results li a{font-weight:700}
+.results li .en{color:var(--muted);font-weight:400;font-size:.85rem;margin-left:6px}
+.results li .lv{margin-left:8px;vertical-align:middle}
+.results li p{margin:2px 0 0;color:var(--muted);font-size:.92rem}
+.results li.empty{border:0}
+
+/* 條目頁 */
+.card h3 a{color:inherit}
+.entry{max-width:720px;margin:24px 0 0}
+.entry .back{margin:16px 0 0}
 
 /* 來源表 */
 table.sources{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:16px}

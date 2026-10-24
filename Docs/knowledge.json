@@ -35,7 +35,8 @@
     "link_checked_at": "2026-10-22",
     "queue_title": "Day",
     "curated_by": "manual",
-    "curated_at": "2026-10-18"
+    "curated_at": "2026-10-18",
+    "slug": "day"
   },
   {
     "id": "pikipedia-1377",
@@ -73,7 +74,8 @@
     "link_checked_at": "2026-10-22",
     "queue_title": "Onion",
     "curated_by": "manual",
-    "curated_at": "2026-10-18"
+    "curated_at": "2026-10-18",
+    "slug": "onion"
   },
   {
     "id": "pikipedia-1253",
@@ -112,7 +114,8 @@
     "link_ok": true,
     "link_checked_at": "2026-10-22",
     "curated_by": "manual",
-    "curated_at": "2026-10-18"
+    "curated_at": "2026-10-18",
+    "slug": "pikmin-family"
   },
   {
     "id": "pikipedia-1338",
@@ -150,7 +153,8 @@
     "link_checked_at": "2026-10-22",
     "curated_by": "manual",
     "curated_at": "2026-10-18",
-    "queue_title": "Pikmin series"
+    "queue_title": "Pikmin series",
+    "slug": "pikmin-series"
   },
   {
     "id": "pikipedia-758",
@@ -189,7 +193,8 @@
     "link_checked_at": "2026-10-22",
     "queue_title": "Leader",
     "curated_by": "manual",
-    "curated_at": "2026-10-18"
+    "curated_at": "2026-10-18",
+    "slug": "leader"
   },
   {
     "id": "pikipedia-1078",
@@ -227,7 +232,8 @@
     "link_checked_at": "2026-10-22",
     "queue_title": "Pellet",
     "curated_by": "manual",
-    "curated_at": "2026-10-18"
+    "curated_at": "2026-10-18",
+    "slug": "pellet"
   },
   {
     "id": "pikipedia-1188",
@@ -267,7 +273,8 @@
     "link_checked_at": "2026-10-22",
     "queue_title": "Red Pikmin",
     "curated_by": "manual",
-    "curated_at": "2026-10-18"
+    "curated_at": "2026-10-18",
+    "slug": "red-pikmin"
   },
   {
     "id": "pikipedia-40",
@@ -306,7 +313,8 @@
     "link_checked_at": "2026-10-22",
     "queue_title": "Blue Pikmin",
     "curated_by": "manual",
-    "curated_at": "2026-10-18"
+    "curated_at": "2026-10-18",
+    "slug": "blue-pikmin"
   },
   {
     "id": "pikipedia-1757",
@@ -346,7 +354,8 @@
     "link_checked_at": "2026-10-22",
     "queue_title": "Yellow Pikmin",
     "curated_by": "manual",
-    "curated_at": "2026-10-18"
+    "curated_at": "2026-10-18",
+    "slug": "yellow-pikmin"
   },
   {
     "id": "pikipedia-31822",
@@ -382,7 +391,8 @@
     "link_checked_at": "2026-10-22",
     "queue_title": "Ice Pikmin",
     "curated_by": "manual",
-    "curated_at": "2026-10-18"
+    "curated_at": "2026-10-18",
+    "slug": "ice-pikmin"
   },
   {
     "id": "pikipedia-7833",
@@ -420,7 +430,8 @@
     "link_checked_at": "2026-10-22",
     "queue_title": "Rock Pikmin",
     "curated_by": "manual",
-    "curated_at": "2026-10-18"
+    "curated_at": "2026-10-18",
+    "slug": "rock-pikmin"
   },
   {
     "id": "pikipedia-32799",
@@ -455,7 +466,8 @@
     "link_checked_at": "2026-10-22",
     "queue_title": "Glow Pikmin",
     "curated_by": "manual",
-    "curated_at": "2026-10-18"
+    "curated_at": "2026-10-18",
+    "slug": "glow-pikmin"
   },
   {
     "id": "pikipedia-1455",
@@ -493,7 +505,8 @@
     "link_checked_at": "2026-10-22",
     "queue_title": "White Pikmin",
     "curated_by": "manual",
-    "curated_at": "2026-10-18"
+    "curated_at": "2026-10-18",
+    "slug": "white-pikmin"
   },
   {
     "id": "pikipedia-1101",
@@ -531,7 +544,8 @@
     "link_checked_at": "2026-10-22",
     "queue_title": "Purple Pikmin",
     "curated_by": "manual",
-    "curated_at": "2026-10-18"
+    "curated_at": "2026-10-18",
+    "slug": "purple-pikmin"
   },
   {
     "id": "pikipedia-8140",
@@ -569,7 +583,8 @@
     "link_checked_at": "2026-10-22",
     "queue_title": "Winged Pikmin",
     "curated_by": "manual",
-    "curated_at": "2026-10-18"
+    "curated_at": "2026-10-18",
+    "slug": "winged-pikmin"
   },
   {
     "id": "pikipedia-195",
@@ -604,7 +619,8 @@
     "link_checked_at": "2026-10-22",
     "queue_title": "Bulbmin",
     "curated_by": "manual",
-    "curated_at": "2026-10-18"
+    "curated_at": "2026-10-18",
+    "slug": "bulbmin"
   },
   {
     "id": "pikipedia-691",
@@ -643,7 +659,8 @@
     "link_ok": true,
     "link_checked_at": "2026-10-22",
     "curated_by": "manual",
-    "curated_at": "2026-10-18"
+    "curated_at": "2026-10-18",
+    "slug": "fiery-blowhog"
   },
   {
     "id": "pikipedia-379",
@@ -680,7 +697,8 @@
     "link_checked_at": "2026-10-22",
     "queue_title": "Dwarf Bulborb",
     "curated_by": "manual",
-    "curated_at": "2026-10-18"
+    "curated_at": "2026-10-18",
+    "slug": "dwarf-bulborb"
   },
   {
     "id": "pikipedia-1184",
@@ -719,6 +737,7 @@
     "link_checked_at": "2026-10-22",
     "queue_title": "Bulborb",
     "curated_by": "manual",
-    "curated_at": "2026-10-18"
+    "curated_at": "2026-10-18",
+    "slug": "bulborb"
   }
 ]

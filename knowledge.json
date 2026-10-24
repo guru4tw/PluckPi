@@ -1,6 +1,6 @@
 {
  "site": "拔拔道場 PluckPi",
- "updated_at": "2026-10-22",
+ "updated_at": "2026-10-18",
  "count": 19,
  "license": {
   "name": "CC BY-SA 4.0",
@@ -67,6 +67,7 @@
  "entries": [
   {
    "id": "pikipedia-8607",
+   "slug": "day",
    "topic": "basics",
    "level": "入門",
    "title_zh": "一天的循環與日落",
@@ -101,6 +102,7 @@
   },
   {
    "id": "pikipedia-1377",
+   "slug": "onion",
    "topic": "basics",
    "level": "入門",
    "title_zh": "洋蔥(皮克敏的母艦)",
@@ -135,6 +137,7 @@
   },
   {
    "id": "pikipedia-1253",
+   "slug": "pikmin-family",
    "topic": "basics",
    "level": "入門",
    "title_zh": "皮克敏是什麼(物種總覽)",
@@ -170,6 +173,7 @@
   },
   {
    "id": "pikipedia-1338",
+   "slug": "pikmin-series",
    "topic": "basics",
    "level": "入門",
    "title_zh": "皮克敏系列總覽",
@@ -204,6 +208,7 @@
   },
   {
    "id": "pikipedia-758",
+   "slug": "leader",
    "topic": "basics",
    "level": "入門",
    "title_zh": "隊長(玩家操作的角色)",
@@ -239,6 +244,7 @@
   },
   {
    "id": "pikipedia-1078",
+   "slug": "pellet",
    "topic": "basics",
    "level": "入門",
    "title_zh": "顆粒(增加皮克敏的基本資源)",
@@ -273,6 +279,7 @@
   },
   {
    "id": "pikipedia-1188",
+   "slug": "red-pikmin",
    "topic": "pikmin",
    "level": "入門",
    "title_zh": "紅色皮克敏",
@@ -309,6 +316,7 @@
   },
   {
    "id": "pikipedia-40",
+   "slug": "blue-pikmin",
    "topic": "pikmin",
    "level": "入門",
    "title_zh": "藍色皮克敏",
@@ -344,6 +352,7 @@
   },
   {
    "id": "pikipedia-1757",
+   "slug": "yellow-pikmin",
    "topic": "pikmin",
    "level": "入門",
    "title_zh": "黃色皮克敏",
@@ -380,6 +389,7 @@
   },
   {
    "id": "pikipedia-31822",
+   "slug": "ice-pikmin",
    "topic": "pikmin",
    "level": "進階",
    "title_zh": "冰凍皮克敏",
@@ -412,6 +422,7 @@
   },
   {
    "id": "pikipedia-7833",
+   "slug": "rock-pikmin",
    "topic": "pikmin",
    "level": "進階",
    "title_zh": "岩石皮克敏",
@@ -446,6 +457,7 @@
   },
   {
    "id": "pikipedia-32799",
+   "slug": "glow-pikmin",
    "topic": "pikmin",
    "level": "進階",
    "title_zh": "發光皮克敏",
@@ -477,6 +489,7 @@
   },
   {
    "id": "pikipedia-1455",
+   "slug": "white-pikmin",
    "topic": "pikmin",
    "level": "進階",
    "title_zh": "白色皮克敏",
@@ -511,6 +524,7 @@
   },
   {
    "id": "pikipedia-1101",
+   "slug": "purple-pikmin",
    "topic": "pikmin",
    "level": "進階",
    "title_zh": "紫色皮克敏",
@@ -545,6 +559,7 @@
   },
   {
    "id": "pikipedia-8140",
+   "slug": "winged-pikmin",
    "topic": "pikmin",
    "level": "進階",
    "title_zh": "飛行皮克敏",
@@ -579,6 +594,7 @@
   },
   {
    "id": "pikipedia-195",
+   "slug": "bulbmin",
    "topic": "pikmin",
    "level": "達人",
    "title_zh": "寄生皮克敏",
@@ -610,6 +626,7 @@
   },
   {
    "id": "pikipedia-691",
+   "slug": "fiery-blowhog",
    "topic": "creatures",
    "level": "進階",
    "title_zh": "噴火豬",
@@ -645,6 +662,7 @@
   },
   {
    "id": "pikipedia-379",
+   "slug": "dwarf-bulborb",
    "topic": "creatures",
    "level": "進階",
    "title_zh": "小查比",
@@ -678,6 +696,7 @@
   },
   {
    "id": "pikipedia-1184",
+   "slug": "bulborb",
    "topic": "creatures",
    "level": "進階",
    "title_zh": "查比(大嘴怪)",

@@ -86,6 +86,26 @@ def norm_title(t: str) -> str:
     return t[:1].upper() + t[1:] if t else t
 
 
+def make_slug(title: str, taken: set) -> str:
+    """英文頁名 → 網址 slug(小寫、非英數轉 -);撞名加 -2、-3。"""
+    base = re.sub(r"[^a-z0-9]+", "-", (title or "").lower()).strip("-") or "entry"
+    slug, n = base, 2
+    while slug in taken:
+        slug, n = f"{base}-{n}", n + 1
+    return slug
+
+
+def ensure_slugs(entries: List[dict]) -> int:
+    """缺 slug 的條目補上。slug 是條目網址,一旦產生永不改(標題改了也不變)。回傳補了幾筆。"""
+    taken = {e["slug"] for e in entries if e.get("slug")}
+    added = 0
+    for e in entries:
+        if not e.get("slug"):
+            e["slug"] = make_slug(e.get("title_en") or e.get("id", ""), taken)
+            taken.add(e["slug"]); added += 1
+    return added
+
+
 def load_knowledge(path: Path = KNOWLEDGE_JSON) -> List[dict]:
     if not path.exists():
         return []

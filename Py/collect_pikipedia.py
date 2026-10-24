@@ -14,6 +14,7 @@ collect_pikipedia.py — 從 Pikipedia(CC BY-SA 4.0)收集皮克敏知識原料
               與「脈絡欄位」(topic / level / title_zh,以 topics.md 為準);
               「整理欄位」(summary_zh / key_points_zh / status / curated_*)一律保留
   - 佇列裡找不到的頁面(missing)→ 印警告,不寫入
+  - 缺 `slug`(條目網址)的條目在這裡補上;build 只讀不寫,slug 一律由收集時產生
 
 用法:
     python3 Py/collect_pikipedia.py                 # 最多收 20 個新頁面
@@ -33,7 +34,7 @@ import urllib.parse
 import urllib.request
 from typing import Dict, List
 
-from common import (KNOWLEDGE_JSON, TODAY, UA, QueueItem, load_knowledge, norm_title,
+from common import (KNOWLEDGE_JSON, TODAY, UA, QueueItem, ensure_slugs, load_knowledge, norm_title,
                     parse_topics, queue_items, save_knowledge, sort_key)
 
 API = "https://www.pikminwiki.com/api.php"
@@ -128,6 +129,10 @@ def main() -> int:
     todo = new_items + old_items
     print(f"佇列 {len(queue)} 頁;已收集 {len(existing)};本次抓新 {len(new_items)}、重抓 {len(old_items)}")
     if not todo:
+        backfilled = ensure_slugs(existing)
+        if backfilled and not args.dry_run:
+            save_knowledge(existing)
+            print(f"補上 {backfilled} 筆 slug")
         print("沒有要抓的頁面,結束。")
         return 0
 
@@ -160,6 +165,7 @@ def main() -> int:
             time.sleep(DELAY)
 
     existing.sort(key=sort_key(topics))
+    ensure_slugs(existing)
     print(f"新增 {added}、更新 {updated}、找不到 {missing};總計 {len(existing)} 條")
     if args.dry_run:
         print("(dry-run,未寫檔)")

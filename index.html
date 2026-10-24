@@ -27,7 +27,7 @@
       <span class="step">③ 出處(來源・版本・授權)</span>
     </div>
     <!-- STATS:START -->
-<p class="stats">最近更新 2026-10-22・共 19 條知識(已中文整理 19 條)・每週一清晨自動更新・<a href="sources/">引用來源總表</a></p>
+<p class="stats">最近更新 2026-10-18・共 19 條知識(已中文整理 19 條)・每週一清晨自動更新・<a href="zh-hant/sources/">引用來源總表</a></p>
 <!-- STATS:END -->
   </div>
 </header>
@@ -36,23 +36,15 @@
   <section>
     <h2 style="margin:22px 0 0;font-size:1.2rem">道場地圖</h2>
     <!-- MAP:START -->
-<ul class="map"><li><a href="topics/basics.html"><span class="n">1</span> <span class="t">入門基礎</span><span class="c">6 條</span><span class="d">第一次接觸皮克敏要先知道的事:這是什麼遊戲、基本單位是什麼、一天怎麼過。</span></a></li><li><a href="topics/pikmin.html"><span class="n">2</span> <span class="t">皮克敏圖鑑</span><span class="c">10 條</span><span class="d">各色皮克敏的特性、免疫與用途。選對顏色就是成功的一半。</span></a></li><li><a href="topics/creatures.html"><span class="n">3</span> <span class="t">原生生物</span><span class="c">3 條</span><span class="d">PNF-404 上的生物圖鑑:常見敵人、頭目與牠們的弱點。</span></a></li><li><a href="topics/collectibles.html"><span class="n">4</span> <span class="t">寶物與收集</span><span class="c">0 條</span><span class="d">每代要收的東西不一樣:太空船零件、寶物、水果、遇難者。</span></a></li><li><a href="topics/strategy.html"><span class="n">5</span> <span class="t">戰術與攻略</span><span class="c">0 條</span><span class="d">怎麼把皮克敏用得又快又省:投擲、衝鋒、分隊、段取り(Dandori)。</span></a></li><li><a href="topics/lore.html"><span class="n">6</span> <span class="t">世界觀與考據</span><span class="c">0 條</span><span class="d">角色、星球與公司:歐利瑪、Hocotate 運輸、PNF-404 的真相。</span></a></li><li><a href="topics/games.html"><span class="n">7</span> <span class="t">系列作品</span><span class="c">0 條</span><span class="d">每一代的定位與差異,想入坑從哪一代開始。</span></a></li></ul>
+<ul class="map"><li><a href="zh-hant/topics/basics/"><span class="n">1</span> <span class="t">入門基礎</span><span class="c">6 條</span><span class="d">第一次接觸皮克敏要先知道的事:這是什麼遊戲、基本單位是什麼、一天怎麼過。</span></a></li><li><a href="zh-hant/topics/pikmin/"><span class="n">2</span> <span class="t">皮克敏圖鑑</span><span class="c">10 條</span><span class="d">各色皮克敏的特性、免疫與用途。選對顏色就是成功的一半。</span></a></li><li><a href="zh-hant/topics/creatures/"><span class="n">3</span> <span class="t">原生生物</span><span class="c">3 條</span><span class="d">PNF-404 上的生物圖鑑:常見敵人、頭目與牠們的弱點。</span></a></li><li><a href="zh-hant/topics/collectibles/"><span class="n">4</span> <span class="t">寶物與收集</span><span class="c">0 條</span><span class="d">每代要收的東西不一樣:太空船零件、寶物、水果、遇難者。</span></a></li><li><a href="zh-hant/topics/strategy/"><span class="n">5</span> <span class="t">戰術與攻略</span><span class="c">0 條</span><span class="d">怎麼把皮克敏用得又快又省:投擲、衝鋒、分隊、段取り(Dandori)。</span></a></li><li><a href="zh-hant/topics/lore/"><span class="n">6</span> <span class="t">世界觀與考據</span><span class="c">0 條</span><span class="d">角色、星球與公司:歐利瑪、Hocotate 運輸、PNF-404 的真相。</span></a></li><li><a href="zh-hant/topics/games/"><span class="n">7</span> <span class="t">系列作品</span><span class="c">0 條</span><span class="d">每一代的定位與差異,想入坑從哪一代開始。</span></a></li></ul>
 <!-- MAP:END -->
   </section>
 
   <div class="toolbar">
     <input id="q" type="search" placeholder="搜尋:紅色、Oatchi、火、洋蔥…" aria-label="搜尋知識條目">
-    <div class="chips" id="levels">
-      <button class="chip on" data-lv="">全部</button>
-      <button class="chip" data-lv="入門">入門</button>
-      <button class="chip" data-lv="進階">進階</button>
-      <button class="chip" data-lv="達人">達人</button>
-    </div>
-    <button class="chip" id="newonly" title="最近 7 天新收集">只看本週新增</button>
-    <span class="count" id="count"></span>
+    <span class="count" id="count" aria-live="polite"></span>
   </div>
-
-  <div id="app"><p class="empty">載入知識資料中…</p></div>
+  <ul class="results" id="results"></ul>
 </main>
 
 <footer class="site-foot">
@@ -66,60 +58,33 @@
 </footer>
 
 <script>
+// 首頁只做兩件事:搜尋(結果是連到條目頁的清單,卡片 HTML 只在 build_site.py 產生)、
+// 把舊的首頁錨點(#pikipedia-xxx 條目、#t-slug 主題)轉到新網址。
 (function(){
   const $=s=>document.querySelector(s);
   const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-  const state={q:'',lv:'',newOnly:false,data:null};
-  const weekAgo=new Date(Date.now()-7*864e5).toISOString().slice(0,10);
+  let entries=[];
 
-  function card(e){
-    const curated=e.status==='curated'&&e.summary_zh;
-    const sum=curated?`<p class="sum">${esc(e.summary_zh)}</p>`:`<p class="sum en">${esc(e.excerpt_en||'')}</p>`;
-    const pts=(e.key_points_zh||[]).length?`<details><summary>重點</summary><ul>${e.key_points_zh.map(p=>`<li>${esc(p)}</li>`).join('')}</ul></details>`:'';
-    const orig=curated&&e.excerpt_en?`<details><summary>原文(英文)</summary><p class="sum en">${esc(e.excerpt_en)}</p></details>`:'';
-    const games=(e.games||[]).length?`<div class="games">${e.games.map(g=>`<span>${esc(g)}</span>`).join('')}</div>`:'';
-    const s=e.source||{};
-    const link=e.link_ok===false?'<span class="warn">⚠ 連結待確認</span>':(e.link_ok?'<span class="ok">✓ 連結已驗證</span>':'');
-    const isNew=e.fetched_at>=weekAgo?'<span class="new">本週新增</span>':'';
-    return `<article class="card" id="${esc(e.id)}">
-      <div class="head"><span class="lv" data-lv="${esc(e.level)}">${esc(e.level)}</span>${curated?'':'<span class="raw">待整理・原文</span>'}${isNew}</div>
-      <h3>${esc(e.title_zh||e.title_en)}<span class="en">${esc(e.title_en)}</span></h3>
-      ${sum}${pts}${orig}${games}
-      <div class="src">出處:<a href="${esc(s.url)}" rel="noopener">${esc(s.name)}〈${esc(e.title_en)}〉</a>
-        ・版本 ${esc(s.revid)}・${esc(s.license)}・查閱 ${esc(s.accessed)} ${link}</div>
-    </article>`;
+  function hay(e){return [e.title_zh,e.title_en,e.summary_zh,e.excerpt_en,(e.key_points_zh||[]).join(' '),(e.games||[]).join(' ')].join(' ').toLowerCase();}
+  function render(q){
+    const words=q.split(/\s+/).filter(Boolean);
+    if(!words.length){$('#results').innerHTML='';$('#count').textContent='';return;}
+    const hits=entries.filter(e=>words.every(w=>e._hay.includes(w)));
+    $('#count').textContent=`找到 ${hits.length} 條`;
+    $('#results').innerHTML=hits.map(e=>`<li><a href="zh-hant/k/${esc(e.slug)}/">${esc(e.title_zh||e.title_en)}<span class="en">${esc(e.title_en)}</span></a>
+      <span class="lv" data-lv="${esc(e.level)}">${esc(e.level)}</span><p>${esc(e.summary_zh||e.excerpt_en)}</p></li>`).join('')
+      ||'<li class="empty">沒有符合的條目,換個關鍵字試試。</li>';
   }
 
-  function matches(e){
-    if(state.lv&&e.level!==state.lv)return false;
-    if(state.newOnly&&!(e.fetched_at>=weekAgo))return false;
-    if(!state.q)return true;
-    const hay=[e.title_zh,e.title_en,e.summary_zh,e.excerpt_en,(e.key_points_zh||[]).join(' '),(e.games||[]).join(' ')].join(' ').toLowerCase();
-    return state.q.split(/\s+/).filter(Boolean).every(w=>hay.includes(w));
-  }
-
-  function render(){
-    const d=state.data;if(!d)return;
-    const shown=d.entries.filter(e=>!e.hidden&&matches(e));
-    $('#count').textContent=`顯示 ${shown.length} / ${d.count} 條`;
-    if(!shown.length){$('#app').innerHTML='<p class="empty">沒有符合的條目。換個關鍵字,或把難度切回「全部」。</p>';return;}
-    $('#app').innerHTML=d.topics.map(t=>{
-      const es=shown.filter(e=>e.topic===t.slug);
-      if(!es.length)return'';
-      return `<section class="topic" id="t-${esc(t.slug)}">
-        <h2><span class="n">${t.order}</span>${esc(t.name)}<a class="more" href="topics/${esc(t.slug)}.html">主題頁 →</a></h2>
-        <p class="desc">${esc(t.desc)}</p>
-        <div class="cards">${es.map(card).join('')}</div></section>`;
-    }).join('');
-  }
-
-  $('#q').addEventListener('input',e=>{state.q=e.target.value.trim().toLowerCase();render();});
-  $('#levels').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;
-    document.querySelectorAll('#levels .chip').forEach(c=>c.classList.toggle('on',c===b));state.lv=b.dataset.lv;render();});
-  $('#newonly').addEventListener('click',e=>{state.newOnly=!state.newOnly;e.currentTarget.classList.toggle('on',state.newOnly);render();});
-
-  fetch('knowledge.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{state.data=d;render();})
-    .catch(()=>{$('#app').innerHTML='<p class="empty">讀不到 knowledge.json。本地預覽請用 HTTP server(python3 -m http.server 8766),不要直接開檔案。</p>';});
+  fetch('knowledge.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{
+    entries=d.entries.filter(e=>!e.hidden).map(e=>Object.assign(e,{_hay:hay(e)}));
+    const h=decodeURIComponent(location.hash.slice(1));
+    const hit=entries.find(e=>e.id===h);
+    if(hit)return location.replace(`zh-hant/k/${hit.slug}/`);
+    if(h.startsWith('t-')&&d.topics.some(t=>t.slug===h.slice(2)))return location.replace(`zh-hant/topics/${h.slice(2)}/`);
+    render($('#q').value.trim().toLowerCase());
+  }).catch(()=>{$('#count').textContent='讀不到 knowledge.json,搜尋暫停。本地預覽請用 python3 -m http.server 8766。';});
+  $('#q').addEventListener('input',e=>render(e.target.value.trim().toLowerCase()));
 })();
 </script>
 </body>
