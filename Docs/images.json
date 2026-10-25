@@ -1,0 +1,110 @@
+[
+  {
+    "file": "mascot-bud.svg",
+    "title": "吉祥物芽芽(花苞狀態)",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "author": "PluckPi",
+    "kind": "original",
+    "source_url": null,
+    "added": "2026-10-25",
+    "use": "首頁互動體驗、空狀態",
+    "alt": "一個花苞形狀的小生物站在地上。"
+  },
+  {
+    "file": "mascot-bloom.svg",
+    "title": "吉祥物芽芽(開花狀態)",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "author": "PluckPi",
+    "kind": "original",
+    "source_url": null,
+    "added": "2026-10-25",
+    "use": "首頁互動體驗、讀完子分類的獎勵",
+    "alt": "一個花苞形狀的小生物站在一圈白色花瓣中間,張嘴在笑。"
+  },
+  {
+    "file": "seedling.svg",
+    "title": "花苗",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "author": "PluckPi",
+    "kind": "original",
+    "source_url": null,
+    "added": "2026-10-25",
+    "use": "首頁互動體驗、走路與成長大分類",
+    "alt": "一株花苗從土裡長出兩片葉子。"
+  },
+  {
+    "file": "flower-coral.svg",
+    "title": "珊瑚色的花",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "author": "PluckPi",
+    "kind": "original",
+    "source_url": null,
+    "added": "2026-10-25",
+    "use": "首頁花路、讀完的進度",
+    "alt": "一朵珊瑚色的五瓣花。"
+  },
+  {
+    "file": "flower-lilac.svg",
+    "title": "薰衣草色的花",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "author": "PluckPi",
+    "kind": "original",
+    "source_url": null,
+    "added": "2026-10-25",
+    "use": "首頁花路、讀完的進度",
+    "alt": "一朵薰衣草色的五瓣花。"
+  },
+  {
+    "file": "flower-sun.svg",
+    "title": "暖陽色的花",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "author": "PluckPi",
+    "kind": "original",
+    "source_url": null,
+    "added": "2026-10-25",
+    "use": "首頁花路、讀完的進度",
+    "alt": "一朵黃色的五瓣花。"
+  },
+  {
+    "file": "flower-mint.svg",
+    "title": "薄荷色的花",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "author": "PluckPi",
+    "kind": "original",
+    "source_url": null,
+    "added": "2026-10-25",
+    "use": "首頁花路、讀完的進度",
+    "alt": "一朵薄荷色的五瓣花。"
+  },
+  {
+    "file": "petal.svg",
+    "title": "一片花瓣",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "author": "PluckPi",
+    "kind": "original",
+    "source_url": null,
+    "added": "2026-10-25",
+    "use": "種花動畫",
+    "alt": "一片珊瑚色的花瓣。"
+  },
+  {
+    "file": "footprints.svg",
+    "title": "兩個腳印",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "author": "PluckPi",
+    "kind": "original",
+    "source_url": null,
+    "added": "2026-10-25",
+    "use": "走路動畫、步數",
+    "alt": "地上有兩個腳印。"
+  }
+]

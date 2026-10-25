@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img"><title>花苗</title>
+  <ellipse cx="50" cy="84" rx="40" ry="12" fill="#B98A5E" stroke="#2E5E3E" stroke-width="2.5"/>
+  <path d="M50 82 C50 70 50 60 50 52" fill="none" stroke="#2E5E3E" stroke-width="3" stroke-linecap="round"/>
+  <path d="M50 58 C38 58 26 50 24 36 C38 34 48 44 50 58 Z" fill="#5BA56B" stroke="#2E5E3E" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M50 54 C60 52 74 42 76 28 C62 28 52 38 50 54 Z" fill="#7CC28A" stroke="#2E5E3E" stroke-width="2.5" stroke-linejoin="round"/>
+</svg>

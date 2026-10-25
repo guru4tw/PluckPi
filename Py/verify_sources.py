@@ -4,8 +4,8 @@
 verify_sources.py — 逐筆連回出處網址,確認引用連結有效
 =====================================================
 
-讀 Docs/knowledge.json,對每條 source.url 做 HEAD(405 則改 GET),
-把 link_ok / link_checked_at 寫回,並產 Docs/link_report.json。
+讀 Docs/knowledge.json,對每條條目的每個 sources[].url 做 HEAD(405 則改 GET;同一網址只查一次),
+每個來源寫 ok,條目的 link_ok = 全部來源都通;並產 Docs/link_report.json。
 
 exit code:0 = 全通過;2 = 有失效連結(不擋 pipeline,前端標「⚠ 連結待確認」);1 = 讀檔失敗。
 
@@ -37,6 +37,8 @@ def check(url: str) -> tuple[bool, int | str]:
         except urllib.error.HTTPError as e:
             if e.code == 405 and method == "HEAD":
                 continue
+            if 300 <= e.code < 400:            # Python 3.9 的 urllib 不跟 307/308;有轉址就代表頁面還在
+                return True, e.code
             return False, e.code
         except Exception as e:
             return False, type(e).__name__
@@ -52,28 +54,31 @@ def main() -> int:
     except Exception as e:
         print(f"讀檔失敗:{e}", file=sys.stderr); return 1
 
-    rows, broken = [], []
-    for i, e in enumerate(entries):
-        url = (e.get("source") or {}).get("url")
-        if not url:
-            ok, st = False, "no-url"
-        else:
-            ok, st = check(url)
-        rows.append({"id": e["id"], "title": e.get("title_en"), "url": url, "ok": ok, "status": st})
-        if not ok:
-            broken.append(rows[-1])
+    rows, broken, seen = [], [], {}
+    for e in entries:
+        srcs = e.get("sources") or []
+        for s in srcs:
+            url = s.get("url")
+            if url not in seen:
+                if seen:
+                    time.sleep(DELAY)
+                seen[url] = check(url) if url else (False, "no-url")
+            ok, st = seen[url]
+            rows.append({"slug": e.get("slug"), "url": url, "ok": ok, "status": st})
+            if not ok:
+                broken.append(rows[-1])
+            if not args.no_annotate:
+                s["ok"] = ok
+            print(f"  {'✓' if ok else '✗'} {e.get('slug')} {url} ({st})")
         if not args.no_annotate:
-            e["link_ok"] = ok; e["link_checked_at"] = TODAY
-        print(f"  {'✓' if ok else '✗'} {e.get('title_en')} ({st})")
-        if i + 1 < len(entries):
-            time.sleep(DELAY)
+            e["link_ok"] = bool(srcs) and all(x.get("ok") for x in srcs); e["link_checked_at"] = TODAY
 
     REPORT.write_text(json.dumps({"checked_at": TODAY, "total": len(rows), "broken": len(broken),
                                   "broken_list": broken, "rows": rows}, ensure_ascii=False, indent=2) + "\n",
                       encoding="utf-8")
     if not args.no_annotate:
         save_knowledge(entries)
-    print(f"檢查 {len(rows)} 條,失效 {len(broken)};報告 {REPORT.name}")
+    print(f"檢查 {len(rows)} 個出處(不重複網址 {len(seen)}),失效 {len(broken)};報告 {REPORT.name}")
     return 2 if broken else 0
 
 

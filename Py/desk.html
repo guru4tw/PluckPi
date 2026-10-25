@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>收集台 ｜ 拔拔道場</title>
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+/* 收集台專用(只在本機 Py/desk.py 提供,不上站) */
+.desk{display:grid;grid-template-columns:240px minmax(0,1.3fr) minmax(0,1fr);gap:16px;margin:16px 0 40px}
+@media (max-width:1000px){.desk{grid-template-columns:1fr}}
+.box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;margin-bottom:12px}
+.box h4{margin:0 0 10px;font-size:1rem;display:flex;gap:8px;align-items:center}
+.box h4 .no{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font-size:.8rem}
+.queue{list-style:none;margin:0;padding:0;font-size:.88rem;max-height:70vh;overflow:auto}
+.queue .grp{color:var(--muted);font-size:.78rem;padding:10px 0 4px}
+.queue button{all:unset;box-sizing:border-box;display:flex;gap:6px;width:100%;padding:5px 6px;border-radius:6px;cursor:pointer}
+.queue button:hover{background:var(--accent-soft)}
+.queue button.sel{background:var(--accent-soft);font-weight:700}
+.queue .st{margin-left:auto;font-size:.7rem;border-radius:5px;padding:0 5px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.queue .st.done{border-color:var(--accent);color:var(--accent)}
+.queue .st.unv{border-style:dashed}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.lab{display:block;font-size:.8rem;color:var(--muted);margin:10px 0 4px}
+.desk input,.desk textarea{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+.desk textarea{min-height:90px;resize:vertical;line-height:1.6}
+.btn{font:inherit;border:1px solid var(--accent);background:var(--accent);color:#fff;border-radius:8px;padding:7px 14px;cursor:pointer}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.ghost{background:none;color:var(--accent)}
+.meta{font-size:.82rem;color:var(--muted);background:var(--bg);border-radius:8px;padding:8px 10px}
+.excerpt{font-size:.85rem;color:var(--muted);max-height:160px;overflow:auto;border-left:3px solid var(--line);padding-left:10px;margin-top:8px;white-space:pre-wrap}
+.ref{font-size:.85rem;color:var(--muted)}.ref ul{margin:4px 0 0;padding-left:18px}
+.hint{font-size:.78rem;color:var(--muted);margin-top:4px}
+.lint{list-style:none;margin:0;padding:0;font-size:.85rem}
+.lint li{padding:4px 0;border-bottom:1px dashed var(--line)}
+.pass{color:var(--accent)}.fail{color:var(--lv2)}
+.sticky{position:sticky;top:12px}
+.msg{font-size:.88rem;margin-top:8px}
+.empty{color:var(--muted);padding:40px 0;text-align:center}
+</style>
+</head>
+<body>
+<header class="site-head"><div class="wrap">
+  <div class="brand"><h1>收集台</h1><span class="en">PluckPi desk</span>
+    <span class="dots"><span class="r"></span><span class="y"></span><span class="b"></span></span></div>
+  <p class="crumbs">本機工具:挑頁面 → 抓原文 → 用 STE100 寫中文 → 存入 Docs/knowledge.json。上站前再跑 verify_sources.py 與 build_site.py。</p>
+</div></header>
+
+<main class="wrap"><div class="desk">
+  <aside>
+    <div class="box"><h4>佇列(topics.md)</h4><ul class="queue" id="queue"></ul></div>
+  </aside>
+
+  <section id="editor"><p class="empty">從左邊佇列挑一個頁面。</p></section>
+
+  <aside class="sticky" id="side" hidden>
+    <div class="box"><h4>STE100 檢查</h4><ul class="lint" id="lint"></ul></div>
+    <div class="box"><h4>卡片預覽</h4><div id="preview"></div></div>
+    <button class="btn" id="save" disabled>存入 knowledge.json</button>
+    <p class="msg" id="msg"></p>
+  </aside>
+</div></main>
+
+<template id="tpl">
+  <div class="box">
+    <h4><span class="no">1</span>玩家問題與來源</h4>
+    <div class="row"><strong data-k="title"></strong><span data-k="place"></span>
+      <button class="btn ghost" data-act="fetch" style="margin-left:auto">重抓來源</button></div>
+    <div data-k="sources" class="meta">抓取中…</div>
+  </div>
+  <div class="box">
+    <h4><span class="no">2</span>用 STE100 寫中文</h4>
+    <label class="lab">答案:事實(一行一句,一句一件事)</label><textarea data-f="facts_zh"></textarea>
+    <label class="lab">怎麼做(一行一步,動詞開頭,最多 6 步,可空)</label><textarea data-f="steps_zh" style="min-height:64px"></textarea>
+    <label class="lab">例外(可空)</label><textarea data-f="exceptions_zh" style="min-height:48px"></textarea>
+    <label class="lab">詞彙(一行一個「詞 = 定義」,可空)</label><textarea data-f="terms_zh" style="min-height:48px"></textarea>
+    <p class="hint">規則見 Py/ste.py;標準詞見 Docs/glossary.md。只寫來源有寫的事。</p>
+  </div>
+</template>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const FIELDS = ["facts_zh","steps_zh","exceptions_zh","terms_zh"];
+const ST = {todo:"未寫", done:"已寫"};
+let cur = null, fetched = null, lintTimer = 0;
+
+async function api(path, body) {
+  const r = await fetch(path, body ? {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(body)} : {});
+  return r.json();
+}
+
+async function loadQueue() {
+  const q = await api("/api/queue");
+  let html = "", grp = "";
+  for (const it of q) {
+    if (it.topic_name !== grp) { grp = it.topic_name; html += `<li class="grp">${esc(it.category)} › ${esc(grp)}</li>`; }
+    html += `<li><button data-s="${esc(it.slug)}" class="${cur && cur.slug === it.slug ? "sel" : ""}">
+      ${esc(it.title_zh)}<span class="st ${it.state}${it.status ? " unv" : ""}">${ST[it.state]}${it.status ? "・待證" : ""}</span></button></li>`;
+  }
+  $("#queue").innerHTML = html;
+  $("#queue").querySelectorAll("button").forEach(b => b.onclick = () => pick(q.find(x => x.slug === b.dataset.s)));
+}
+
+function pick(it) {
+  cur = it; fetched = null;
+  $("#queue").querySelectorAll("button").forEach(b => b.classList.toggle("sel", b.dataset.s === it.slug));
+  $("#editor").replaceChildren($("#tpl").content.cloneNode(true));
+  $("#editor [data-k=title]").textContent = it.title_zh;
+  $("#editor [data-k=place]").textContent = `・${it.topic_name}・${it.level}${it.status ? "・待證" : ""}`;
+  $("#editor [data-act=fetch]").onclick = doFetch;
+  $("#editor").querySelectorAll("[data-f]").forEach(el => el.addEventListener("input", schedule));
+  $("#side").hidden = false; $("#msg").textContent = "";
+  doFetch();
+}
+
+function form() {
+  const o = {slug: cur.slug};
+  for (const f of FIELDS) o[f] = $(`#editor [data-f=${f}]`).value.split("\n").map(s => s.trim()).filter(Boolean);
+  return o;
+}
+
+async function doFetch() {
+  const box = $("#editor [data-k=sources]");
+  box.textContent = "抓取中…";
+  const d = await api("/api/fetch?slug=" + encodeURIComponent(cur.slug));
+  if (d.ok === false) { box.innerHTML = `<span class="fail">✗ ${esc(d.error)}</span>`; return; }
+  fetched = d;
+  box.innerHTML = d.sources.map(s => `<div style="margin-bottom:8px"><b>${s.grade || "?"}</b>・${esc(s.name)}
+      ${s.title ? "〈" + esc(s.title) + "〉・版本 " + s.revid : ""}・<a href="${esc(s.url)}" target="_blank" rel="noopener">打開原頁</a>
+      ${s.excerpt ? `<div class="excerpt">${esc(s.excerpt)}</div>` : ""}</div>`).join("");
+  for (const f of FIELDS) { const v = d[f]; $(`#editor [data-f=${f}]`).value = Array.isArray(v) ? v.join("\n") : (v || ""); }
+  runLint();
+}
+
+function schedule() { clearTimeout(lintTimer); lintTimer = setTimeout(runLint, 250); preview(); }
+
+async function runLint() {
+  const {issues} = await api("/api/lint", form());
+  const NAME = {facts:"事實", steps:"步驟", exceptions:"例外", terms:"詞彙"};
+  $("#lint").innerHTML = issues.length
+    ? issues.map(i => `<li class="fail">✗ ${NAME[i.field]}${i.index ? " " + i.index : ""}:${esc(i.msg)}</li>`).join("")
+    : `<li class="pass">✓ 全部通過</li>`;
+  $("#save").disabled = issues.length > 0 || !fetched;
+  preview();
+}
+
+function preview() {
+  const f = form(), d = fetched || {sources: []};
+  const li = a => a.map(s => `<li>${esc(s)}</li>`).join("");
+  $("#preview").innerHTML = `<article class="card ste" style="border:none;padding:0">
+    <div class="head"><span class="lv" data-lv="${esc(cur.level)}">${esc(cur.level)}</span>${cur.status ? '<span class="raw">待證</span>' : ""}</div>
+    <h3>${esc(cur.title_zh)}</h3>
+    <ul class="facts">${li(f.facts_zh)}</ul>
+    ${f.steps_zh.length ? `<div><span class="label">怎麼做</span><ol>${li(f.steps_zh)}</ol></div>` : ""}
+    ${f.exceptions_zh.length ? `<div><span class="label">例外</span><ul class="facts">${li(f.exceptions_zh)}</ul></div>` : ""}
+    ${f.terms_zh.length ? `<div class="terms">${f.terms_zh.map(t => `<span>${esc(t)}</span>`).join("")}</div>` : ""}
+    <div class="src">出處:${d.sources.map(s => esc(s.grade + " " + s.name + (s.title ? "〈" + s.title + "〉" : ""))).join("、") || "(先抓取來源)"}</div>
+  </article>`;
+}
+
+$("#save").onclick = async () => {
+  $("#save").disabled = true; $("#msg").textContent = "存入中…";
+  const r = await api("/api/save", form());
+  if (r.ok) {
+    $("#msg").innerHTML = `<span class="pass">✓ 已寫入 ${esc(r.file)}(${esc(r.slug)})。上站前跑 verify_sources.py 與 build_site.py。</span>`;
+    loadQueue();
+  } else {
+    $("#msg").innerHTML = `<span class="fail">✗ ${esc(r.error || "STE100 檢查沒過")}</span>`;
+    runLint();
+  }
+};
+
+loadQueue();
+</script>
+</body>
+</html>

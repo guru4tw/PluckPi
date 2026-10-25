@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""topics.md 解析測試:舊格式、新格式(>> en: 行、key=value 欄)、省略難度,以及格式錯要報錯。
+"""topics.md 解析測試:大分類 → 子分類 → 條目三層、來源欄、具名欄位、格式錯要報錯。
 
 跑法:python3 -m unittest discover -s tests
 """
@@ -9,122 +9,123 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "Py"))
 
-from common import TOPICS_MD, TopicsFormatError, parse_topics, parse_topics_text, queue_items  # noqa: E402
+from common import (TOPICS_MD, TopicsFormatError, parse_categories, parse_categories_text,  # noqa: E402
+                    parse_topics_text, queue_items)
 
-OLD = """# 標題
-> 檔頭說明,不屬於任何主題
+GOOD = """# 檔頭標題,不是大分類
+> 檔頭說明
 > - 這行像條目但在檔頭,要略過
 
-## 2. 皮克敏圖鑑 (pikmin) · 入門
-> 各色皮克敏的特性。
-- Red Pikmin | 紅色皮克敏
-- Purple Pikmin | 紫色皮克敏 | 進階
+# 2. 走路與成長 (grow)
+> 走路讓花苗長大。
+>> en: Walk and grow — Steps grow seedlings.
 
-## 1. 入門基礎 (basics)
-- Onion | 洋蔥(皮克敏的母艦)
+## 2.1 花苗 (seedlings) · 進階
+> 花苗靠步數長大。
+- 花苗要走幾步才會長大? (seedling-steps) | pikipedia:Seedling
+- 花苗包滿了怎麼辦? (seedling-slots) | pikipedia:Slot; https://example.com/faq | 達人 | 先讀=seedling-steps
+
+# 1. 開始玩 (start)
+> 裝好遊戲。
+
+## 1.1 認識這個遊戲 (about)
+- 要花錢嗎? (is-it-free) | https://example.com/a | 狀態=待證 | 期限=2026-12-31
 """
 
-NEW = """## 2. 皮克敏圖鑑 (pikmin) · 入門
-> 各色皮克敏的特性、免疫與用途。
->> en: Pikmin Types — Each Pikmin type's traits, immunities and uses.
-- Red Pikmin | 紅色皮克敏
-- Purple Pikmin | 紫色皮克敏 | 進階 | 先讀=Red Pikmin
-- White Pikmin | 白色皮克敏 | 先讀=Red Pikmin
-"""
+
+def bad(snippet: str, head: str = "# 1. 開始玩 (start)\n> 大綱\n## 1.1 子 (sub)\n") -> str:
+    return head + snippet
 
 
-def parse(text):
-    return parse_topics_text(text, "topics.md")
+class ParseTest(unittest.TestCase):
+    def setUp(self):
+        self.cats = parse_categories_text(GOOD)
 
+    def test_categories_sorted_and_outline(self):
+        self.assertEqual([c.slug for c in self.cats], ["start", "grow"])
+        self.assertEqual(self.cats[1].outline, "走路讓花苗長大。")
+        self.assertEqual((self.cats[1].name_en, self.cats[1].desc_en), ("Walk and grow", "Steps grow seedlings."))
 
-class OldFormat(unittest.TestCase):
-    def test_topics_sorted_by_order(self):
-        ts = parse(OLD)
-        self.assertEqual([t.slug for t in ts], ["basics", "pikmin"])
+    def test_subcategory(self):
+        t = self.cats[1].topics[0]
+        self.assertEqual((t.number, t.slug, t.level, t.category, t.desc), ("2.1", "seedlings", "進階", "grow", "花苗靠步數長大。"))
 
-    def test_heading_fields(self):
-        t = parse(OLD)[1]
-        self.assertEqual((t.order, t.name, t.slug, t.level, t.desc), (2, "皮克敏圖鑑", "pikmin", "入門", "各色皮克敏的特性。"))
-
-    def test_heading_level_omitted_defaults_to_beginner(self):
-        self.assertEqual(parse(OLD)[0].level, "入門")
+    def test_topic_order_follows_category_order(self):
+        self.assertEqual([t.slug for t in parse_topics_text(GOOD)], ["about", "seedlings"])
+        self.assertEqual([t.order for t in parse_topics_text(GOOD)], [1, 2])
 
     def test_items(self):
-        items = parse(OLD)[1].items
-        self.assertEqual([(i.title, i.title_zh, i.topic, i.level) for i in items],
-                         [("Red Pikmin", "紅色皮克敏", "pikmin", "入門"), ("Purple Pikmin", "紫色皮克敏", "pikmin", "進階")])
+        a, b = self.cats[1].topics[0].items
+        self.assertEqual((a.title_zh, a.slug, a.level, a.title), ("花苗要走幾步才會長大?", "seedling-steps", "進階", "Seedling"))
+        self.assertEqual([(s.kind, s.ref) for s in b.sources], [("pikipedia", "Slot"), ("url", "https://example.com/faq")])
+        self.assertEqual((b.level, b.prereq), ("達人", "seedling-steps"))
+        c = self.cats[0].topics[0].items[0]
+        self.assertEqual((c.status, c.expires, c.title), ("待證", "2026-12-31", "https://example.com/a"))
 
-    def test_preamble_ignored(self):
-        self.assertEqual(len(queue_items(parse(OLD))), 3)
-
-    def test_no_english_means_empty(self):
-        t = parse(OLD)[1]
-        self.assertEqual((t.name_en, t.desc_en), ("", ""))
-        self.assertIsNone(t.items[0].prereq)
+    def test_queue_items(self):
+        self.assertEqual(len(queue_items(parse_topics_text(GOOD))), 3)
 
 
-class NewFormat(unittest.TestCase):
-    def test_english_line(self):
-        t = parse(NEW)[0]
-        self.assertEqual(t.name_en, "Pikmin Types")
-        self.assertEqual(t.desc_en, "Each Pikmin type's traits, immunities and uses.")
-        self.assertEqual(t.desc, "各色皮克敏的特性、免疫與用途。")
+class ErrorTest(unittest.TestCase):
+    CASES = {
+        "no slug on question": "- 沒有 slug 的問題 | pikipedia:X\n",
+        "bad source": "- 問題 (q) | Seedling\n",
+        "empty column": "- 問題 (q) |  \n",
+        "level not third": "- 問題 (q) | pikipedia:X | 狀態=待證 | 入門\n",
+        "unknown key": "- 問題 (q) | pikipedia:X | 作者=我\n",
+        "bad status": "- 問題 (q) | pikipedia:X | 狀態=確定\n",
+        "bad expiry": "- 問題 (q) | pikipedia:X | 期限=明年\n",
+        "duplicate item slug": "- 甲 (q) | pikipedia:X\n- 乙 (q) | pikipedia:Y\n",
+        "two outlines": "> 第二行說明\n> 第三行\n",
+        "stray line": "隨便一行\n",
+    }
 
-    def test_english_name_only(self):
-        t = parse("## 1. 入門基礎 (basics)\n>> en: Basics\n")[0]
-        self.assertEqual((t.name_en, t.desc_en), ("Basics", ""))
+    def test_errors(self):
+        for name, snippet in self.CASES.items():
+            with self.subTest(name), self.assertRaises(TopicsFormatError):
+                parse_categories_text(bad(snippet))
 
-    def test_named_field_does_not_leak_into_title_zh(self):
-        purple = parse(NEW)[0].items[1]
-        self.assertEqual((purple.title_zh, purple.level, purple.prereq), ("紫色皮克敏", "進階", "Red Pikmin"))
+    def test_item_under_category(self):
+        with self.assertRaises(TopicsFormatError):
+            parse_categories_text("# 1. 開始玩 (start)\n- 問題 (q) | pikipedia:X\n")
 
-    def test_named_field_with_level_omitted(self):
-        white = parse(NEW)[0].items[2]
-        self.assertEqual((white.title_zh, white.level, white.prereq), ("白色皮克敏", "入門", "Red Pikmin"))
+    def test_sub_number_mismatch(self):
+        with self.assertRaises(TopicsFormatError):
+            parse_categories_text("# 1. 開始玩 (start)\n## 2.1 子 (sub)\n")
 
+    def test_duplicate_slug_across_levels(self):
+        with self.assertRaises(TopicsFormatError):
+            parse_categories_text("# 1. 開始玩 (start)\n## 1.1 子 (start)\n")
 
-class Errors(unittest.TestCase):
-    def assertBad(self, text, needle):
+    def test_empty_category(self):
+        with self.assertRaises(TopicsFormatError):
+            parse_categories_text("# 1. 開始玩 (start)\n> 大綱\n")
+
+    def test_error_has_line_number(self):
         with self.assertRaises(TopicsFormatError) as cm:
-            parse(text)
-        self.assertIn(needle, str(cm.exception))
-
-    def test_item_missing_title_zh(self):
-        self.assertBad("## 1. 入門基礎 (basics)\n- Onion\n", "topics.md:2")
-
-    def test_unknown_field(self):
-        self.assertBad("## 1. 入門基礎 (basics)\n- Onion | 洋蔥 | 前置=Leader\n", "前置")
-
-    def test_bad_level(self):
-        self.assertBad("## 1. 入門基礎 (basics)\n- Onion | 洋蔥 | 高手\n", "高手")
-
-    def test_level_after_named_field(self):
-        self.assertBad("## 1. 入門基礎 (basics)\n- Onion | 洋蔥 | 先讀=Leader | 進階\n", "topics.md:2")
-
-    def test_empty_field(self):
-        self.assertBad("## 1. 入門基礎 (basics)\n- Onion |  | 進階\n", "topics.md:2")
-
-    def test_malformed_heading(self):
-        self.assertBad("## 1. 入門基礎 basics\n", "topics.md:1")
-
-    def test_english_in_heading(self):
-        self.assertBad("## 2. 皮克敏圖鑑 / Pikmin Types (pikmin)\n", ">> en:")
-
-    def test_unknown_lang_line(self):
-        self.assertBad("## 1. 入門基礎 (basics)\n>> ja: 基本\n", "ja")
-
-    def test_stray_text_in_topic(self):
-        self.assertBad("## 1. 入門基礎 (basics)\n隨手寫的筆記\n", "topics.md:2")
-
-    def test_duplicate_slug(self):
-        self.assertBad("## 1. 入門基礎 (basics)\n## 2. 再一次 (basics)\n", "basics")
+            parse_categories_text(bad("隨便一行\n"))
+        self.assertIn("topics.md:4:", str(cm.exception))
 
 
-class RealFile(unittest.TestCase):
-    def test_current_topics_md_parses(self):
-        ts = parse_topics(TOPICS_MD)
-        self.assertEqual(len(ts), 7)
-        self.assertTrue(all(t.desc and t.items for t in ts))
+class RepoFileTest(unittest.TestCase):
+    """真正的 Docs/topics.md 要能解析,而且守住網站精神裡的硬規則。"""
+
+    def test_repo_topics(self):
+        cats = parse_categories(TOPICS_MD)
+        self.assertEqual(len(cats), 7)
+        self.assertIn("trivia", [c.slug for c in cats])
+        for c in cats:
+            self.assertTrue(c.outline, f"{c.name} 缺大綱")
+            for t in c.topics:
+                self.assertTrue(t.desc, f"{t.name} 缺一句話說明")
+                self.assertTrue(t.items, f"{t.name} 沒有條目")
+
+    def test_every_item_has_graded_source(self):
+        """每條至少一個 A(官方網域)或 B(Pikipedia)來源。"""
+        official = ("pikminbloom.com", "helpshift.com", "nintendo.com", "apps.apple.com")
+        for it in queue_items([t for c in parse_categories(TOPICS_MD) for t in c.topics]):
+            ok = any(s.kind == "pikipedia" or any(d in s.ref for d in official) for s in it.sources)
+            self.assertTrue(ok, f"{it.slug} 沒有 A/B 來源")
 
 
 if __name__ == "__main__":

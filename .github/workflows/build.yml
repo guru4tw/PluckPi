@@ -1,0 +1,58 @@
+name: build-site
+
+# 手動收集制:條目由本機收集台(Py/desk.py)寫進 Docs/knowledge.json 後 push。
+# 本 workflow 只在 push 改到資料時跑:驗證出處 → 建站 → 有變動才 commit。
+# 不再排程收集;要重跑就在 Actions 頁按 Run workflow。
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "Docs/knowledge.json"
+      - "Docs/topics.md"
+      - "Docs/retired.json"
+      - "Py/build_site.py"
+      - "assets/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-site
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # 步驟 1:逐筆連回出處驗證。失效會 exit 2 但不擋 pipeline,前端標「⚠ 連結待確認」
+      - name: Verify source links
+        run: python Py/verify_sources.py
+        continue-on-error: true
+
+      # 步驟 2:正規化 → 根 knowledge.json + zh-hant/ 主題頁、條目頁、來源頁 + 舊網址轉址頁 + sitemap + 首頁注入
+      - name: Build site
+        run: python Py/build_site.py
+
+      # 步驟 3:有變動才 commit + push
+      - name: Commit changes
+        run: |
+          git config user.name  "pluckpi-bot"
+          git config user.email "pluckpi-bot@users.noreply.github.com"
+          git add Docs/knowledge.json Docs/link_report.json knowledge.json sitemap.xml index.html
+          git add -A zh-hant/ topics/ sources/
+          if git diff --cached --quiet; then
+            echo "無變動,略過 commit"
+          else
+            git commit -m "chore: 重建網站 (verify + build)"
+            git push
+          fi

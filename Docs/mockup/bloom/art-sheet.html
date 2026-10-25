@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>素材預覽 ｜ 拔拔道場</title>
+<style>
+:root{--bg:#FFF6E3;--card:#fff;--ink:#2E5E3E;--line:#eadfc6}
+body{margin:0;font:15px/1.6 -apple-system,"PingFang TC","Noto Sans TC",sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:960px;margin:0 auto;padding:16px}
+h1{font-size:1.4rem;margin:8px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;text-align:center}
+figure img{width:96px;height:96px;object-fit:contain}
+figcaption{font-size:.8rem}
+.dark{background:#1d2a22;--card:#24342a;--line:#33473a;color:#e8efe9;border-radius:14px;padding:12px;margin-top:16px}
+.pal{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.pal span{display:flex;align-items:center;gap:6px;font-size:.8rem}
+.pal i{width:22px;height:22px;border-radius:6px;border:1px solid #0002;display:inline-block}
+</style>
+</head>
+<body><div class="wrap">
+<h1>原創素材預覽(階段 3)</h1>
+<p>全部是本站原創 SVG,授權 CC BY-SA 4.0,登記在 Docs/images.json。</p>
+<div class="pal" id="pal"></div>
+<div class="grid" id="light"></div>
+<div class="dark"><p>暗色背景檢查</p><div class="grid" id="dark"></div></div>
+</div>
+<script>
+const files=["mascot-bud","mascot-bloom","seedling","flower-coral","flower-lilac","flower-sun","flower-mint","petal","footprints"];
+const html=files.map(f=>`<figure><img src="../../../assets/img/${f}.svg" alt=""><figcaption>${f}</figcaption></figure>`).join("");
+document.getElementById("light").innerHTML=html;document.getElementById("dark").innerHTML=html;
+const pal=[["葉綠","#5BA56B"],["深林","#2E5E3E"],["蜜桃","#F6B49A"],["珊瑚","#F07C6C"],["薰衣草","#B79CE0"],["暖陽","#F5C451"],["薄荷","#8FD3C1"],["奶油","#FFF6E3"],["泥土","#B98A5E"]];
+document.getElementById("pal").innerHTML=pal.map(([n,c])=>`<span><i style="background:${c}"></i>${n} ${c}</span>`).join("");
+</script>
+</body>
+</html>

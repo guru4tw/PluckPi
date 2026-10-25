@@ -1,0 +1,33 @@
+{
+  "_說明": "主機版時期的舊網址 → 新去處。網址是承諾:舊條目與舊主題不能 404。build_site.py 依此產轉址頁。",
+  "entries": {
+    "pikmin-series": "zh-hant/c/start/",
+    "pikmin-family": "zh-hant/topics/types/",
+    "onion": "zh-hant/c/start/",
+    "leader": "zh-hant/c/start/",
+    "day": "zh-hant/c/grow/",
+    "pellet": "zh-hant/c/grow/",
+    "red-pikmin": "zh-hant/topics/types/",
+    "yellow-pikmin": "zh-hant/topics/types/",
+    "blue-pikmin": "zh-hant/topics/types/",
+    "purple-pikmin": "zh-hant/topics/types/",
+    "white-pikmin": "zh-hant/topics/types/",
+    "rock-pikmin": "zh-hant/topics/types/",
+    "winged-pikmin": "zh-hant/topics/types/",
+    "ice-pikmin": "zh-hant/topics/types/",
+    "glow-pikmin": "zh-hant/topics/types/",
+    "bulbmin": "zh-hant/topics/types/",
+    "bulborb": "",
+    "fiery-blowhog": "",
+    "dwarf-bulborb": ""
+  },
+  "topics": {
+    "basics": "zh-hant/c/start/",
+    "pikmin": "zh-hant/c/pikmin/",
+    "creatures": "",
+    "collectibles": "zh-hant/topics/decor/",
+    "strategy": "",
+    "lore": "zh-hant/c/trivia/",
+    "games": "zh-hant/c/start/"
+  }
+}

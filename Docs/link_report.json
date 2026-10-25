@@ -1,139 +1,486 @@
 {
-  "checked_at": "2026-10-22",
-  "total": 19,
+  "checked_at": "2026-10-25",
+  "total": 80,
   "broken": 0,
   "broken_list": [],
   "rows": [
     {
-      "id": "pikipedia-8607",
-      "title": "Day",
-      "url": "https://www.pikminwiki.com/Day",
+      "slug": "what-is-bloom",
+      "url": "https://www.pikminwiki.com/Pikmin_Bloom",
       "ok": true,
       "status": 200
     },
     {
-      "id": "pikipedia-1377",
-      "title": "Onion",
-      "url": "https://www.pikminwiki.com/Onion",
+      "slug": "what-is-bloom",
+      "url": "https://pikminbloom.com/zh_hant/",
+      "ok": true,
+      "status": 308
+    },
+    {
+      "slug": "is-it-free",
+      "url": "https://www.pikminwiki.com/Pikmin_Bloom",
       "ok": true,
       "status": 200
     },
     {
-      "id": "pikipedia-1253",
-      "title": "Pikmin family",
-      "url": "https://www.pikminwiki.com/Pikmin_family",
+      "slug": "is-it-free",
+      "url": "https://www.nintendo.com/au/games/mobile/pikmin-bloom/",
       "ok": true,
       "status": 200
     },
     {
-      "id": "pikipedia-1338",
-      "title": "Pikmin series",
-      "url": "https://www.pikminwiki.com/Pikmin_series",
+      "slug": "sign-in",
+      "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/2360-help-with-sign-in-issues/",
       "ok": true,
       "status": 200
     },
     {
-      "id": "pikipedia-758",
-      "title": "Leader",
-      "url": "https://www.pikminwiki.com/Leader",
+      "slug": "step-permission-ios",
+      "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/2861-my-steps-aren-t-being-counted-correctly-ios/",
       "ok": true,
       "status": 200
     },
     {
-      "id": "pikipedia-1078",
-      "title": "Pellet",
-      "url": "https://www.pikminwiki.com/Pellet",
+      "slug": "step-permission-android",
+      "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/2862-my-steps-aren-t-being-counted-correctly-android/",
       "ok": true,
       "status": 200
     },
     {
-      "id": "pikipedia-1188",
-      "title": "Red Pikmin",
-      "url": "https://www.pikminwiki.com/Red_Pikmin",
+      "slug": "step-permission-android",
+      "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/3162-faq-and-known-issues/",
       "ok": true,
       "status": 200
     },
     {
-      "id": "pikipedia-40",
-      "title": "Blue Pikmin",
-      "url": "https://www.pikminwiki.com/Blue_Pikmin",
+      "slug": "first-day-todo",
+      "url": "https://www.pikminwiki.com/Pikmin_Bloom",
       "ok": true,
       "status": 200
     },
     {
-      "id": "pikipedia-1757",
-      "title": "Yellow Pikmin",
-      "url": "https://www.pikminwiki.com/Yellow_Pikmin",
+      "slug": "first-day-todo",
+      "url": "https://pikminbloom.com/zh_hant/",
+      "ok": true,
+      "status": 308
+    },
+    {
+      "slug": "map-screen",
+      "url": "https://www.pikminwiki.com/Pikmin_Bloom_interface",
       "ok": true,
       "status": 200
     },
     {
-      "id": "pikipedia-31822",
-      "title": "Ice Pikmin",
-      "url": "https://www.pikminwiki.com/Ice_Pikmin",
+      "slug": "steps-not-counted",
+      "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/3162-faq-and-known-issues/",
       "ok": true,
       "status": 200
     },
     {
-      "id": "pikipedia-7833",
-      "title": "Rock Pikmin",
-      "url": "https://www.pikminwiki.com/Rock_Pikmin",
+      "slug": "steps-not-counted",
+      "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/2861-my-steps-aren-t-being-counted-correctly-ios/",
       "ok": true,
       "status": 200
     },
     {
-      "id": "pikipedia-32799",
-      "title": "Glow Pikmin",
-      "url": "https://www.pikminwiki.com/Glow_Pikmin",
+      "slug": "steps-not-counted",
+      "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/2862-my-steps-aren-t-being-counted-correctly-android/",
       "ok": true,
       "status": 200
     },
     {
-      "id": "pikipedia-1455",
-      "title": "White Pikmin",
-      "url": "https://www.pikminwiki.com/White_Pikmin",
+      "slug": "seedling-steps",
+      "url": "https://www.pikminwiki.com/Seedling",
       "ok": true,
       "status": 200
     },
     {
-      "id": "pikipedia-1101",
-      "title": "Purple Pikmin",
-      "url": "https://www.pikminwiki.com/Purple_Pikmin",
+      "slug": "seedling-sources",
+      "url": "https://www.pikminwiki.com/Seedling",
       "ok": true,
       "status": 200
     },
     {
-      "id": "pikipedia-8140",
-      "title": "Winged Pikmin",
-      "url": "https://www.pikminwiki.com/Winged_Pikmin",
+      "slug": "seedling-sources",
+      "url": "https://scopelyexplore.helpshift.com/hc/en/11-pikmin-bloom/faq/2182-items-and-the-effects/",
       "ok": true,
       "status": 200
     },
     {
-      "id": "pikipedia-195",
-      "title": "Bulbmin",
-      "url": "https://www.pikminwiki.com/Bulbmin",
+      "slug": "seedling-slots",
+      "url": "https://www.pikminwiki.com/Planter_Pack",
       "ok": true,
       "status": 200
     },
     {
-      "id": "pikipedia-691",
-      "title": "Fiery Blowhog",
-      "url": "https://www.pikminwiki.com/Fiery_Blowhog",
+      "slug": "seedling-slots",
+      "url": "https://www.pikminwiki.com/Seedling",
       "ok": true,
       "status": 200
     },
     {
-      "id": "pikipedia-379",
-      "title": "Dwarf Bulborb",
-      "url": "https://www.pikminwiki.com/Dwarf_Bulborb",
+      "slug": "seedling-slots",
+      "url": "https://niantic.helpshift.com/hc/zh/23-pikmin-bloom/faq/3040-storage-size-of-each-item/",
       "ok": true,
       "status": 200
     },
     {
-      "id": "pikipedia-1184",
-      "title": "Bulborb",
-      "url": "https://www.pikminwiki.com/Bulborb",
+      "slug": "after-pluck",
+      "url": "https://pikminbloom.com/zh_hant/",
+      "ok": true,
+      "status": 308
+    },
+    {
+      "slug": "after-pluck",
+      "url": "https://www.pikminwiki.com/Pikmin_Bloom",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "pikmin-silhouette",
+      "url": "https://pikminbloom.com/news/nov25-icepikmin-welcome",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "nectar-sources",
+      "url": "https://pikminbloom.com/zh_hant/",
+      "ok": true,
+      "status": 308
+    },
+    {
+      "slug": "nectar-sources",
+      "url": "https://www.pikminwiki.com/Pikmin_Bloom",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "why-plant",
+      "url": "https://pikminbloom.com/zh_hant/",
+      "ok": true,
+      "status": 308
+    },
+    {
+      "slug": "why-plant",
+      "url": "https://www.pikminwiki.com/Pikmin_Bloom",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "cant-plant",
+      "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/2877-i-can-t-plant-flowers-1636017814/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "level-up",
+      "url": "https://www.pikminwiki.com/Level",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "coins",
+      "url": "https://www.pikminwiki.com/Pikmin_Bloom",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "pikmin-types",
+      "url": "https://www.pikminwiki.com/Seedling",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "pikmin-types",
+      "url": "https://pikminbloom.com/news/nov25-icepikmin-welcome",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "type-unlock-levels",
+      "url": "https://www.pikminwiki.com/Seedling",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "raise-friendship",
+      "url": "https://www.pikminwiki.com/Friendship",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "raise-friendship",
+      "url": "https://pikminbloom.com/zh_hant/",
+      "ok": true,
+      "status": 308
+    },
+    {
+      "slug": "what-is-decor",
+      "url": "https://pikminbloom.com/zh_hant/",
+      "ok": true,
+      "status": 308
+    },
+    {
+      "slug": "what-is-decor",
+      "url": "https://www.pikminwiki.com/Decor_Pikmin",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "get-decor",
+      "url": "https://www.pikminwiki.com/Decor_Pikmin",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "get-decor",
+      "url": "https://www.pikminwiki.com/Seedling",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "pikmin4-link",
+      "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/5260-how-to-send-the-seedlings-for-decor-pikmin-found-in-pikmin-4-to-pikmin-bloom/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "what-is-expedition",
+      "url": "https://www.pikminwiki.com/Expedition",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "what-is-expedition",
+      "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/4926-expedition-snapshots/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "what-is-expedition",
+      "url": "https://pikminbloom.com/zh_hant/",
+      "ok": true,
+      "status": 308
+    },
+    {
+      "slug": "mushroom-battle",
+      "url": "https://www.pikminwiki.com/Mushroom_battle",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "mushroom-battle",
+      "url": "https://pikminbloom.com/zh_hant/",
+      "ok": true,
+      "status": 308
+    },
+    {
+      "slug": "mushroom-rewards",
+      "url": "https://scopelyexplore.helpshift.com/hc/en/11-pikmin-bloom/faq/2158-rewards-for-clearing-mushrooms/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "mushroom-rewards",
+      "url": "https://www.pikminwiki.com/Mushroom_battle",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "mushroom-rewards",
+      "url": "https://pikminbloom.com/zh_hant/",
+      "ok": true,
+      "status": 308
+    },
+    {
+      "slug": "bloom-big-flower",
+      "url": "https://www.pikminwiki.com/Big_Flower",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "bloom-big-flower",
+      "url": "https://pikminbloom.com/zh_hant/",
+      "ok": true,
+      "status": 308
+    },
+    {
+      "slug": "bloom-big-flower",
+      "url": "https://www.pikminwiki.com/Expedition",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "add-friend",
+      "url": "https://www.pikminwiki.com/Friend",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "weekly-challenge",
+      "url": "https://pikminbloom.com/zh_hant/",
+      "ok": true,
+      "status": 308
+    },
+    {
+      "slug": "weekly-challenge",
+      "url": "https://www.pikminwiki.com/Weekly_challenge",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "weekly-challenge",
+      "url": "https://www.pikminwiki.com/Pikmin_Bloom",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "community-day",
+      "url": "https://www.pikminwiki.com/Event/Community_Days",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "community-day",
+      "url": "https://www.pikminwiki.com/Expedition",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "live-events",
+      "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/5200-registering-for-live-events/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "live-events",
+      "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/3886/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "live-events",
+      "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/4804/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "what-is-lifelog",
+      "url": "https://pikminbloom.com/zh_hant/",
+      "ok": true,
+      "status": 308
+    },
+    {
+      "slug": "what-is-lifelog",
+      "url": "https://www.pikminwiki.com/Lifelog",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "send-postcard",
+      "url": "https://www.pikminwiki.com/Postcard",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "send-postcard",
+      "url": "https://www.pikminwiki.com/Friend",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "send-postcard",
+      "url": "https://pikminbloom.com/zh_hant/",
+      "ok": true,
+      "status": 308
+    },
+    {
+      "slug": "send-postcard",
+      "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/4926-expedition-snapshots/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "postcard-storage",
+      "url": "https://pikminbloom.com/news/nov25-icepikmin-welcome",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "postcard-storage",
+      "url": "https://www.pikminwiki.com/Postcard",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "postcard-storage",
+      "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/4926-expedition-snapshots/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "no-enemies",
+      "url": "https://www.pikminwiki.com/Pikmin_Bloom",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "launch-markets",
+      "url": "https://www.pikminwiki.com/Pikmin_Bloom",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "devs-on-bloom",
+      "url": "https://www.nintendo.com/us/whatsnew/ask-the-developer-vol-10-pikmin-4-part-3/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "big-flower-locations",
+      "url": "https://www.pikminwiki.com/Big_Flower",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "nintendo-account-gift",
+      "url": "https://www.pikminwiki.com/Pikmin_Bloom",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "trail-visibility",
+      "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/2874-information-shared-with-others/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "trail-visibility",
+      "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/3277-privacy-zone/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "privacy-zone",
+      "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/3277-privacy-zone/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "shared-info",
+      "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/2874-information-shared-with-others/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "spoofing",
+      "url": "https://niantic.helpshift.com/hc/zh-hant/23-pikmin-bloom/faq/2868-three-strike-discipline-policy/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "slug": "spoofing",
+      "url": "https://niantic.helpshift.com/hc/zh-hant/23-pikmin-bloom/section/259-safety-security/",
       "ok": true,
       "status": 200
     }

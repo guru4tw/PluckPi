@@ -28,13 +28,18 @@ UA = "PluckPiBot/0.1 (+https://github.com/guru4tw/PluckPi; weekly knowledge dige
 LEVELS = ("入門", "進階", "達人")
 TODAY = datetime.date.today().isoformat()
 
-# ## 1. 入門基礎 (basics) · 入門
-HEADING_RE = re.compile(r"^##\s+(\d+)\.\s*(.+?)\s*\(([a-z0-9_-]+)\)\s*(?:[·・]\s*(入門|進階|達人))?\s*$")
+# # 1. 開始玩 (start)
+CAT_RE = re.compile(r"^#\s+(\d+)\.\s*(.+?)\s*\(([a-z0-9_-]+)\)\s*$")
+# ## 1.2 第一天要做的事 (first-day) · 入門
+SUB_RE = re.compile(r"^##\s+(\d+)\.(\d+)\s*(.+?)\s*\(([a-z0-9_-]+)\)\s*(?:[·・]\s*(入門|進階|達人))?\s*$")
 # >> en: Pikmin Types — Each Pikmin type's traits, immunities and uses.
 LANG_RE = re.compile(r"^>>\s*([a-z-]+)\s*:\s*(.+?)\s*$")
-# 標題裡出現這些符號,多半是把英文名寫進來了(英文要寫在 >> en: 行)
+# - 我走路為什麼沒算到步數? (steps-not-counted)
+QUESTION_RE = re.compile(r"^(.+?)\s*\(([a-z0-9-]+)\)$")
+# 名稱裡出現這些符號,多半是把英文名寫進來了(英文要寫在 >> en: 行)
 NAME_BAD = ("|", "｜", "/", "—")
-ITEM_KEYS = {"先讀": "prereq"}     # 條目行的具名欄位 → QueueItem 屬性
+ITEM_KEYS = {"先讀": "prereq", "狀態": "status", "期限": "expires"}   # 條目行的具名欄位 → QueueItem 屬性
+STATUSES = ("待證",)
 
 
 class TopicsFormatError(ValueError):
@@ -42,37 +47,88 @@ class TopicsFormatError(ValueError):
 
 
 @dataclass
+class Source:
+    kind: str     # pikipedia / url
+    ref: str      # Pikipedia 頁名或完整網址
+
+
+@dataclass
 class Topic:
-    order: int
+    """子分類。網站上的一個子分類頁;條目掛在這裡。"""
+    order: int                 # 全站流水號(排序用)
     name: str
     slug: str
     level: str = "入門"
     desc: str = ""
     name_en: str = ""
     desc_en: str = ""
+    number: str = ""           # 顯示用編號,例 "1.2"
+    category: str = ""         # 所屬大分類 slug
     items: List["QueueItem"] = field(default_factory=list)
 
 
 @dataclass
+class Category:
+    """大分類。網站上的一個大綱頁;首頁網站地圖的一格。"""
+    order: int
+    name: str
+    slug: str
+    outline: str = ""          # 一行大綱
+    name_en: str = ""
+    desc_en: str = ""
+    topics: List[Topic] = field(default_factory=list)
+
+
+@dataclass
 class QueueItem:
-    title: str        # Pikipedia 頁名
-    title_zh: str
-    topic: str        # slug
+    title_zh: str               # 玩家問題
+    slug: str                   # 條目網址,全站唯一
+    sources: List[Source]
+    topic: str                  # 子分類 slug
     level: str
-    prereq: Optional[str] = None   # 先讀=頁名(跨主題前置,選配)
+    prereq: Optional[str] = None    # 先讀=條目 slug(選配)
+    status: Optional[str] = None    # 狀態=待證(只有一個來源或來源不夠硬)
+    expires: Optional[str] = None   # 期限=YYYY-MM-DD(活動類)
+
+    @property
+    def title(self) -> str:
+        """第一個 Pikipedia 頁名;沒有就給第一個網址。收集器用它抓原文。"""
+        pk = [s.ref for s in self.sources if s.kind == "pikipedia"]
+        return pk[0] if pk else self.sources[0].ref
+
+
+def parse_sources(col: str, fail) -> List[Source]:
+    """`pikipedia:頁名; https://…` → Source 清單。每條至少一個來源。"""
+    out: List[Source] = []
+    for raw in (x.strip() for x in col.split(";")):
+        if raw.startswith("pikipedia:") and raw[10:].strip():
+            out.append(Source("pikipedia", raw[10:].strip()))
+        elif re.match(r"^https?://\S+$", raw):
+            out.append(Source("url", raw))
+        else:
+            fail(f"來源「{raw}」要寫成「pikipedia:頁名」或完整網址,多個用 ; 分開")
+    return out
 
 
 def parse_item(body: str, cur: Topic, fail) -> QueueItem:
-    """`頁名 | 中文標題 | 難度(可省) | key=value ...` → QueueItem。難度只能在第 3 欄,具名欄位之後不能再有位置欄。"""
+    """`玩家問題 (slug) | 來源 | 難度(可省) | key=value ...` → QueueItem。難度只能在第 3 欄。"""
     cols = [c.strip() for c in body.split("|")]
     if len(cols) < 2 or not all(cols):
-        fail("條目要寫成「- 頁名 | 中文標題 | 難度(可省)」,且每欄不可空白")
-    item = QueueItem(title=cols[0], title_zh=cols[1], topic=cur.slug, level=cur.level)
+        fail("條目要寫成「- 玩家問題 (slug) | 來源 | 難度(可省)」,且每欄不可空白")
+    m = QUESTION_RE.match(cols[0])
+    if not m:
+        fail("玩家問題後面要接半形括號 slug,例:「我走路為什麼沒算到步數? (steps-not-counted)」")
+    item = QueueItem(title_zh=m.group(1), slug=m.group(2), sources=parse_sources(cols[1], fail),
+                     topic=cur.slug, level=cur.level)
     for i, col in enumerate(cols[2:], start=2):
         if "=" in col:
             key, _, val = (x.strip() for x in col.partition("="))
             if key not in ITEM_KEYS or not val:
                 fail(f"不認得的欄位「{col}」(可用:{'、'.join(ITEM_KEYS)})")
+            if key == "狀態" and val not in STATUSES:
+                fail(f"狀態只能是 {'/'.join(STATUSES)}")
+            if key == "期限" and not re.match(r"^\d{4}-\d{2}-\d{2}$", val):
+                fail("期限要寫成 YYYY-MM-DD")
             setattr(item, ITEM_KEYS[key], val)
         elif i == 2 and col in LEVELS:
             item.level = col
@@ -81,47 +137,96 @@ def parse_item(body: str, cur: Topic, fail) -> QueueItem:
     return item
 
 
-def parse_topics_text(text: str, src: str = "topics.md") -> List[Topic]:
-    """解析 topics.md 內容 → Topic 清單(含各自的佇列),依主題編號排序。
+def parse_categories_text(text: str, src: str = "topics.md") -> List[Category]:
+    """解析 topics.md → 大分類 → 子分類 → 條目。
 
-    第一個 `##` 之前是檔頭說明,不解析;之後每一行都要認得,認不得就丟 TopicsFormatError。
+    第一個 `# 數字.` 大分類之前是檔頭說明,不解析;之後每一行都要認得,認不得就丟 TopicsFormatError。
     """
-    topics: List[Topic] = []
+    cats: List[Category] = []
+    cat: Optional[Category] = None
     cur: Optional[Topic] = None
+    seq = 0
+    slugs: set = set()
+    item_slugs: set = set()
     for n, raw in enumerate(text.splitlines(), start=1):
         line = raw.strip()
         def fail(msg: str):
             raise TopicsFormatError(f"{src}:{n}: {msg}\n  {line}")
+        if cat is None and not CAT_RE.match(line):
+            continue                                   # 檔頭
         if line.startswith("##"):
-            m = HEADING_RE.match(line)
+            m = SUB_RE.match(line)
             if not m:
-                fail("主題標題要寫成「## 數字. 中文名 (slug) · 預設難度(可省)」")
-            name = m.group(2)
+                fail("子分類標題要寫成「## 大分類號.子分類號 中文名 (slug) · 預設難度(可省)」")
+            if int(m.group(1)) != cat.order:
+                fail(f"子分類編號 {m.group(1)}.{m.group(2)} 不屬於大分類 {cat.order}")
+            name, slug = m.group(3), m.group(4)
             if any(ch in name for ch in NAME_BAD):
-                fail("主題名只放中文;英文名請寫在下一行「>> en: 英文名 — 英文說明」")
-            if any(t.slug == m.group(3) for t in topics):
-                fail(f"主題 slug「{m.group(3)}」重複")
-            cur = Topic(order=int(m.group(1)), name=name, slug=m.group(3), level=m.group(4) or "入門")
-            topics.append(cur)
-        elif cur is None or not line:
+                fail("子分類名只放中文;英文名請寫在下一行「>> en: 英文名 — 英文說明」")
+            if slug in slugs:
+                fail(f"slug「{slug}」重複")
+            seq += 1
+            cur = Topic(order=seq, name=name, slug=slug, level=m.group(5) or "入門",
+                        number=f"{m.group(1)}.{m.group(2)}", category=cat.slug)
+            cat.topics.append(cur); slugs.add(slug)
+        elif line.startswith("#"):
+            m = CAT_RE.match(line)
+            if not m:
+                fail("大分類標題要寫成「# 數字. 中文名 (slug)」")
+            name, slug = m.group(2), m.group(3)
+            if any(ch in name for ch in NAME_BAD):
+                fail("大分類名只放中文;英文名請寫在下一行「>> en: 英文名 — 英文說明」")
+            if slug in slugs:
+                fail(f"slug「{slug}」重複")
+            cat = Category(order=int(m.group(1)), name=name, slug=slug)
+            cur = None
+            cats.append(cat); slugs.add(slug)
+        elif not line:
             continue
         elif line.startswith(">>"):
             m = LANG_RE.match(line)
             if not m or m.group(1) != "en":
                 fail("語系行目前只支援「>> en: 英文名 — 英文說明」")
-            if cur.name_en:
-                fail("同一主題只能有一行 >> en:")
+            target = cur or cat
+            if target.name_en:
+                fail("同一分類只能有一行 >> en:")
             name_en, _, desc_en = m.group(2).partition("—")
-            cur.name_en, cur.desc_en = name_en.strip(), desc_en.strip()
+            target.name_en, target.desc_en = name_en.strip(), desc_en.strip()
         elif line.startswith(">"):
-            if cur.desc:
-                fail("主題說明只能一行(第一行 > 之後不能再有 >)")
-            cur.desc = line[1:].strip()
+            if cur is None:
+                if cat.outline:
+                    fail("大綱只能一行(第一行 > 之後不能再有 >)")
+                cat.outline = line[1:].strip()
+            else:
+                if cur.desc:
+                    fail("子分類說明只能一行(第一行 > 之後不能再有 >)")
+                cur.desc = line[1:].strip()
         elif line.startswith("- "):
-            cur.items.append(parse_item(line[2:], cur, fail))
+            if cur is None:
+                fail("條目要放在子分類(##)底下,不能直接掛在大分類下")
+            item = parse_item(line[2:], cur, fail)
+            if item.slug in item_slugs:
+                fail(f"條目 slug「{item.slug}」重複")
+            item_slugs.add(item.slug)
+            cur.items.append(item)
         else:
-            fail("認不得這行:主題內只能有 > 說明、>> en: 英文、- 條目")
-    return sorted(topics, key=lambda t: t.order)
+            fail("認不得這行:分類內只能有 # 大分類、## 子分類、> 說明、>> en: 英文、- 條目")
+    cats.sort(key=lambda c: c.order)
+    for i, t in enumerate((t for c in cats for t in c.topics), start=1):
+        t.order = i                                   # 流水號跟著大分類順序重排
+    for c in cats:
+        if not c.topics:
+            raise TopicsFormatError(f"{src}: 大分類「{c.name}」底下沒有子分類")
+    return cats
+
+
+def parse_categories(path: Path = TOPICS_MD) -> List[Category]:
+    return parse_categories_text(path.read_text(encoding="utf-8"), path.name)
+
+
+def parse_topics_text(text: str, src: str = "topics.md") -> List[Topic]:
+    """攤平成子分類清單(依大分類、子分類順序)。建站與收集台以子分類為單位,用這個。"""
+    return [t for c in parse_categories_text(text, src) for t in c.topics]
 
 
 def parse_topics(path: Path = TOPICS_MD) -> List[Topic]:
@@ -130,6 +235,34 @@ def parse_topics(path: Path = TOPICS_MD) -> List[Topic]:
 
 def queue_items(topics: List[Topic]) -> List[QueueItem]:
     return [it for t in topics for it in t.items]
+
+
+# 來源分級:A 官方、B 社群百科(Pikipedia)。其他網域不算合格來源,收集台與測試會擋。
+OFFICIAL_SITES = {
+    "pikminbloom.com": "Pikmin Bloom 官網",
+    "helpshift.com": "Pikmin Bloom 說明中心",
+    "nintendo.com": "任天堂官網",
+    "apps.apple.com": "App Store 開發商頁",
+}
+PIKIPEDIA = {"name": "Pikipedia", "license": "CC BY-SA 4.0",
+             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"}
+
+
+def source_grade(src: "Source") -> Optional[str]:
+    """Source → "A" / "B" / None(不合格)。"""
+    if src.kind == "pikipedia":
+        return "B"
+    host = re.sub(r"^https?://([^/]+).*$", r"\1", src.ref).lower()
+    return "A" if any(host == d or host.endswith("." + d) for d in OFFICIAL_SITES) else None
+
+
+def official_name(url: str) -> str:
+    host = re.sub(r"^https?://([^/]+).*$", r"\1", url).lower()
+    return next((n for d, n in OFFICIAL_SITES.items() if host == d or host.endswith("." + d)), host)
+
+
+def pikipedia_url(page: str) -> str:
+    return "https://www.pikminwiki.com/" + page.replace(" ", "_")
 
 
 def norm_title(t: str) -> str:

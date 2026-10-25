@@ -1,743 +1,2304 @@
 [
   {
-    "id": "pikipedia-8607",
-    "topic": "basics",
-    "level": "入門",
-    "title_zh": "一天的循環與日落",
-    "title_en": "Day",
-    "excerpt_en": "The main Pikmin games take place over the course of several in-game days (日, lit.: \"Day\"). Dangerous creatures roam at nighttime, so exploration on PNF-404 generally only happens during the daytime. The number of days spent on the planet is also important in some games: in Pikmin, Captain Olimar has 30 days before his life-support systems fail and he's stranded on the planet permanently, and in Pikmin 3, the number of days left is determined by how many bottles of fruit juice are left, for a maximum of 99 days. Pikmin 2 and Pikmin 4 have no day limit (though the alternative game mode \"Olimar's Shipwreck Tale\" in Pikmin 4 has a 15 day time limit), and in New Play Control! Pikmin, the Nintendo Switch port of Pikmin, and Pikmin 3, the player is given the ability to go back in time and retry from a certain day of their adventure, through an option in the saved game selection menu in the case of New Play Control! Pikmin and the Nintendo Switch port of Pikmin, or a dedicated day selection menu in the case of Pikmin 3. A common challenge run in the Pikmin games is to complete the game taking the least amount of days possible.\nThe Sun Meter at the top of the HUD indicates the amount of daylight left, or in Pikmin 4's case, the clock, so effectively, the time the player has left on the current day. A number on the top right corner indicates the current day. In the Story Mode of Pikmin games, a day lasts between 13 and 18 real-life minutes, depending on the game, version, and difficulty mode, as explained here. Alternative game modes have days with varying lengths. As the day goes by, the lighting in the area changes much as it does on Earth, but enemy behavior and area layout remains constant throughout (save for the Serene Shores in Pikmin 4 where the tide changes at noon).\nAny important collectible object, such as a treasure, that is moved from its original spot, will remain in the new spot on any following day. In Pikmin, Pikmin 2, and Pikmin 3, when an enemy is killed, it usually respawns in its original place after some number of days, and if an enemy's corpse isn't brought back to an Onion before the end of the day, the corpse will disappear. In Pikmin 4, enemy corpses will remain in the location they were left at every day until brought back to an Onion, and enemies in overground areas do not respawn. Some enemies only appear on certain days. Some of the most notable enemies with this characteristic are the Smoky Progg, which disappears after day 15, the Ujadani, which only appear every 30 days, and the Goolix and Mamuta on The Impact Site, that appear on alternating days. For a list of all enemies that appear on exclusive days, please read the list of enemies in the corresponding area article.",
-    "games": [
-      "Pikmin 1",
-      "Pikmin 2",
-      "Pikmin 3",
-      "Pikmin 4"
+    "id": "what-is-bloom",
+    "slug": "what-is-bloom",
+    "topic": "about",
+    "facts_zh": [
+      "Pikmin Bloom 是皮克敏系列的手機外傳遊戲。",
+      "遊戲在 2021 年推出 iOS 和 Android 版。",
+      "遊戲玩法鼓勵玩家在現實中走路。",
+      "走路的步數可以讓花苗長成皮克敏。",
+      "拔出的皮克敏會加入玩家的隊伍。",
+      "玩家用花瓣在走過的地方種花。"
     ],
-    "source": {
-      "key": "pikipedia",
-      "name": "Pikipedia",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "url": "https://www.pikminwiki.com/Day",
-      "revid": 353816,
-      "accessed": "2026-10-18"
-    },
-    "fetched_at": "2026-10-18",
-    "summary_zh": "主系列以「一天」為單位推進,夜晚有危險生物,探索只在白天;一代限 30 天、三代看果汁存量最多 99 天,二、四代無天數限制。",
-    "key_points_zh": [
-      "夜間危險生物出沒,探索只在白天進行",
-      "一代:歐利瑪(Olimar)30 天內要修好維生系統,否則永困星球",
-      "三代:剩餘天數取決於果汁瓶數,上限 99 天",
-      "二代與四代沒有天數上限(四代「歐利瑪漂流記」模式限 15 天)"
+    "steps_zh": [],
+    "exceptions_zh": [],
+    "terms_zh": [
+      {
+        "term": "花苗",
+        "def": "走夠步數後可以拔出皮克敏的植物"
+      },
+      {
+        "term": "種花",
+        "def": "用花瓣在走過的路上種下花朵"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Pikmin Bloom",
+        "url": "https://www.pikminwiki.com/Pikmin_Bloom",
+        "revid": 355108,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 官網",
+        "url": "https://pikminbloom.com/zh_hant/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
     ],
     "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
     "hidden": false,
     "link_ok": true,
-    "link_checked_at": "2026-10-22",
-    "queue_title": "Day",
-    "curated_by": "manual",
-    "curated_at": "2026-10-18",
-    "slug": "day"
+    "link_checked_at": "2026-10-25"
   },
   {
-    "id": "pikipedia-1377",
-    "topic": "basics",
-    "level": "入門",
-    "title_zh": "洋蔥(皮克敏的母艦)",
-    "title_en": "Onion",
-    "excerpt_en": "Onions (オニヨン, lit.: \"Oniyon\") are large, round life forms that act as mother ships for the Pikmin. There are eight main types of Onion nests, each with unique coloration corresponding to either Red, Yellow, Blue, Purple, White, Rock, Winged, and Ice. As of Pikmin 4, Bulbmin and Glow Pikmin are the only Pikmin types to have no known Onions.\nIn Pikmin 3, all discovered Onions merge together the night after they are discovered, and become a single, universal Onion, greatly simplifying the act of withdrawing and retrieving multiple Pikmin types at once. It also appears that the Onions in this game are much more free in regards to which Pikmin species they will hold than their Pikmin and Pikmin 2 counterparts. In Pikmin 3, if a new Onion color is discovered, and Pikmin from that new type are left on the landing site at the end of the day, the master Onion there will accommodate them until the Onions fuse at the end of the day.\nIn Pikmin 4, it's revealed they are part of the candypop family. Onions merge in this game much like in Pikmin 3, but discovered Onions remain dormant upon being found and must be manually carried back to the master Onion in order for them to merge. Since some Pikmin types have duplicate Onions in Pikmin 4, collecting a type that has already been obtained will result in its absorption by the master Onion, converting it into 20 Pikmin of the Onion's color. Flarlic can also be brought to the Onion to increase the Pikmin limit by 10.\nDuring the daytime, Pikmin hunt and bring food, such as pellets or defeated enemies, to their Onion, which in turn produces new Pikmin seeds. If there are fewer Pikmin on the field than the allowed Pikmin limit, the seeds are ejected from its flower's head and take root in the ground as sprouts; if not, they are added to that type's Pikmin reserves as leaf Pikmin. Unlike in the area, however, the number of Pikmin that can be stored inside an Onion is unlimited, as a general rule. When night falls and all the Pikmin have returned, the Onion folds or sucks in its legs and lifts off from the ground, joining the ship in low orbit.",
-    "games": [
-      "Pikmin 1",
-      "Pikmin 2",
-      "Pikmin 3",
-      "Pikmin 4",
-      "Hey! Pikmin"
+    "id": "is-it-free",
+    "slug": "is-it-free",
+    "topic": "about",
+    "facts_zh": [
+      "Pikmin Bloom 可以免費下載。",
+      "遊戲內有付費購買的項目。",
+      "玩家可以用真錢購買金幣。",
+      "玩家也可以靠種花慢慢賺金幣。"
     ],
-    "source": {
-      "key": "pikipedia",
-      "name": "Pikipedia",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "url": "https://www.pikminwiki.com/Onion",
-      "revid": 349969,
-      "accessed": "2026-10-18"
-    },
-    "fetched_at": "2026-10-18",
-    "summary_zh": "洋蔥(Onion)是皮克敏的母艦,一種顏色一顆;寄生與發光皮克敏沒有洋蔥。三代起已發現的洋蔥會合體成一顆。",
-    "key_points_zh": [
-      "八種主要洋蔥:紅、黃、藍、紫、白、岩石、飛行、冰",
-      "到四代為止,寄生皮克敏(Bulbmin)與發光皮克敏沒有已知的洋蔥",
-      "三代中發現的洋蔥會在當晚合併成一顆通用洋蔥,收放多色皮克敏更方便"
+    "steps_zh": [],
+    "exceptions_zh": [],
+    "terms_zh": [
+      {
+        "term": "金幣",
+        "def": "遊戲內商店使用的貨幣"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Pikmin Bloom",
+        "url": "https://www.pikminwiki.com/Pikmin_Bloom",
+        "revid": 355108,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "任天堂官網",
+        "url": "https://www.nintendo.com/au/games/mobile/pikmin-bloom/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
     ],
     "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
     "hidden": false,
     "link_ok": true,
-    "link_checked_at": "2026-10-22",
-    "queue_title": "Onion",
-    "curated_by": "manual",
-    "curated_at": "2026-10-18",
-    "slug": "onion"
+    "link_checked_at": "2026-10-25"
   },
   {
-    "id": "pikipedia-1253",
-    "topic": "basics",
-    "level": "入門",
-    "title_zh": "皮克敏是什麼(物種總覽)",
-    "queue_title": "Pikmin family",
-    "title_en": "Pikmin family",
-    "excerpt_en": "Pikmin (ピクミン) are plant-animal hybrid creatures that are found on PNF-404 and the planet in Hey! Pikmin. As the titular creatures of the Pikmin series, they are the main feature of gameplay in all games in the series.\nIn the main games, Pikmin are created by Onions, which produce them as seeds, which in turn fall to the ground and become sprouts. A leader can then pluck one of these sprouts. Once plucked, Pikmin follow a leader around in their squad, and the leader can throw them at objects, as well as dismiss, swarm, and charge them. When out of a leader's squad, they can be whistled back into it. Through these basic actions, Pikmin can be ordered to carry items or fight enemies, among other abilities.\nPikmin come in several types, each with certain unique abilities (such as resistance to a specific hazard). Most are 1.2cm tall head to toe (around 3cm if the stem and top are included), and have a generally humanoid shape. On top of a Pikmin's head is either a leaf, bud, or flower, representing its maturity.\nOn its own, a Pikmin is not particularly strong, but in large groups (usually up to 100), they are capable of accomplishing many things. Pikmin can be lost to enemies and hazards, and losing all Pikmin, either of a specific type or in total, is known as a Pikmin extinction. However, Pikmin can be grown easily by carrying defeated enemies or pellets to the Onion. In addition, Candypop Buds can convert Pikmin from one type to another.",
-    "games": [
-      "Pikmin 1",
-      "Pikmin 2",
-      "Pikmin 3",
-      "Pikmin 4",
-      "Hey! Pikmin",
-      "Pikmin Bloom"
+    "id": "sign-in",
+    "slug": "sign-in",
+    "topic": "setup",
+    "facts_zh": [
+      "第一種登入方式是 Google。",
+      "第二種是 Facebook,第三種是 Apple。",
+      "第四種是 Kids @ Scopely Explore。",
+      "第五種是 Nintendo Account。",
+      "Pikmin Bloom 不儲存玩家的密碼。",
+      "忘記密碼時,玩家要向登入服務商重設。"
     ],
-    "source": {
-      "key": "pikipedia",
-      "name": "Pikipedia",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "url": "https://www.pikminwiki.com/Pikmin_family",
-      "revid": 354139,
-      "accessed": "2026-10-18"
-    },
-    "fetched_at": "2026-10-18",
-    "summary_zh": "皮克敏是 PNF-404 上半植物半動物的生物:洋蔥產出種子、落地成芽,隊長拔起後就會跟著你,可以投擲、解散、群攻、衝鋒,吹哨能召回。",
-    "key_points_zh": [
-      "半植物半動物,棲息於 PNF-404(Hey! Pikmin 則在另一顆星球)",
-      "由洋蔥產出種子 → 落地成芽 → 隊長拔起才會加入隊伍",
-      "指令:投擲、解散、群攻、衝鋒;離隊時吹哨召回"
+    "steps_zh": [
+      "檢查手機的網路連線。",
+      "重新啟動 App 後再登入。",
+      "清除 App 的快取。",
+      "重新安裝 App。",
+      "填寫客服表單,選「Sign-In Issues」。"
+    ],
+    "exceptions_zh": [
+      "生日填錯時,刪除 App 後重裝,再填正確生日。",
+      "成年玩家不能用兒童任天堂帳號登入。",
+      "兒童玩家不能用一般任天堂帳號登入。",
+      "Apple ID 刪除後無法復原。",
+      "Kids 帳號刪除後也無法復原。",
+      "瀏覽器登入失敗時,把預設瀏覽器改成 Chrome。",
+      "忘記登入方式時,玩家要聯絡客服。"
+    ],
+    "terms_zh": [
+      {
+        "term": "登入服務商",
+        "def": "提供登入帳號的公司"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/2360-help-with-sign-in-issues/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
     ],
     "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
     "hidden": false,
     "link_ok": true,
-    "link_checked_at": "2026-10-22",
-    "curated_by": "manual",
-    "curated_at": "2026-10-18",
-    "slug": "pikmin-family"
+    "link_checked_at": "2026-10-25"
   },
   {
-    "id": "pikipedia-1338",
-    "topic": "basics",
-    "level": "入門",
-    "title_zh": "皮克敏系列總覽",
-    "title_en": "Pikmin series",
-    "excerpt_en": "The Pikmin series is a video game series owned by Nintendo that focuses on using Pikmin to perform various tasks, such as carrying objects and fighting enemies. It consists of 4 main games, 5 re-releases, 2 spin-off games, and various other media.",
-    "games": [
-      "Pikmin 1",
-      "Pikmin 2",
-      "Pikmin 3",
-      "Pikmin 4",
-      "Hey! Pikmin",
-      "Pikmin Bloom"
+    "id": "step-permission-ios",
+    "slug": "step-permission-ios",
+    "topic": "setup",
+    "facts_zh": [
+      "遊戲從 Apple Health 讀取步數。",
+      "定位權限要選「Always」。",
+      "定位權限位於「Location Services」。",
+      "「Fitness Tracking」要保持開啟。",
+      "此開關位於「Motion & Fitness」。",
+      "「Low Power Mode」可能關閉計步感應器。"
     ],
-    "source": {
-      "key": "pikipedia",
-      "name": "Pikipedia",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "url": "https://www.pikminwiki.com/Pikmin_series",
-      "revid": 354956,
-      "accessed": "2026-10-18"
-    },
-    "fetched_at": "2026-10-18",
-    "summary_zh": "任天堂的遊戲系列,核心是指揮皮克敏搬東西、打敵人;共 4 部本傳、5 部重製、2 部外傳。",
-    "key_points_zh": [
-      "玩法核心:讓皮克敏執行搬運與戰鬥等任務",
-      "4 部本傳、5 部重製版、2 部外傳,另有其他周邊媒體"
+    "steps_zh": [
+      "打開 Settings › Health。",
+      "點「Data Access & Devices」。",
+      "點「Pikmin Bloom」。",
+      "開啟「Steps」。"
+    ],
+    "exceptions_zh": [
+      "Apple Health 同步最多可能延遲數小時。",
+      "設定都正確仍不計步時,重新啟動手機。"
+    ],
+    "terms_zh": [
+      {
+        "term": "Apple Health",
+        "def": "iPhone 的健康 App"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/2861-my-steps-aren-t-being-counted-correctly-ios/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
     ],
     "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
     "hidden": false,
     "link_ok": true,
-    "link_checked_at": "2026-10-22",
-    "curated_by": "manual",
-    "curated_at": "2026-10-18",
-    "queue_title": "Pikmin series",
-    "slug": "pikmin-series"
+    "link_checked_at": "2026-10-25"
   },
   {
-    "id": "pikipedia-758",
-    "topic": "basics",
-    "level": "入門",
-    "title_zh": "隊長(玩家操作的角色)",
-    "title_en": "Leader",
-    "excerpt_en": "Leaders (リーダー, lit.: \"Leader\"), unofficially also called captains, are the characters the player controls in the Pikmin games. Leaders have the ability to lead a squad of Pikmin, and can command the squad through throwing, whistling, and other actions. Each of the  11 leaders in the series is an alien explorer with some role in the mission, with the exception of Oatchi and Moss who are space dogs. Some games have multiple leaders which can be switched between, allowing multiple squads to be managed at a time.\nIn Pikmin, there is only one leader, Olimar, an employee of Hocotate Freight who crash-landed on PNF-404. In Pikmin 2, Louie is added as a second playable character; it is possible to switch between the two playable leaders by pressing  /  / . Louie is replaced by the President after the debt is cleared. In Pikmin 3 there are three new leaders: the engineer Alph, the botanist Brittany, and the crew's captain, Charlie.  /  /  is used to switch in the original Pikmin 3 and the action menu left and right is used to switch in Pikmin 3 Deluxe. Pikmin 4 has several playable leaders across its game modes, though the main story features the rookie Rescue Officer and Oatchi as the leaders. Hey! Pikmin again features only Olimar as a playable character.\nPuffstools, Antenna Beetles, mature Bulbmin, the Scornet Maestro, and Moss act as naturally occurring enemy leaders, in each of the four main Pikmin games, stealing the player's Pikmin or scouting with their own type of underlings.",
-    "games": [
-      "Pikmin 1",
-      "Pikmin 2",
-      "Pikmin 3",
-      "Pikmin 4",
-      "Hey! Pikmin"
+    "id": "step-permission-android",
+    "slug": "step-permission-android",
+    "topic": "setup",
+    "facts_zh": [
+      "Android 版有兩種計步方式。",
+      "一種是「Track with Google Fit」。",
+      "另一種是「Track with your phone」。",
+      "官方建議用手機計步。"
     ],
-    "source": {
-      "key": "pikipedia",
-      "name": "Pikipedia",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "url": "https://www.pikminwiki.com/Leader",
-      "revid": 347308,
-      "accessed": "2026-10-18"
-    },
-    "fetched_at": "2026-10-18",
-    "summary_zh": "隊長(Leader)是玩家操作的角色,靠投擲與哨聲指揮皮克敏;全系列 11 位,多數是外星探險者。",
-    "key_points_zh": [
-      "指揮方式:投擲、吹哨等動作",
-      "全系列共 11 位隊長,其中歐慶(Oatchi)與 Moss 是太空狗",
-      "部分作品可切換多位隊長,同時管理多支隊伍",
-      "一代只有歐利瑪(Olimar):Hocotate 運輸的員工,迫降在 PNF-404"
+    "steps_zh": [
+      "打開遊戲內的「Settings」。",
+      "找到「Step Count」設定。",
+      "選一種計步方式。"
+    ],
+    "exceptions_zh": [
+      "未滿 13 歲的帳號不能用 Google Fit。",
+      "這類玩家要改用手機計步。",
+      "改用手機計步後,智慧手錶會斷線。",
+      "官方兩篇說明寫的設定位置不同。"
+    ],
+    "terms_zh": [
+      {
+        "term": "Google Fit",
+        "def": "Google 的健身記錄服務"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/2862-my-steps-aren-t-being-counted-correctly-android/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/3162-faq-and-known-issues/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
     ],
     "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
     "hidden": false,
     "link_ok": true,
-    "link_checked_at": "2026-10-22",
-    "queue_title": "Leader",
-    "curated_by": "manual",
-    "curated_at": "2026-10-18",
-    "slug": "leader"
+    "link_checked_at": "2026-10-25"
   },
   {
-    "id": "pikipedia-1078",
-    "topic": "basics",
-    "level": "入門",
-    "title_zh": "顆粒(增加皮克敏的基本資源)",
-    "title_en": "Pellet",
-    "excerpt_en": "A pellet (ペレット, lit.: \"Pellet\") is a crystallized chunk of nectar that contains vitamins and other nutrition. Pellets are used to produce Pikmin, by bringing them to the Onion, and are the main source of seeds at the start of the games, as large creatures require many Pikmin to kill safely.\nPellets come in a variety of sizes, and each one produces a different amount of Pikmin. An Arabic numeral is seen atop each one, reflecting its weight. Pellets with the numbers 1, 5, 8, 10, and 20 exist. If the color of the pellet matches the color of the Onion it is brought to, that same number of Pikmin is produced (the exception being the number 1, which creates two Pikmin). If not, only half that number, rounded up, will appear. According to the Japanese version of Pikmin 2, this is due to a better absorption of the nutrients in the pellet.\nThey are found on the top of Pellet Posies and sometimes on the ground. According to the Japanese Pikmin Garden website, pellets are a type of fruit. Certain creatures of PNF-404 also leave pellets as spoils at times. They have presumably eaten pellets, which could indicate the possibility that the same creatures are herbivores, if not omnivores.",
-    "games": [
-      "Pikmin 1",
-      "Pikmin 2",
-      "Pikmin 3",
-      "Pikmin 4",
-      "Hey! Pikmin"
+    "id": "first-day-todo",
+    "slug": "first-day-todo",
+    "topic": "first-day",
+    "facts_zh": [
+      "遊戲需要 GPS 權限。",
+      "遊戲需要讀取計步資料。",
+      "花苗放進花苗包後,玩家要走路。",
+      "花苗走夠步數後,玩家可以拔出皮克敏。",
+      "拔出的皮克敏會加入玩家的隊伍。",
+      "每天結束時,玩家可以回顧當天的步數。"
     ],
-    "source": {
-      "key": "pikipedia",
-      "name": "Pikipedia",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "url": "https://www.pikminwiki.com/Pellet",
-      "revid": 355841,
-      "accessed": "2026-10-18"
-    },
-    "fetched_at": "2026-10-18",
-    "summary_zh": "顆粒(Pellet)是結晶化的花蜜,搬回洋蔥就能長出皮克敏,是開局最主要的種子來源。",
-    "key_points_zh": [
-      "顆粒上的數字代表重量,有 1、5、8、10、20 五種",
-      "顏色與洋蔥相同時,產出同數量的皮克敏(1 號例外,產 2 隻)",
-      "顏色不同時只產一半"
+    "steps_zh": [],
+    "exceptions_zh": [],
+    "terms_zh": [
+      {
+        "term": "花苗包",
+        "def": "培育花苗的背包"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Pikmin Bloom",
+        "url": "https://www.pikminwiki.com/Pikmin_Bloom",
+        "revid": 355108,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 官網",
+        "url": "https://pikminbloom.com/zh_hant/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
     ],
     "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
     "hidden": false,
     "link_ok": true,
-    "link_checked_at": "2026-10-22",
-    "queue_title": "Pellet",
-    "curated_by": "manual",
-    "curated_at": "2026-10-18",
-    "slug": "pellet"
+    "link_checked_at": "2026-10-25"
   },
   {
-    "id": "pikipedia-1188",
-    "topic": "pikmin",
-    "level": "入門",
-    "title_zh": "紅色皮克敏",
-    "title_en": "Red Pikmin",
-    "excerpt_en": "Red Pikmin (赤ピクミン) are a red species of Pikmin with the special abilities of fire resistance and strong attack power. They are the first Pikmin type seen or discovered in all games by the main playable leaders, and are usually considered the \"main\" type of Pikmin due to their relatively simple traits and early discovery. They are cultivated via the Red Onion (or the master Onion), and like Yellow Pikmin, Blue Pikmin and Bulbmin, their buds and flowers are white. These Pikmin are present in all games of the series, and make an appearance in all game modes, excluding Pikmin 4's night expeditions, which are Glow Pikmin-exclusive.",
-    "games": [
-      "Pikmin 1",
-      "Pikmin 2",
-      "Pikmin 3",
-      "Pikmin 4",
-      "Hey! Pikmin",
-      "Pikmin Bloom"
+    "id": "map-screen",
+    "slug": "map-screen",
+    "topic": "first-day",
+    "facts_zh": [
+      "地圖中央有玩家的 Mii 和皮克敏隊伍。",
+      "地圖會顯示最近幾天種下的花。",
+      "巨大花朵在地圖上會顯示範圍。",
+      "蘑菇解鎖後會出現在地圖上。",
+      "皮克敏拿著水果時,玩家可以點地圖收下。",
+      "右上角的指南針可以切換地圖方向。"
     ],
-    "source": {
-      "key": "pikipedia",
-      "name": "Pikipedia",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "url": "https://www.pikminwiki.com/Red_Pikmin",
-      "revid": 353014,
-      "accessed": "2026-10-18"
-    },
-    "fetched_at": "2026-10-18",
-    "summary_zh": "紅色皮克敏耐火、攻擊力強,是每一代最先遇到的皮克敏,公認的「基本款」。",
-    "key_points_zh": [
-      "免疫火焰",
-      "攻擊力強",
-      "由紅色洋蔥培育,花苞與花朵為白色",
-      "全系列所有模式都登場,僅四代夜間探索(發光皮克敏專屬)除外"
+    "steps_zh": [],
+    "exceptions_zh": [
+      "地圖畫面沒有步數顯示。",
+      "步數顯示在主選單的生活記錄區。"
+    ],
+    "terms_zh": [
+      {
+        "term": "花苗包按鈕",
+        "def": "右下角,培育花苗"
+      },
+      {
+        "term": "種花按鈕",
+        "def": "右下角的按鈕,打開種花選單"
+      },
+      {
+        "term": "偵測器按鈕",
+        "def": "解鎖後出現在右下角"
+      },
+      {
+        "term": "哨子按鈕",
+        "def": "右下角的按鈕,打開「garden」畫面"
+      },
+      {
+        "term": "返回按鈕",
+        "def": "左下角的按鈕,回到主選單"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Pikmin Bloom interface",
+        "url": "https://www.pikminwiki.com/Pikmin_Bloom_interface",
+        "revid": 347957,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
     ],
     "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
     "hidden": false,
     "link_ok": true,
-    "link_checked_at": "2026-10-22",
-    "queue_title": "Red Pikmin",
-    "curated_by": "manual",
-    "curated_at": "2026-10-18",
-    "slug": "red-pikmin"
+    "link_checked_at": "2026-10-25"
   },
   {
-    "id": "pikipedia-40",
-    "topic": "pikmin",
-    "level": "入門",
-    "title_zh": "藍色皮克敏",
-    "title_en": "Blue Pikmin",
-    "excerpt_en": "Blue Pikmin (青ピクミン) are a blue species of Pikmin that reside on PNF-404. They have the special ability of water resistance. This type of Pikmin is present in all game modes of all Pikmin games, and is the last type to be discovered in the Story mode of Pikmin, Pikmin 2, and Pikmin 3, as well as the fourth type discovered in Pikmin 4. Besides their coloration, these Pikmin are distinguishable from other Pikmin species by their pink mouths, a trait seen in no other Pikmin species. These mouths are used to take in water, which filters oxygen through gills, giving them the ability to breathe both underwater and on dry land. Producing more Blue Pikmin can be done by carrying pellets or enemy carcasses to the Blue Onion (or the Master Onion), or by throwing other species into a Lapis Lazuli Candypop Bud or a Candypop Bud. As with Red Pikmin, Yellow Pikmin and Bulbmin, their buds and flowers are white.\nThe exact location of their gills is not consistently explained in the series, having been said to be on the cheeks, near the cheeks, their mouths, and not even visible. Pikmin 4 consistently says that the mouths are the gills.",
-    "games": [
-      "Pikmin 1",
-      "Pikmin 2",
-      "Pikmin 3",
-      "Pikmin 4",
-      "Hey! Pikmin",
-      "Pikmin Bloom"
+    "id": "steps-not-counted",
+    "slug": "steps-not-counted",
+    "topic": "steps",
+    "facts_zh": [
+      "iOS 版從 Apple Health 讀取步數。",
+      "Apple Health 同步最多可能延遲數小時。",
+      "Google Fit 同步最多也可能延遲數小時。",
+      "「Low Power Mode」可能關閉計步感應器。",
+      "Android 兒童帳號可能不計步。",
+      "Apple Watch 本身不計步時,要找製造商。"
     ],
-    "source": {
-      "key": "pikipedia",
-      "name": "Pikipedia",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "url": "https://www.pikminwiki.com/Blue_Pikmin",
-      "revid": 354525,
-      "accessed": "2026-10-18"
-    },
-    "fetched_at": "2026-10-18",
-    "summary_zh": "藍色皮克敏能在水中活動,一到三代都是最後發現的種類;粉紅色的嘴是牠們獨有的特徵。",
-    "key_points_zh": [
-      "免疫水,可在水下與陸上呼吸",
-      "一、二、三代故事模式最後發現的種類;四代則是第四種",
-      "獨有的粉紅色嘴巴用來吸水、經鰓過濾氧氣"
+    "steps_zh": [
+      "重新啟動遊戲,加快同步。",
+      "確認 Apple Health 有記錄到步數。",
+      "檢查 iOS 的步數、定位和健身權限。",
+      "在遊戲內切換 Android 的計步方式。",
+      "重新啟動手機。"
+    ],
+    "exceptions_zh": [
+      "Android 兒童帳號不計步的問題,官方仍在調查。",
+      "未滿 13 歲的帳號不能用 Google Fit。"
+    ],
+    "terms_zh": [],
+    "sources": [
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/3162-faq-and-known-issues/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/2861-my-steps-aren-t-being-counted-correctly-ios/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/2862-my-steps-aren-t-being-counted-correctly-android/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
     ],
     "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
     "hidden": false,
     "link_ok": true,
-    "link_checked_at": "2026-10-22",
-    "queue_title": "Blue Pikmin",
-    "curated_by": "manual",
-    "curated_at": "2026-10-18",
-    "slug": "blue-pikmin"
+    "link_checked_at": "2026-10-25"
   },
   {
-    "id": "pikipedia-1757",
-    "topic": "pikmin",
-    "level": "入門",
-    "title_zh": "黃色皮克敏",
-    "title_en": "Yellow Pikmin",
-    "excerpt_en": "Yellow Pikmin (黄ピクミン) are a yellow species of Pikmin, with the special abilities of increased throw height, bomb-rock carrying (in Pikmin), and electricity resistance (in every game after Pikmin). They are the second type discovered by Captain Olimar in Pikmin, the fourth type identified in Pikmin 2, and the first type found by Captain Charlie in Pikmin 3. In Pikmin 4, Pikmin can be discovered in any order (with the exception of Red Pikmin). These Pikmin have lamellae, which resemble large ears; these are the means by which they are primarily identifiable aside from their yellow-coloring. Yellow Pikmin can be thrown higher – an ability that is needed to retrieve certain elevated ship parts, treasures and fruits – and are immune to electricity. Additionally, Yellow Pikmin appear to like being in elevated places, such as trees – this can be concluded from the places they are first found in Pikmin 2 and Pikmin 3. Their main method of production is through the Yellow Onion (or the Master Onion), and like Red Pikmin, Blue Pikmin, and Bulbmin, their buds and flowers are white. Also like Red Pikmin and Blue Pikmin, they appear in all games of the series, and the only game mode they are missing from in comparison to the other two, is 2-Player Battle.",
-    "games": [
-      "Pikmin 1",
-      "Pikmin 2",
-      "Pikmin 3",
-      "Pikmin 4",
-      "Hey! Pikmin",
-      "Pikmin Bloom"
+    "id": "seedling-steps",
+    "slug": "seedling-steps",
+    "topic": "seedlings",
+    "facts_zh": [
+      "紅、黃、藍色花苗要走 1,000 步。",
+      "紫、白色花苗要走 3,000 步。",
+      "粉紅、灰、冰藍色花苗要走 5,000 步。",
+      "「Huge Seedling」需要 10,000 步。",
+      "金色花苗只要走 100 步。",
+      "銀色花苗的步數依活動而定。"
     ],
-    "source": {
-      "key": "pikipedia",
-      "name": "Pikipedia",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "url": "https://www.pikminwiki.com/Yellow_Pikmin",
-      "revid": 350121,
-      "accessed": "2026-10-18"
-    },
-    "fetched_at": "2026-10-18",
-    "summary_zh": "黃色皮克敏丟得比較高,二代起免疫電擊;一代還能搬炸彈岩。",
-    "key_points_zh": [
-      "投擲高度較高,可拿到高處的太空船零件",
-      "一代可搬運炸彈岩(bomb-rock)",
-      "一代之後的每一作都免疫電",
-      "像大耳朵的葉片(lamellae)是辨識特徵"
+    "steps_zh": [],
+    "exceptions_zh": [
+      "「Huge Seedling」會長出飾品皮克敏。",
+      "4 週年點心活動的銀色花苗要 2,000 步。"
+    ],
+    "terms_zh": [
+      {
+        "term": "飾品皮克敏",
+        "def": "戴著飾品的皮克敏"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Seedling",
+        "url": "https://www.pikminwiki.com/Seedling",
+        "revid": 350617,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
     ],
     "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
     "hidden": false,
     "link_ok": true,
-    "link_checked_at": "2026-10-22",
-    "queue_title": "Yellow Pikmin",
-    "curated_by": "manual",
-    "curated_at": "2026-10-18",
-    "slug": "yellow-pikmin"
+    "link_checked_at": "2026-10-25"
   },
   {
-    "id": "pikipedia-31822",
-    "topic": "pikmin",
-    "level": "進階",
-    "title_zh": "冰凍皮克敏",
-    "title_en": "Ice Pikmin",
-    "excerpt_en": "Ice Pikmin (氷ピクミン) are a type of Pikmin that appear in Pikmin 4 and Pikmin Bloom. They have light blue and blocky bodies, seemingly made of chunks of ice. Their defining characteristics are their immunity to all types of freezing, and their ability to freeze enemies and bodies of water and mud. They have lower attack power in battle, and burn to death faster than other Pikmin types when lit aflame by sources of fire. They leave small snow and water vapor particles around them as they move, and their buds and flowers are yellow.",
-    "games": [
-      "Pikmin 4",
-      "Pikmin Bloom"
+    "id": "seedling-sources",
+    "slug": "seedling-sources",
+    "topic": "seedlings",
+    "facts_zh": [
+      "花苗主要來自探險。",
+      "升級獎勵會給花苗。",
+      "玩家走路時有時會找到花苗。",
+      "偵測器能在附近找到至少一個花苗。",
+      "玩家在等級 4 解鎖偵測器。",
+      "遊戲每天免費提供一個偵測器。"
     ],
-    "source": {
-      "key": "pikipedia",
-      "name": "Pikipedia",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "url": "https://www.pikminwiki.com/Ice_Pikmin",
-      "revid": 346409,
-      "accessed": "2026-10-18"
-    },
-    "fetched_at": "2026-10-18",
-    "summary_zh": "冰凍皮克敏(四代、Bloom)免疫冰凍,能把敵人和水面、泥地凍住;但攻擊力較低、遇火燒得更快。",
-    "key_points_zh": [
-      "免疫所有冰凍效果",
-      "能凍住敵人、水域與泥地",
-      "攻擊力較低,被火點燃後死得比其他種類快",
-      "花苞與花朵為黃色"
+    "steps_zh": [],
+    "exceptions_zh": [
+      "金色花苗只來自活動或「Special Spot」。",
+      "銀色花苗來自各種活動。",
+      "免費偵測器沒用完不會累積到隔天。",
+      "找到的物品不派探險,幾天後會消失。"
+    ],
+    "terms_zh": [
+      {
+        "term": "探險",
+        "def": "派皮克敏去指定地點帶回物品"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Seedling",
+        "url": "https://www.pikminwiki.com/Seedling",
+        "revid": 350617,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://scopelyexplore.helpshift.com/hc/en/11-pikmin-bloom/faq/2182-items-and-the-effects/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
     ],
     "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
     "hidden": false,
     "link_ok": true,
-    "link_checked_at": "2026-10-22",
-    "queue_title": "Ice Pikmin",
-    "curated_by": "manual",
-    "curated_at": "2026-10-18",
-    "slug": "ice-pikmin"
+    "link_checked_at": "2026-10-25"
   },
   {
-    "id": "pikipedia-7833",
-    "topic": "pikmin",
-    "level": "進階",
-    "title_zh": "岩石皮克敏",
-    "title_en": "Rock Pikmin",
-    "excerpt_en": "Rock Pikmin (岩ピクミン) are a species of Pikmin appearing in Pikmin 3, Pikmin 4, Hey! Pikmin and Pikmin Bloom, with the special abilities of crush (on soft surfaces) and stab immunity and a different method of attacking. They resemble small polished rocks with Pikmin eyes and limbs, and have lavender-purple buds and flowers like the Winged Pikmin. The main part of their bodies seem to be a dark gray texture of graphite that reflects light, whereas their stems, arms, and legs appear to be smooth and gray. When Rock Pikmin are dismissed, their sprouts glow gray, oddily from Pikmin 4, they glow as a grayish cyan. Their ghosts are also shaped like small gray rocks with eyes. Just like all other types of Pikmin in Pikmin 3, Rock Pikmin have an Onion, which later in the story merges with the Master Onion, and are reproduced through collecting nutrients from pellets and corpses. In Hey! Pikmin, like all other types, they are found in certain levels and go to the Pikmin Park after a level is done.",
-    "games": [
-      "Pikmin 3",
-      "Pikmin 4",
-      "Hey! Pikmin",
-      "Pikmin Bloom"
+    "id": "seedling-slots",
+    "slug": "seedling-slots",
+    "topic": "seedlings",
+    "facts_zh": [
+      "花苗儲存空間一開始可放 30 個。",
+      "在商店升級後,上限最多 200 個。",
+      "花苗包有 6 個格子。",
+      "其中 2 格可以無限次使用。",
+      "另外 4 格要放入額外格子才能用。",
+      "不要的花苗可以按「Recycle」丟掉。"
     ],
-    "source": {
-      "key": "pikipedia",
-      "name": "Pikipedia",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "url": "https://www.pikminwiki.com/Rock_Pikmin",
-      "revid": 351733,
-      "accessed": "2026-10-18"
-    },
-    "fetched_at": "2026-10-18",
-    "summary_zh": "岩石皮克敏(三代起)像顆小石頭,免疫壓碎與刺穿,攻擊方式也與其他皮克敏不同。",
-    "key_points_zh": [
-      "免疫壓碎(柔軟表面)與刺穿",
-      "攻擊方式與其他皮克敏不同",
-      "花苞與花朵為薰衣草紫,與飛行皮克敏相同",
-      "登場:三代、四代、Hey! Pikmin、Pikmin Bloom"
+    "steps_zh": [
+      "到商店升級花苗儲存空間。",
+      "點花苗打開資訊頁。",
+      "按「Recycle」丟掉不要的花苗。",
+      "用金幣買「Single-Use Slot」。"
+    ],
+    "exceptions_zh": [
+      "某些獎勵在空間滿時仍會加入。",
+      "空間要比上限少 1 格,才能在商店買物品。"
+    ],
+    "terms_zh": [
+      {
+        "term": "「Single-Use Slot」",
+        "def": "用一次的格子"
+      },
+      {
+        "term": "「Special Slot」",
+        "def": "加速 30% 的格子"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Planter Pack",
+        "url": "https://www.pikminwiki.com/Planter_Pack",
+        "revid": 348142,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Seedling",
+        "url": "https://www.pikminwiki.com/Seedling",
+        "revid": 350617,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://niantic.helpshift.com/hc/zh/23-pikmin-bloom/faq/3040-storage-size-of-each-item/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
     ],
     "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
     "hidden": false,
     "link_ok": true,
-    "link_checked_at": "2026-10-22",
-    "queue_title": "Rock Pikmin",
-    "curated_by": "manual",
-    "curated_at": "2026-10-18",
-    "slug": "rock-pikmin"
+    "link_checked_at": "2026-10-25"
   },
   {
-    "id": "pikipedia-32799",
-    "topic": "pikmin",
-    "level": "進階",
-    "title_zh": "發光皮克敏",
-    "title_en": "Glow Pikmin",
-    "excerpt_en": "Glow Pikmin (ヒカリピクミン, lit.: \"Light Pikmin\") are a type of Pikmin found in Pikmin 4. They are unlocked and mainly used during night expeditions, though they can also be summoned in caves via Glow Seeds and in Dandori Battles via the Quick Glow Pik item.\nBecause of their ghostly traits, they are able to float slightly above ground, teleport to the player's side, meld themselves into an explosive blob called a Glowmob, and resist most manners of hazard. On the other hand, they cannot be out in the sun, and so cannot be used when outdoors during the day.\nAs of Pikmin 4, Glow Pikmin are the only Pikmin types to not have an Onion or an associated Candypop Bud. Rather, they inhabit in Lumiknolls.",
-    "games": [
-      "Pikmin 4"
+    "id": "after-pluck",
+    "slug": "after-pluck",
+    "topic": "pluck",
+    "facts_zh": [
+      "拔出的皮克敏會加入玩家的隊伍。",
+      "隊伍裡的皮克敏會跟著玩家的 Mii 走。",
+      "隊伍有人數上限,其餘皮克敏留在待命區。",
+      "玩家可以派皮克敏去探險,帶回道具。",
+      "玩家可以派皮克敏打蘑菇或寄送明信片。"
     ],
-    "source": {
-      "key": "pikipedia",
-      "name": "Pikipedia",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "url": "https://www.pikminwiki.com/Glow_Pikmin",
-      "revid": 355764,
-      "accessed": "2026-10-18"
-    },
-    "fetched_at": "2026-10-18",
-    "summary_zh": "發光皮克敏是四代夜間探索專用:會漂浮、瞬移到玩家身邊、合體成會爆炸的 Glowmob,抗多數危害,但見不得太陽。",
-    "key_points_zh": [
-      "主要在夜間探索使用;洞窟中可用 Glow Seeds 召喚",
-      "能漂浮、瞬移到玩家身旁、合體為爆炸球 Glowmob",
-      "抗多數危害,但白天戶外無法使用",
-      "沒有洋蔥,棲息於 Lumiknoll"
+    "steps_zh": [],
+    "exceptions_zh": [],
+    "terms_zh": [
+      {
+        "term": "探險",
+        "def": "派皮克敏離開隊伍,去地圖上的地點帶回東西"
+      },
+      {
+        "term": "蘑菇",
+        "def": "地圖上的目標,皮克敏打倒後可得獎勵"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 官網",
+        "url": "https://pikminbloom.com/zh_hant/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Pikmin Bloom",
+        "url": "https://www.pikminwiki.com/Pikmin_Bloom",
+        "revid": 355108,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
     ],
     "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
     "hidden": false,
     "link_ok": true,
-    "link_checked_at": "2026-10-22",
-    "queue_title": "Glow Pikmin",
-    "curated_by": "manual",
-    "curated_at": "2026-10-18",
-    "slug": "glow-pikmin"
+    "link_checked_at": "2026-10-25"
   },
   {
-    "id": "pikipedia-1455",
-    "topic": "pikmin",
-    "level": "進階",
-    "title_zh": "白色皮克敏",
-    "title_en": "White Pikmin",
-    "excerpt_en": "White Pikmin (白ピクミン) are a type of Pikmin found in Pikmin 2, Pikmin 4, Pikmin Bloom, and non-story game modes in Pikmin 3. They are the third type of Pikmin found in Pikmin 2, the first of which are found in the White Flower Garden. Their most noteworthy characteristics are their faster speed compared to other Pikmin, ability to find buried objects that are completely hidden underground, and their immunity to poison. Their defining physical characteristics are their red eyes, white color, and smaller size.\nWhite Pikmin share a number of similarities with Purple Pikmin. Their flowers (as well as buds) are magenta rather than white. In Pikmin 2, they can only be obtained via certain Candypop Buds, in this case Ivory Candypop Buds, and they are stored in the Hocotate ship. In Pikmin 4, they are stored in the master Onion, and a White Onion can be obtained to produce White Pikmin by completing the 5th story of the Trial of the Sage Leaf.",
-    "games": [
-      "Pikmin 2",
-      "Pikmin 3",
-      "Pikmin 4",
-      "Pikmin Bloom"
+    "id": "pikmin-silhouette",
+    "slug": "pikmin-silhouette",
+    "topic": "pluck",
+    "facts_zh": [
+      "地圖上的剪影標出玩家拔過的皮克敏。",
+      "剪影出現在該皮克敏花苗當初的發現地點。",
+      "2025/10/23 起拔出的皮克敏才有剪影。",
+      "只有玩家種大再拔出的皮克敏才留下剪影。",
+      "花苗沒長大就回收,不會留下紀錄。"
     ],
-    "source": {
-      "key": "pikipedia",
-      "name": "Pikipedia",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "url": "https://www.pikminwiki.com/White_Pikmin",
-      "revid": 355847,
-      "accessed": "2026-10-18"
-    },
-    "fetched_at": "2026-10-18",
-    "summary_zh": "白色皮克敏跑得快、免疫毒,還能挖出完全埋在地下的東西;二代起登場,體型最小、紅眼。",
-    "key_points_zh": [
-      "速度比其他皮克敏快",
-      "免疫毒",
-      "能找出完全埋在地下的物品",
-      "二代只能透過特定的 Candypop Bud 取得"
+    "steps_zh": [],
+    "exceptions_zh": [
+      "剪影只算拔出的皮克敏,不算放生的皮克敏。"
+    ],
+    "terms_zh": [
+      {
+        "term": "剪影",
+        "def": "地圖上顯示皮克敏輪廓的標記"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 官網",
+        "url": "https://pikminbloom.com/news/nov25-icepikmin-welcome",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
     ],
     "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
     "hidden": false,
     "link_ok": true,
-    "link_checked_at": "2026-10-22",
-    "queue_title": "White Pikmin",
-    "curated_by": "manual",
-    "curated_at": "2026-10-18",
-    "slug": "white-pikmin"
+    "link_checked_at": "2026-10-25"
   },
   {
-    "id": "pikipedia-1101",
-    "topic": "pikmin",
-    "level": "進階",
-    "title_zh": "紫色皮克敏",
-    "title_en": "Purple Pikmin",
-    "excerpt_en": "Purple Pikmin (紫ピクミン) are a type of Pikmin found in Pikmin 2, Pikmin 4, Pikmin Bloom, and non-story game modes in Pikmin 3. They are the second type of Pikmin found in Pikmin 2, the first of which are found in the Emergence Cave. Their most noteworthy characteristics are their massive weight and carrying strength – 10 times those of a regular Pikmin. They are also slower than other Pikmin types, and have a unique way of attacking enemies in Pikmin 2 through a pound. They are specifically required to obtain a number of treasures, two of which are needed to gain access to new areas, making them necessary to complete the game. Their defining physical characteristics are their purple color, as the name would imply, as well as their bulbous physique when compared to other Pikmin, in addition to the straight trichomes atop their heads. Similarly to White Pikmin, Purple Pikmin feature magenta buds and flowers, rather than white.\nIn Pikmin 2, Purple Pikmin do not have an Onion and can only be harvested through Violet Candypop Buds, found in various caves. At the end of each day, they are stored in the Hocotate ship, much like White Pikmin in the same game. They do not have an Onion in Pikmin 3 either, appearing in non-story game modes only. In Pikmin 4, they are also only harvestable with Purple Candypop Buds, but when the Purple Onion is obtained by completing the final story of the Trial of the Sage Leaf, they can be grown like the other Pikmin types.",
-    "games": [
-      "Pikmin 2",
-      "Pikmin 3",
-      "Pikmin 4",
-      "Pikmin Bloom"
+    "id": "nectar-sources",
+    "slug": "nectar-sources",
+    "topic": "nectar-petals",
+    "facts_zh": [
+      "玩家走路或探險時會遇到水果。",
+      "玩家收集水果會得到精華。",
+      "玩家打倒蘑菇可以拿到精華。",
+      "玩家在花園畫面把精華餵給皮克敏。"
     ],
-    "source": {
-      "key": "pikipedia",
-      "name": "Pikipedia",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "url": "https://www.pikminwiki.com/Purple_Pikmin",
-      "revid": 353333,
-      "accessed": "2026-10-18"
-    },
-    "fetched_at": "2026-10-18",
-    "summary_zh": "紫色皮克敏的重量與搬運力是一般皮克敏的 10 倍,但速度慢;二代有獨特的重擊攻擊,部分寶物非牠不可。",
-    "key_points_zh": [
-      "重量與搬運力等於 10 隻普通皮克敏",
-      "移動較慢",
-      "二代以重擊(pound)攻擊敵人",
-      "二代有數件寶物必須靠牠取得,是通關必需"
+    "steps_zh": [],
+    "exceptions_zh": [],
+    "terms_zh": [
+      {
+        "term": "精華",
+        "def": "餵皮克敏的道具,讓頭上的花開花"
+      },
+      {
+        "term": "花園畫面",
+        "def": "遊戲內查看、照顧皮克敏的畫面"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 官網",
+        "url": "https://pikminbloom.com/zh_hant/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Pikmin Bloom",
+        "url": "https://www.pikminwiki.com/Pikmin_Bloom",
+        "revid": 355108,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
     ],
     "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
     "hidden": false,
     "link_ok": true,
-    "link_checked_at": "2026-10-22",
-    "queue_title": "Purple Pikmin",
-    "curated_by": "manual",
-    "curated_at": "2026-10-18",
-    "slug": "purple-pikmin"
+    "link_checked_at": "2026-10-25"
   },
   {
-    "id": "pikipedia-8140",
-    "topic": "pikmin",
-    "level": "進階",
-    "title_zh": "飛行皮克敏",
-    "title_en": "Winged Pikmin",
-    "excerpt_en": "Winged Pikmin (羽ピクミン) are a Pikmin type that appear in Pikmin 3, Pikmin 4, Hey! Pikmin, and Pikmin Bloom, with the special ability of flight. They are pink with large blue eyes, their bodies have two dark pink stripes, resembling real-world bees, and they have lavender-purple buds and flowers, like Rock Pikmin. Their name comes from the transparent wings on their backs, which allow them to be airborne most of the time. This is particularly useful in combat and while carrying. Like other main Pikmin types, they are produced in an Onion and appear in all of the game's modes.",
-    "games": [
-      "Pikmin 3",
-      "Pikmin 4",
-      "Hey! Pikmin",
-      "Pikmin Bloom"
+    "id": "why-plant",
+    "slug": "why-plant",
+    "topic": "planting",
+    "facts_zh": [
+      "玩家走路時用花瓣在地圖上種花。",
+      "種下的花會在走過的地方留下彩色足跡。",
+      "種花開啟時,玩家附近比較容易出現水果。",
+      "種花可以慢慢賺到金幣。",
+      "其他玩家預設看得到你種的花。"
     ],
-    "source": {
-      "key": "pikipedia",
-      "name": "Pikipedia",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "url": "https://www.pikminwiki.com/Winged_Pikmin",
-      "revid": 354154,
-      "accessed": "2026-10-18"
-    },
-    "fetched_at": "2026-10-18",
-    "summary_zh": "飛行皮克敏(三代起)有透明翅膀,大多時間在空中,搬運與戰鬥時特別好用。",
-    "key_points_zh": [
-      "能力:飛行",
-      "粉紅身體、藍色大眼、兩條深粉紅條紋,像蜜蜂",
-      "花苞與花朵為薰衣草紫",
-      "由洋蔥產出,出現在遊戲所有模式"
+    "steps_zh": [],
+    "exceptions_zh": [
+      "開始、停止種花或用掉花瓣時,手機要連網路。"
+    ],
+    "terms_zh": [
+      {
+        "term": "花瓣",
+        "def": "點開皮克敏頭上的花得到的道具,用來種花"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 官網",
+        "url": "https://pikminbloom.com/zh_hant/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Pikmin Bloom",
+        "url": "https://www.pikminwiki.com/Pikmin_Bloom",
+        "revid": 355108,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
     ],
     "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
     "hidden": false,
     "link_ok": true,
-    "link_checked_at": "2026-10-22",
-    "queue_title": "Winged Pikmin",
-    "curated_by": "manual",
-    "curated_at": "2026-10-18",
-    "slug": "winged-pikmin"
+    "link_checked_at": "2026-10-25"
   },
   {
-    "id": "pikipedia-195",
-    "topic": "pikmin",
-    "level": "達人",
-    "title_zh": "寄生皮克敏",
-    "title_en": "Bulbmin",
-    "excerpt_en": "Bulbmin (adults: ハチャッピー, lit.: \"Leaf Chappy\", juvenile: コッパチャッピー, lit.: \"Small Leaf Chappy\") are a parasitic species of Pikmin in Pikmin 2 that infect Bulborbs, hence the name. They are only found in caves and there is no way to store them, meaning Bulbmin can only be used in the cave they are found in. They are resistant to all four hazards defined by the game, and are one of the only ways to gain Pikmin in a cave, making them a valuable asset.\nUniquely for a Pikmin type, they start out as enemies when they appear in a cave. An adult Bulbmin, closely resembling a Red Bulborb, is followed by up to 10 juvenile Bulbmin, which take on a more unique appearance (having completely black eyes rather than the blue or purple eyes of the dwarf and true Bulborbs, uniquely proportioned and colored legs, and relatively fewer and larger white spots which are positioned differently than those of other Bulborbs) with a stem and leaf (or bud or flower) atop their back. They can be found wandering the floors of certain caves and behave much like the Spotty Bulbear, patrolling an established path. The adult Bulbmin is quite aggressive, but can be defeated quickly. When the adult Bulbmin is defeated, the juvenile Bulbmin will panic until whistled, at which point they will join the player's squad. At this point, they can be used like normal Pikmin. When the player uses a geyser to exit the cave, all Bulbmin in their squad are left behind. It is implied that other creatures can be infected by the parasitic species of Pikmin.",
-    "games": [
-      "Pikmin 2"
+    "id": "cant-plant",
+    "slug": "cant-plant",
+    "topic": "planting",
+    "facts_zh": [
+      "種花要有花瓣,沒有花瓣就種不了。",
+      "搭車或用走路以外的方式移動時,可能種不了花。",
+      "GPS 誤差會讓遊戲誤判移動太快,停止種花。",
+      "每個區域有種花上限,原地不動會種不了。",
+      "道路和水路上不能種花。"
     ],
-    "source": {
-      "key": "pikipedia",
-      "name": "Pikipedia",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "url": "https://www.pikminwiki.com/Bulbmin",
-      "revid": 355799,
-      "accessed": "2026-10-18"
-    },
-    "fetched_at": "2026-10-18",
-    "summary_zh": "寄生皮克敏(二代限定)是寄生在查比身上的皮克敏,只在洞窟出現、無法帶出,四種危害全免疫。",
-    "key_points_zh": [
-      "只在洞窟出現,無法存放,只能在該洞窟使用",
-      "免疫遊戲定義的四種危害",
-      "剛出現時是敵人:成體像紅查比,後面跟著最多 10 隻幼體",
-      "是洞窟中少數能增加皮克敏的方式"
+    "steps_zh": [
+      "收集花瓣後再種花。",
+      "用走路的方式移動。",
+      "在原地等一陣子,或走到別的區域。",
+      "換一個不是道路或水路的地點。"
+    ],
+    "exceptions_zh": [
+      "同一處顯示的花數有限,畫面只顯示種最多的顏色。",
+      "你的花顏色沒顯示,也算已經種下。",
+      "GPS 偏移會讓花出現在離實際位置稍遠處。"
+    ],
+    "terms_zh": [],
+    "sources": [
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/2877-i-can-t-plant-flowers-1636017814/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
     ],
     "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
     "hidden": false,
     "link_ok": true,
-    "link_checked_at": "2026-10-22",
-    "queue_title": "Bulbmin",
-    "curated_by": "manual",
-    "curated_at": "2026-10-18",
-    "slug": "bulbmin"
+    "link_checked_at": "2026-10-25"
   },
   {
-    "id": "pikipedia-691",
-    "topic": "creatures",
-    "level": "進階",
-    "title_zh": "噴火豬",
-    "queue_title": "Fiery Blowhog",
-    "title_en": "Fiery Blowhog",
-    "excerpt_en": "The Fiery Blowhog (ブタドックリ, lit.: \"Pig Tokkuri\") is a pig-like enemy in Pikmin, Pikmin 2, Pikmin 3, and Pikmin 4, and a boss in Hey! Pikmin. As the name would imply, Fiery Blowhogs shoot fire from their red snouts. They are only found in The Forest Navel and are larger than in the other main Pikmin games in Pikmin, but are found commonly in Pikmin 2 and Pikmin 3. Like all bosses in Hey! Pikmin, only one appears in the game, in Blazing Winds. In the first two games, when provoked by Pikmin, Fiery Blowhogs will buck them off into an area in front of them and shoot fire. In Pikmin, it can be extremely difficult to save burning Pikmin, but blowing the whistle within the area of the Blowhog's attack will ensure that any Pikmin caught in the flames will instantly be extinguished.\nIn Hey! Pikmin, its behavior is a quite different from the main games in the series: this beast stands on top of a pillar and shoots fire at Olimar down below. It is normally too far up to reach, but can be stunned with a bomb rock, and by sneaking to its backside, the player can throw Pikmin at the part of its body that slipped off the platform. As it is now a boss, it is much larger than in the main Pikmin games. It drops the Shimmering Skull when defeated. A younger variant can be found in this game, the Fiery Blowlet.\nFiery Blowhogs also have lightly colored segments that are barely visible in-game, but more noticeable in the creature's artwork. These became more visible in Pikmin 3 and Hey! Pikmin.",
-    "games": [
-      "Pikmin 1",
-      "Pikmin 2",
-      "Pikmin 3",
-      "Pikmin 4",
-      "Hey! Pikmin"
+    "id": "level-up",
+    "slug": "level-up",
+    "topic": "levels",
+    "facts_zh": [
+      "玩家走路、種出皮克敏、完成任務會升級。",
+      "每一級有步數目標和指定任務。",
+      "最高等級是 130 級。",
+      "2025/5/12 起,上限從 100 級變成 130 級。"
     ],
-    "source": {
-      "key": "pikipedia",
-      "name": "Pikipedia",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "url": "https://www.pikminwiki.com/Fiery_Blowhog",
-      "revid": 352977,
-      "accessed": "2026-10-18"
-    },
-    "fetched_at": "2026-10-18",
-    "summary_zh": "噴火豬(Fiery Blowhog)是一到四代都有的豬型敵人,會從紅鼻子噴火;一、二代被皮克敏攻擊時會先甩開再噴火。",
-    "key_points_zh": [
-      "會從紅色鼻子噴火,紅色皮克敏不怕",
-      "一代只出現在 The Forest Navel,體型比後作大;二、三代很常見",
-      "Hey! Pikmin 中是頭目,只在 Blazing Winds 出現一隻",
-      "一、二代被挑釁時會把皮克敏甩到前方再噴火"
+    "steps_zh": [
+      "打開個人資料頁。",
+      "查看升到下一級要完成的任務。",
+      "完成列出的任務升級。"
+    ],
+    "exceptions_zh": [
+      "2023/8/14 起,升級條件有改變。"
+    ],
+    "terms_zh": [],
+    "sources": [
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Level",
+        "url": "https://www.pikminwiki.com/Level",
+        "revid": 354934,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
     ],
     "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
     "hidden": false,
     "link_ok": true,
-    "link_checked_at": "2026-10-22",
-    "curated_by": "manual",
-    "curated_at": "2026-10-18",
-    "slug": "fiery-blowhog"
+    "link_checked_at": "2026-10-25"
   },
   {
-    "id": "pikipedia-379",
-    "topic": "creatures",
-    "level": "進階",
-    "title_zh": "小查比",
-    "title_en": "Dwarf Bulborb",
-    "excerpt_en": "The Dwarf Bulborb (コチャッピー, lit.: \"Small Chappy\"), named the Dwarf Red Bulborb (アカコチャッピー, lit.: \"Red Small Chappy\") in Pikmin 2, is a small and common enemy in the Pikmin series.\nThey are small bipedal creatures equipped with a pair of eyes on stalks, two fangs on either side of their mouth, two toes on each leg; each having a single claw, and a curved snout. Their bodies are beige-colored and their backs are red, which are covered with white spots.\nDwarf Bulborbs strongly resemble juvenile Bulborbs. However, they are actually a different species in the breadbug family, and mimic the appearance of Bulborbs to evade predation. They are rather weak and can be easily defeated by throwing a single Pikmin directly on top of them.\nExclusively in the first game, pestering one for long enough will prompt it to scream for help, waking up the nearest Spotty Bulborb (or Spotty Bulbear in Challenge Mode).",
-    "games": [
-      "Pikmin 1",
-      "Pikmin 2",
-      "Pikmin 3",
-      "Pikmin 4"
+    "id": "coins",
+    "slug": "coins",
+    "topic": "levels",
+    "facts_zh": [
+      "玩家可以用真錢買金幣。",
+      "玩家種花會慢慢賺到金幣。",
+      "玩家在商店用金幣買遊戲道具。",
+      "部分升級可以用金幣或真錢付款。"
     ],
-    "source": {
-      "key": "pikipedia",
-      "name": "Pikipedia",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "url": "https://www.pikminwiki.com/Dwarf_Bulborb",
-      "revid": 355942,
-      "accessed": "2026-10-18"
-    },
-    "fetched_at": "2026-10-18",
-    "summary_zh": "小查比是系列最常見的小型敵人,長得像幼年查比,其實是麵包蟲家族的擬態種;丟一隻皮克敏就能解決。",
-    "key_points_zh": [
-      "二代名為小紅查比(Dwarf Red Bulborb)",
-      "外觀模仿查比以躲避天敵,實為麵包蟲(breadbug)家族",
-      "很弱,丟一隻皮克敏即可擊倒"
+    "steps_zh": [
+      "開啟種花,走路累積金幣。",
+      "打開商店,用金幣買道具。"
+    ],
+    "exceptions_zh": [
+      "有些道具只能用真錢買。",
+      "兒童帳號不能在網路商店購買。"
+    ],
+    "terms_zh": [
+      {
+        "term": "金幣",
+        "def": "遊戲內貨幣,在商店換道具"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Pikmin Bloom",
+        "url": "https://www.pikminwiki.com/Pikmin_Bloom",
+        "revid": 355108,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
     ],
     "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
     "hidden": false,
     "link_ok": true,
-    "link_checked_at": "2026-10-22",
-    "queue_title": "Dwarf Bulborb",
-    "curated_by": "manual",
-    "curated_at": "2026-10-18",
-    "slug": "dwarf-bulborb"
+    "link_checked_at": "2026-10-25"
   },
   {
-    "id": "pikipedia-1184",
-    "topic": "creatures",
-    "level": "進階",
-    "title_zh": "查比(大嘴怪)",
-    "title_en": "Bulborb",
-    "excerpt_en": "The Bulborb (チャッピー, lit.: \"Chappy\"), known as the Spotty Bulborb in Pikmin and the Red Bulborb (アカチャッピー, lit.: \"Red Chappy\") in Pikmin 2, is a common enemy in the Pikmin series. Bulborbs are the most prominent enemies in the franchise, with images and icons of them often being used to represent enemies in general, and appear in all 4 main-series Pikmin games. In Hey! Pikmin, the Bulborb serves as the game's first boss. Bulborbs are the most commonly encountered member of the Grub-dog family of enemies.\nBulborbs have pointed snouts, eyes on stalks, and red backs with white spots. They only have two mandibles, which are on either side of their mouth. They are largely nocturnal creatures and spend much of their time sleeping, only waking up when detecting potential prey, or during the night. They are often found sleeping near Dwarf Bulborbs, which are actually species of a different family.",
-    "games": [
-      "Pikmin 1",
-      "Pikmin 2",
-      "Pikmin 3",
-      "Pikmin 4",
-      "Hey! Pikmin"
+    "id": "pikmin-types",
+    "slug": "pikmin-types",
+    "topic": "types",
+    "facts_zh": [
+      "Bloom 有紅、黃、藍、紫、白皮克敏。",
+      "Bloom 有羽翅皮克敏和岩石皮克敏。",
+      "冰凍皮克敏從 2025/11/1 起在 Bloom 出現。",
+      "飾品皮克敏是穿戴飾品的皮克敏,不是另一種顏色。"
     ],
-    "source": {
-      "key": "pikipedia",
-      "name": "Pikipedia",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "url": "https://www.pikminwiki.com/Bulborb",
-      "revid": 355937,
-      "accessed": "2026-10-18"
-    },
-    "fetched_at": "2026-10-18",
-    "summary_zh": "查比是系列最具代表性的敵人,四部本傳都有;紅背白點、夜行性,在 Hey! Pikmin 是第一個頭目。",
-    "key_points_zh": [
-      "一代稱斑點查比(Spotty Bulborb),二代稱紅查比(Red Bulborb)",
-      "Grub-dog 家族中最常見的成員",
-      "紅背白點、眼睛長在眼柄上、只有兩根下顎",
-      "大多為夜行性"
+    "steps_zh": [],
+    "exceptions_zh": [
+      "冰凍皮克敏一開始只在餐廳與路邊出現。"
+    ],
+    "terms_zh": [
+      {
+        "term": "冰凍皮克敏",
+        "def": "Ice Pikmin,花苗盆是冰藍色"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Seedling",
+        "url": "https://www.pikminwiki.com/Seedling",
+        "revid": 350617,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 官網",
+        "url": "https://pikminbloom.com/news/nov25-icepikmin-welcome",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
     ],
     "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
     "hidden": false,
     "link_ok": true,
-    "link_checked_at": "2026-10-22",
-    "queue_title": "Bulborb",
-    "curated_by": "manual",
-    "curated_at": "2026-10-18",
-    "slug": "bulborb"
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "type-unlock-levels",
+    "slug": "type-unlock-levels",
+    "topic": "types",
+    "facts_zh": [
+      "紅皮克敏在 1 級出現。",
+      "黃皮克敏在 2 級出現。",
+      "藍皮克敏在 4 級出現。",
+      "紫皮克敏在 7 級,白皮克敏在 9 級出現。",
+      "羽翅皮克敏在 10 級,岩石皮克敏在 11 級出現。",
+      "冰凍皮克敏在 13 級出現。"
+    ],
+    "steps_zh": [],
+    "exceptions_zh": [
+      "「Huge Seedling」在 5 級出現。",
+      "「Huge Seedling」長出隨機飾品皮克敏。"
+    ],
+    "terms_zh": [
+      {
+        "term": "「Huge Seedling」",
+        "def": "Huge Seedling,走 10,000 步才長大"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Seedling",
+        "url": "https://www.pikminwiki.com/Seedling",
+        "revid": 350617,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "raise-friendship",
+    "slug": "raise-friendship",
+    "topic": "friendship",
+    "facts_zh": [
+      "餵皮克敏精華會提升友好度。",
+      "派皮克敏去探險會提升友好度。",
+      "皮克敏打蘑菇會提升友好度。",
+      "每天種花一次,隊伍裡的皮克敏各加 1 點。",
+      "友好度滿 4 顆紅心,皮克敏會去拿禮物。",
+      "皮克敏帶禮物回來後,變成飾品皮克敏。"
+    ],
+    "steps_zh": [
+      "打開花園畫面,餵精華給皮克敏。",
+      "派皮克敏去探險或打蘑菇。"
+    ],
+    "exceptions_zh": [
+      "4 顆紅心後,友好度可以繼續升到 4 顆黃心。"
+    ],
+    "terms_zh": [
+      {
+        "term": "友好度",
+        "def": "皮克敏和玩家的親密程度,用愛心顯示"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Friendship",
+        "url": "https://www.pikminwiki.com/Friendship",
+        "revid": 349106,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 官網",
+        "url": "https://pikminbloom.com/zh_hant/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "what-is-decor",
+    "slug": "what-is-decor",
+    "topic": "decor",
+    "facts_zh": [
+      "飾品皮克敏是穿戴飾品的皮克敏。",
+      "飾品種類取決於花苗當初的發現地點。",
+      "有些飾品屬於期間限定。",
+      "官網表示飾品皮克敏超過 600 種。"
+    ],
+    "steps_zh": [],
+    "exceptions_zh": [
+      "雨天和雪天的飾品取決於天氣,不看地點。",
+      "附近沒有對應地點時,飾品是路邊的貼紙或硬幣。"
+    ],
+    "terms_zh": [
+      {
+        "term": "飾品皮克敏",
+        "def": "Decor Pikmin,頭上或身上戴飾品的皮克敏"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 官網",
+        "url": "https://pikminbloom.com/zh_hant/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Decor Pikmin",
+        "url": "https://www.pikminwiki.com/Decor_Pikmin",
+        "revid": 356296,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "get-decor",
+    "slug": "get-decor",
+    "topic": "decor",
+    "facts_zh": [
+      "飾品種類取決於花苗的發現地點。",
+      "玩家在目標類型的地點附近找花苗。",
+      "皮克敏友好度滿 4 顆心,會去發現地點拿禮物。",
+      "金色花苗會長出指定飾品類型的皮克敏。",
+      "金色花苗來自活動、邀請好友、每週挑戰與特殊地點。",
+      "偵測器可以顯示附近的飾品類型。"
+    ],
+    "steps_zh": [
+      "走到目標類型的地點,例如餐廳。",
+      "用偵測器確認附近的飾品類型。",
+      "撿起當地的花苗,走路種大。",
+      "拔出皮克敏,提升友好度到 4 顆心。",
+      "派皮克敏去拿禮物,帶回後成為飾品皮克敏。"
+    ],
+    "exceptions_zh": [
+      "遊戲用外部地圖資料庫判斷地點類型。",
+      "資料庫沒有的地點類型,遊戲判斷不出來。",
+      "「Huge Seedling」長出的皮克敏顏色隨機。",
+      "金色花苗長出的皮克敏顏色也隨機。"
+    ],
+    "terms_zh": [
+      {
+        "term": "偵測器",
+        "def": "Detector,不用走路就能找附近花苗和水果的道具"
+      },
+      {
+        "term": "金色花苗",
+        "def": "Gold Seedling,活動等管道取得的特殊花苗"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Decor Pikmin",
+        "url": "https://www.pikminwiki.com/Decor_Pikmin",
+        "revid": 356296,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Seedling",
+        "url": "https://www.pikminwiki.com/Seedling",
+        "revid": 350617,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "pikmin4-link",
+    "slug": "pikmin4-link",
+    "topic": "decor",
+    "facts_zh": [
+      "Pikmin 4 要先安裝免費更新。",
+      "兩款遊戲要連結同一個任天堂帳號。",
+      "玩家在 Pikmin 4 拍下飾品皮克敏,登錄到圖鑑。",
+      "每天探險結束要連網路,資料才送得出去。",
+      "Bloom 會收到一個金色花苗。",
+      "每種飾品皮克敏只能收到一個金色花苗。"
+    ],
+    "steps_zh": [
+      "用 Field Camera 拍下飾品皮克敏。",
+      "結束一天的探險,在訊息裡選「Send」。",
+      "打開 Pikmin Bloom,收下金色花苗。",
+      "把金色花苗放進花盆,走路種大後拔出。"
+    ],
+    "exceptions_zh": [
+      "傳送失敗時,畫面不會顯示錯誤訊息。",
+      "玩家可以在 Pikmin 4 設定裡重新傳送。",
+      "回收金色花苗或放生皮克敏後,玩家無法拿回。",
+      "南韓未滿 18 歲的帳號不能用這個功能。",
+      "部分國家未滿 16 歲的玩家要家長同意。"
+    ],
+    "terms_zh": [
+      {
+        "term": "金色花苗",
+        "def": "Gold Seedling,長出指定飾品皮克敏的特殊花苗"
+      },
+      {
+        "term": "Decopedia",
+        "def": "Pikmin 4 裡登錄飾品皮克敏的圖鑑"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/5260-how-to-send-the-seedlings-for-decor-pikmin-found-in-pikmin-4-to-pikmin-bloom/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "what-is-expedition",
+    "slug": "what-is-expedition",
+    "topic": "expeditions",
+    "facts_zh": [
+      "探險是收集水果和花苗的主要方法。",
+      "玩家等級 3 解鎖探險。",
+      "皮克敏走到目標物,再搬回玩家身邊。",
+      "帶回的水果可以換成精華。",
+      "皮克敏有時會帶回明信片。",
+      "明信片有時附帶快照。"
+    ],
+    "steps_zh": [
+      "點地圖上的探險目標。",
+      "選要派出的皮克敏。",
+      "派皮克敏出發。",
+      "到花園畫面收下帶回的物品。"
+    ],
+    "exceptions_zh": [
+      "探險中的皮克敏不能做其他事。",
+      "多數探險在發現 3 天後未出發就消失。",
+      "取消探險時,皮克敏立刻回來。",
+      "皮克敏搬運途中取消,物品會消失。",
+      "快照需要 v110 以上版本。",
+      "刪除明信片時,附帶的照片也會刪除。"
+    ],
+    "terms_zh": [
+      {
+        "term": "花苗",
+        "def": "能長成新皮克敏的苗"
+      },
+      {
+        "term": "精華",
+        "def": "餵皮克敏讓頭上開花的道具"
+      },
+      {
+        "term": "快照",
+        "def": "「Expedition Snapshots」"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Expedition",
+        "url": "https://www.pikminwiki.com/Expedition",
+        "revid": 355755,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/4926-expedition-snapshots/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 官網",
+        "url": "https://pikminbloom.com/zh_hant/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "mushroom-battle",
+    "slug": "mushroom-battle",
+    "topic": "mushrooms",
+    "facts_zh": [
+      "玩家等級 8 解鎖蘑菇戰。",
+      "蘑菇出現在玩家 600 公尺內的地點。",
+      "玩家每天可打 3 場蘑菇戰。",
+      "蘑菇戰補充道具可增加挑戰次數。",
+      "一朵蘑菇通常最多 5 位玩家一起打。",
+      "隊伍攻擊力越高,打完蘑菇的時間越短。"
+    ],
+    "steps_zh": [
+      "在地圖或探險清單選一朵蘑菇。",
+      "點「Join」。",
+      "選要派出的皮克敏。",
+      "點「Auto」自動選出清單前 40 隻皮克敏。",
+      "用「Bullhorn」道具找朋友幫忙。"
+    ],
+    "exceptions_zh": [
+      "離開蘑菇戰不會退回當天次數。",
+      "火蘑菇只能派紅皮克敏。",
+      "水蘑菇只能派藍皮克敏。",
+      "電蘑菇只能派黃皮克敏。",
+      "毒蘑菇只能派白皮克敏。",
+      "水晶蘑菇只能派岩石皮克敏。"
+    ],
+    "terms_zh": [
+      {
+        "term": "隊伍",
+        "def": "派去打蘑菇的一群皮克敏"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Mushroom battle",
+        "url": "https://www.pikminwiki.com/Mushroom_battle",
+        "revid": 352625,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 官網",
+        "url": "https://pikminbloom.com/zh_hant/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "mushroom-rewards",
+    "slug": "mushroom-rewards",
+    "topic": "mushrooms",
+    "facts_zh": [
+      "打倒蘑菇可得到一張明信片。",
+      "這張明信片記錄蘑菇戰的結果。",
+      "打倒蘑菇也能得到水果。",
+      "結果畫面的星數決定水果大小。",
+      "蘑菇詳細畫面下方列出各星數的水果。",
+      "每位參加的玩家都拿到完整獎勵。"
+    ],
+    "steps_zh": [
+      "派最多隻皮克敏去打蘑菇。",
+      "等皮克敏搬回明信片和水果。"
+    ],
+    "exceptions_zh": [
+      "皮克敏太少時,可能搬不回全部獎勵。",
+      "皮克敏先搬明信片,再搬水果。"
+    ],
+    "terms_zh": [],
+    "sources": [
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://scopelyexplore.helpshift.com/hc/en/11-pikmin-bloom/faq/2158-rewards-for-clearing-mushrooms/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Mushroom battle",
+        "url": "https://www.pikminwiki.com/Mushroom_battle",
+        "revid": 352625,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 官網",
+        "url": "https://pikminbloom.com/zh_hant/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "bloom-big-flower",
+    "slug": "bloom-big-flower",
+    "topic": "big-flowers",
+    "facts_zh": [
+      "玩家散步種花,可以讓巨大花朵綻放。",
+      "巨大花朵周圍有半徑 40 公尺的範圍。",
+      "範圍內種滿 300 朵花,巨大花朵就會開。",
+      "巨大花朵開花後維持 23 小時。",
+      "開花後一小時內種花,可得到水果探險。",
+      "100 公尺內的玩家可領 1–3 個精華。"
+    ],
+    "steps_zh": [
+      "走進巨大花朵的 40 公尺範圍。",
+      "在範圍內種花。",
+      "累積到 300 朵花,讓巨大花朵開花。"
+    ],
+    "exceptions_zh": [
+      "玩家也能花 150 片花瓣直接讓巨大花朵開花。",
+      "用花瓣開花時,玩家不必進入範圍。",
+      "地圖上看得到巨大花朵,才能用花瓣開花。",
+      "社群日期間,巨大花朵通常只開 3 小時。",
+      "領水果探險前,玩家要先解鎖探險。"
+    ],
+    "terms_zh": [
+      {
+        "term": "巨大花朵",
+        "def": "地圖上需要玩家種花才會開的大花"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Big Flower",
+        "url": "https://www.pikminwiki.com/Big_Flower",
+        "revid": 355962,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 官網",
+        "url": "https://pikminbloom.com/zh_hant/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Expedition",
+        "url": "https://www.pikminwiki.com/Expedition",
+        "revid": 355755,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "add-friend",
+    "slug": "add-friend",
+    "topic": "friends",
+    "facts_zh": [
+      "玩家可用好友代碼加朋友。",
+      "好友代碼是 12 位數字。",
+      "玩家也可掃描對方的 QR code 加朋友。",
+      "朋友上限是 650 人。",
+      "朋友之間可互寄明信片。",
+      "朋友可一起參加每週挑戰。"
+    ],
+    "steps_zh": [
+      "打開朋友清單。",
+      "點「Add friend」。",
+      "輸入對方的 12 位數好友代碼。",
+      "點「Scan QR code」掃描對方條碼。"
+    ],
+    "exceptions_zh": [
+      "「Invite」按鈕用來邀請新玩家。",
+      "邀請碼是 9 個隨機英文字母。",
+      "新玩家輸入邀請碼,可得 20 片花瓣和 10 個精華。",
+      "邀請人每月最多領 4 次邀請獎勵。",
+      "新玩家要在教學結束後 72 小時內輸入邀請碼。"
+    ],
+    "terms_zh": [
+      {
+        "term": "好友代碼",
+        "def": "每位玩家專屬的 12 位數字"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Friend",
+        "url": "https://www.pikminwiki.com/Friend",
+        "revid": 345989,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "weekly-challenge",
+    "slug": "weekly-challenge",
+    "topic": "friends",
+    "facts_zh": [
+      "每週挑戰分成步行和種花兩種。",
+      "每週挑戰在每週一開始。",
+      "一個團隊最多 5 位玩家。",
+      "玩家可和朋友或陌生人組成團隊。",
+      "步行挑戰目標通常是 30,000 或 100,000 步。",
+      "團隊完成挑戰後,每位成員都拿到獎勵。"
+    ],
+    "steps_zh": [
+      "選步行或種花的每週挑戰。",
+      "邀請最多 4 位朋友加入團隊。",
+      "選擇和隨機玩家組成團隊。",
+      "走路或種花,在週日結束前達成目標。"
+    ],
+    "exceptions_zh": [
+      "挑戰在建立者時區的週一午夜結束。",
+      "同類型的挑戰一次只能參加一個。",
+      "中途離開,玩家的進度會消失。",
+      "重新加入同一個挑戰,不會恢復進度。",
+      "種花挑戰的目標通常是 30,000 朵花。"
+    ],
+    "terms_zh": [
+      {
+        "term": "星數",
+        "def": "依團隊達成比例給的 1 到 3 星"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 官網",
+        "url": "https://pikminbloom.com/zh_hant/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Weekly challenge",
+        "url": "https://www.pikminwiki.com/Weekly_challenge",
+        "revid": 348146,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Pikmin Bloom",
+        "url": "https://www.pikminwiki.com/Pikmin_Bloom",
+        "revid": 355108,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "community-day",
+    "slug": "community-day",
+    "topic": "events",
+    "facts_zh": [
+      "社群日每個月舉辦一次。",
+      "社群日通常在週末兩天舉行。",
+      "每次社群日主打一種本月花朵。",
+      "走滿 10,000 步可得到活動徽章。",
+      "巨大花朵周圍種花,一定開出本月花朵。",
+      "花苗包內花苗加速 1.5 倍。"
+    ],
+    "steps_zh": [
+      "走路累積 10,000 步。",
+      "在巨大花朵周圍種花。",
+      "把花苗放進花苗包。"
+    ],
+    "exceptions_zh": [
+      "2023 年 5 月起,步數目標通常每天分開算。",
+      "社群日的巨大花朵通常只開 3 小時。",
+      "每次活動規則可能不同,請看當次公告。",
+      "官方通常提前一到兩週公告活動。"
+    ],
+    "terms_zh": [
+      {
+        "term": "本月花朵",
+        "def": "「Flower of the Month」"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Event/Community Days",
+        "url": "https://www.pikminwiki.com/Event/Community_Days",
+        "revid": 356300,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Expedition",
+        "url": "https://www.pikminwiki.com/Expedition",
+        "revid": 355755,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "live-events",
+    "slug": "live-events",
+    "topic": "events",
+    "facts_zh": [
+      "實體活動分成抽籤和付費兩種。",
+      "實體活動需要事先報名。",
+      "兒童帳號不能報名實體活動。",
+      "報名後,玩家不能修改或取消報名。",
+      "抽中的玩家要在 48 小時內申請門票。",
+      "報名完成後,活動頁會顯示「Attending!」。"
+    ],
+    "steps_zh": [
+      "點首頁地圖下方的「Challenge List」。",
+      "點右上角的「Local Events」圖示。",
+      "在「All Events」選擇活動。",
+      "點「Enter Drawing」參加抽籤活動。",
+      "點「Buy Tickets」購買付費活動門票。",
+      "確認活動頁面顯示「Attending!」。"
+    ],
+    "exceptions_zh": [
+      "網站報名要登入遊戲連結的帳號。",
+      "網站可用的帳號是 Google 或 Facebook。",
+      "代報名的朋友收不到確認信。",
+      "抽籤活動的中籤者可替朋友申請門票。",
+      "付費活動最多可替 5 位朋友買票。",
+      "中籤不保證一定能參加活動。"
+    ],
+    "terms_zh": [
+      {
+        "term": "實體活動",
+        "def": "玩家到現場參加的線下活動"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/5200-registering-for-live-events/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/3886/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/4804/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "what-is-lifelog",
+    "slug": "what-is-lifelog",
+    "topic": "lifelog",
+    "facts_zh": [
+      "生活記錄會記下每天的步數。",
+      "生活記錄會記下玩家去過的地方。",
+      "生活記錄會顯示種花和拔皮克敏的貼紙。",
+      "生活記錄會列出收集或收到的明信片。",
+      "玩家可在生活記錄加入照片和文字。",
+      "遊戲預設每晚 9 點提醒玩家回顧當天。"
+    ],
+    "steps_zh": [
+      "打開主選單。",
+      "點有地圖的大方框。",
+      "新增最多 300 字的文字記錄。",
+      "新增照片記錄。",
+      "選笑臉、普通臉或難過臉為當天評分。"
+    ],
+    "exceptions_zh": [
+      "設定未來日期的文字記錄,到當天才會顯示。",
+      "週日的每日回顧後,會出現每週回顧。",
+      "附地點的照片記錄,有機會觸發花苗探險。"
+    ],
+    "terms_zh": [
+      {
+        "term": "每日回顧",
+        "def": "每天固定時間整理當天活動的畫面"
+      },
+      {
+        "term": "每週回顧",
+        "def": "每週日整理一週步數和地點的畫面"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 官網",
+        "url": "https://pikminbloom.com/zh_hant/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Lifelog",
+        "url": "https://www.pikminwiki.com/Lifelog",
+        "revid": 333811,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "send-postcard",
+    "slug": "send-postcard",
+    "topic": "postcards",
+    "facts_zh": [
+      "皮克敏探險時可能帶回明信片。",
+      "打倒蘑菇也會拿到明信片。",
+      "寄出的明信片 12 小時後送到朋友手上。",
+      "送達時間和距離無關。",
+      "寄給同一位朋友後,要等 24 小時才能再寄。",
+      "探險明信片 3 天內沒人收,會退回寄件人。"
+    ],
+    "steps_zh": [
+      "打開朋友的個人頁面。",
+      "點明信片按鈕。",
+      "選負責送信的皮克敏。"
+    ],
+    "exceptions_zh": [
+      "同一地點的探險明信片,每人只能有一張。",
+      "蘑菇戰明信片沒有這個限制。",
+      "附照片的明信片寄出時,照片會一起寄出。",
+      "蘑菇戰明信片的底色依星數變化。"
+    ],
+    "terms_zh": [
+      {
+        "term": "快照",
+        "def": "「Expedition Snapshots」"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Postcard",
+        "url": "https://www.pikminwiki.com/Postcard",
+        "revid": 356295,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Friend",
+        "url": "https://www.pikminwiki.com/Friend",
+        "revid": 345989,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 官網",
+        "url": "https://pikminbloom.com/zh_hant/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/4926-expedition-snapshots/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "postcard-storage",
+    "slug": "postcard-storage",
+    "topic": "postcards",
+    "facts_zh": [
+      "明信片空間有上限。",
+      "官方在 2025 年 10 月 23 日調高上限。",
+      "明信片上限從 3,000 張改成 4,000 張。",
+      "空間滿了,玩家收不到朋友寄的明信片。",
+      "空間滿了,遊戲會請玩家擴充或整理明信片。",
+      "遊戲內商店每次擴充 50 張空間。"
+    ],
+    "steps_zh": [
+      "打開明信片選單。",
+      "丟掉不需要的明信片。",
+      "到商店購買明信片空間。",
+      "收下明信片時,直接丟掉不要的那張。"
+    ],
+    "exceptions_zh": [
+      "2024 年 7 月 1 日起,空間滿時不能選擇停收。",
+      "網路商店賣 500 張的擴充包。",
+      "空間 3,500 張以下才能買這個擴充包。",
+      "附照片的明信片不另外占空間。",
+      "刪除明信片時,附帶照片也一起刪除。",
+      "新上限需要 v131 以上版本。"
+    ],
+    "terms_zh": [],
+    "sources": [
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 官網",
+        "url": "https://pikminbloom.com/news/nov25-icepikmin-welcome",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Postcard",
+        "url": "https://www.pikminwiki.com/Postcard",
+        "revid": 356295,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/4926-expedition-snapshots/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "no-enemies",
+    "slug": "no-enemies",
+    "topic": "origins",
+    "facts_zh": [
+      "本作是系列第一款沒有敵人的皮克敏遊戲。"
+    ],
+    "steps_zh": [],
+    "exceptions_zh": [],
+    "terms_zh": [],
+    "sources": [
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Pikmin Bloom",
+        "url": "https://www.pikminwiki.com/Pikmin_Bloom",
+        "revid": 355108,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "launch-markets",
+    "slug": "launch-markets",
+    "topic": "origins",
+    "facts_zh": [
+      "本作分批在各地上架。",
+      "2021 年 10 月 27 日,澳洲和新加坡先開放。",
+      "北美和巴西在 2021 年 10 月 28 日開放。",
+      "日本在 2021 年 11 月 1 日開放。",
+      "11 月 2 日,歐亞非、中東和大洋洲多國開放。",
+      "截至 2021 年 11 月 2 日,本作在 180 個市場上架。"
+    ],
+    "steps_zh": [],
+    "exceptions_zh": [],
+    "terms_zh": [],
+    "sources": [
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Pikmin Bloom",
+        "url": "https://www.pikminwiki.com/Pikmin_Bloom",
+        "revid": 355108,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "devs-on-bloom",
+    "slug": "devs-on-bloom",
+    "topic": "origins",
+    "facts_zh": [
+      "這段話出自任天堂官網的 Pikmin 4 開發者訪談。",
+      "宮本茂希望玩家覺得皮克敏存在於現實中。",
+      "Hiramuki 舉 Bloom 當這個想法的例子。",
+      "團隊樂見 Bloom 玩家接著玩 Pikmin 4。",
+      "宮本茂認同這個看法。"
+    ],
+    "steps_zh": [],
+    "exceptions_zh": [],
+    "terms_zh": [],
+    "sources": [
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "任天堂官網",
+        "url": "https://www.nintendo.com/us/whatsnew/ask-the-developer-vol-10-pikmin-4-part-3/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "big-flower-locations",
+    "slug": "big-flower-locations",
+    "topic": "numbers",
+    "facts_zh": [
+      "巨大花朵固定在世界各地的特定地點。",
+      "巨大花朵的位置來自 Wayspot 資料。",
+      "巨大花朵常和其他 Niantic 遊戲的地點重疊。",
+      "地圖上的巨大花朵周圍有半徑 40 公尺的圓圈。"
+    ],
+    "steps_zh": [],
+    "exceptions_zh": [
+      "玩家無法在軍事區域種花。",
+      "軍事區域內的巨大花朵永遠無法綻放。"
+    ],
+    "terms_zh": [
+      {
+        "term": "Wayspot",
+        "def": "Niantic Wayfarer 系統收錄的地點"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Big Flower",
+        "url": "https://www.pikminwiki.com/Big_Flower",
+        "revid": 355962,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "nintendo-account-gift",
+    "slug": "nintendo-account-gift",
+    "topic": "numbers",
+    "facts_zh": [
+      "玩家綁定任天堂帳號後會拿到一個花苗。",
+      "這個花苗的英文名稱是「Huge Seedling」。",
+      "花苗會長成戴瑪利歐帽子的藍色飾品皮克敏。"
+    ],
+    "steps_zh": [],
+    "exceptions_zh": [
+      "兒童帳號無法綁定任天堂帳號。",
+      "兒童帳號無法使用自訂 Mii。",
+      "兒童帳號拿不到部分服裝獎勵。"
+    ],
+    "terms_zh": [],
+    "sources": [
+      {
+        "kind": "pikipedia",
+        "grade": "B",
+        "name": "Pikipedia",
+        "title": "Pikmin Bloom",
+        "url": "https://www.pikminwiki.com/Pikmin_Bloom",
+        "revid": 355108,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "trail-visibility",
+    "slug": "trail-visibility",
+    "topic": "privacy",
+    "facts_zh": [
+      "附近的玩家看得到你在地圖上的花徑。",
+      "你在私人區域內無法種花。",
+      "私人區域內不會留下你的花徑。",
+      "私人區域外的花徑會在幾天後消失。",
+      "你也可以提早刪除自己的花徑。"
+    ],
+    "steps_zh": [],
+    "exceptions_zh": [],
+    "terms_zh": [
+      {
+        "term": "花徑",
+        "def": "你種花時在地圖上留下的花朵軌跡"
+      },
+      {
+        "term": "私人區域",
+        "def": "你設定不顯示花徑的地圖範圍"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/2874-information-shared-with-others/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/3277-privacy-zone/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "privacy-zone",
+    "slug": "privacy-zone",
+    "topic": "privacy",
+    "facts_zh": [
+      "你在私人區域內無法種花。",
+      "私人區域的半徑要大於 50 公尺。",
+      "私人區域的半徑不能超過 300 公尺。",
+      "每位玩家最多設 5 個私人區域。",
+      "其他玩家看不到你的私人區域。",
+      "點右下角的「Create」後,你要替區域命名。"
+    ],
+    "steps_zh": [
+      "點「Profile」。",
+      "點右上角的齒輪圖示。",
+      "選「Privacy」。",
+      "選「Flower Planting」。",
+      "點「Create New Privacy Zone」。",
+      "移動或縮放地圖來調整藍色圓圈。"
+    ],
+    "exceptions_zh": [
+      "其他玩家仍可在你的私人區域內種花。",
+      "你在私人區域內種花時,花瓣照樣消耗。",
+      "要修改或刪除私人區域,點名稱右邊的編輯圖示。"
+    ],
+    "terms_zh": [
+      {
+        "term": "私人區域",
+        "def": "你設定不顯示花徑的地圖範圍"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/3277-privacy-zone/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "shared-info",
+    "slug": "shared-info",
+    "topic": "privacy",
+    "facts_zh": [
+      "朋友看得到你的 Mii、名稱和帳號 ID。",
+      "朋友看得到你的等級、隊伍和徽章。",
+      "朋友看得到你的總步數和成為朋友的日期。",
+      "朋友看得到你上次登入的時間。",
+      "朋友看得到近期共同活動和明信片往來。",
+      "朋友看得到你們成為朋友的方式。"
+    ],
+    "steps_zh": [],
+    "exceptions_zh": [
+      "上次登入超過 3 天,朋友就看不到登入時間。",
+      "共同活動超過 7 天就不再顯示。",
+      "解除好友後,你送出的明信片仍留在對方手上。",
+      "參加蘑菇時,所有玩家看得到你的名稱和等級。"
+    ],
+    "terms_zh": [],
+    "sources": [
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/2874-information-shared-with-others/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
+  },
+  {
+    "id": "spoofing",
+    "slug": "spoofing",
+    "topic": "account",
+    "facts_zh": [
+      "官方把偽造 GPS 定位視為作弊。",
+      "用第三方程式存取遊戲也算作弊。",
+      "官方用三振出局政策處分作弊帳號。",
+      "第一次警告的處分約持續 7 天。",
+      "第二次警告後,你約 30 天無法進入帳號。",
+      "兩次警告後仍作弊,帳號會永久停權。"
+    ],
+    "steps_zh": [],
+    "exceptions_zh": [
+      "某些不當行為會直接導致永久停權。",
+      "官方不一定先發出警告。"
+    ],
+    "terms_zh": [
+      {
+        "term": "三振出局政策",
+        "def": "官方處分作弊的三階段規則"
+      }
+    ],
+    "sources": [
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://niantic.helpshift.com/hc/zh-hant/23-pikmin-bloom/faq/2868-three-strike-discipline-policy/",
+        "accessed": "2026-10-25",
+        "ok": true
+      },
+      {
+        "kind": "url",
+        "grade": "A",
+        "name": "Pikmin Bloom 說明中心",
+        "url": "https://niantic.helpshift.com/hc/zh-hant/23-pikmin-bloom/section/259-safety-security/",
+        "accessed": "2026-10-25",
+        "ok": true
+      }
+    ],
+    "status": "curated",
+    "curated_by": "claude",
+    "curated_at": "2026-10-25",
+    "hidden": false,
+    "link_ok": true,
+    "link_checked_at": "2026-10-25"
   }
 ]

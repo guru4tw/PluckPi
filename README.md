@@ -2,27 +2,30 @@
 
 網站:https://guru4tw.github.io/PluckPi/
 
-每週自動收集皮克敏(Pikmin)知識,整理成中文條目,**每一條都註明出處**。讀者只需理解三層:
+手機遊戲 **Pikmin Bloom** 的非官方玩法筆記。每個玩家問題用 STE100 簡明中文(一句一件事)回答,**每一條都註明出處**。
 
 ```
-主題(道場地圖,7 個)→ 條目(入門 / 進階 / 達人)→ 出處(來源・版本・授權)
+大分類(7)→ 子分類(24)→ 玩家問題(47)→ 出處(A 官方 / B Pikipedia)
 ```
 
-**架構**:GitHub Pages(顯示)+ GitHub Actions(每週一排程)+ `knowledge.json`(資料)。全部免費,前端純靜態。
+首頁是一個走路小遊戲,同時是整站的網站地圖。
+
+**架構**:本機收集台 `Py/desk.py`(撰寫)+ `Py/build_site.py`(靜態建站)+ GitHub Actions(push 後驗證出處與建站)+ GitHub Pages。全部免費,零第三方依賴。
 
 ## 檔案
 
 | 檔 | 說明 |
 |---|---|
-| `Docs/topics.md` | 主題脈絡 + 收集佇列,**唯一要手改的知識脈絡檔** |
-| `Docs/sources.md` | 允許的來源與授權 |
-| `Docs/knowledge.json` | 原始條目(腳本合併寫入;中文整理可人工填) |
-| `Py/collect_pikipedia.py` | 從 Pikipedia API 收集(零依賴) |
-| `Py/curate.py` | 選配:Claude 整理成中文(有金鑰才跑) |
+| `Docs/topics.md` | 分類與玩家問題(含來源、難度、待證),**唯一要手改的脈絡檔** |
+| `Docs/glossary.md` | STE100 詞彙表(官方繁中用語,一詞一義) |
+| `Docs/knowledge.json` | 每題的答案與出處(收集台寫入) |
+| `Docs/images.md` + `Docs/images.json` | 圖片授權規則與登記簿;`assets/img/` 全是原創 SVG |
+| `Docs/research/why_fun.md` | 研究:為什麼好玩、為什麼紅 |
+| `Py/desk.py` + `Py/desk.html` | 收集台 |
+| `Py/ste.py` | STE100 檢查 |
 | `Py/verify_sources.py` | 出處連結驗證 |
-| `Py/build_site.py` | 建站:根 `knowledge.json`、主題頁、來源頁、sitemap |
-| `index.html` + `assets/style.css` | 前端 |
-| `.github/workflows/weekly.yml` | 每週一台北 05:00 自動更新 |
+| `Py/build_site.py` | 建站 |
+| `.github/workflows/build.yml` | push 改到資料時驗證出處 + 建站 |
 
 ## 本地預覽
 
@@ -30,20 +33,26 @@
 python3 -m http.server 8766
 ```
 
-開 http://localhost:8766/(前端 `fetch` 不支援 `file://`)。
+開 http://localhost:8766/ 。
 
-## 本地跑一次 pipeline
+## 寫一題、建一次站
 
 ```bash
-python3 Py/collect_pikipedia.py --limit 20 && python3 Py/verify_sources.py; python3 Py/build_site.py
+python3 Py/desk.py
 ```
 
-## 新增知識
+開 http://127.0.0.1:8767/ 寫答案並存入,然後:
 
-在 `Docs/topics.md` 對應主題下加一行 `- Pikipedia 頁名 | 中文標題`,下次排程自動收集。
+```bash
+python3 Py/verify_sources.py && python3 Py/build_site.py
+```
+
+## 新增玩家問題
+
+在 `Docs/topics.md` 對應子分類下加一行 `- 玩家問題 (slug) | pikipedia:頁名; 官方網址`,再到收集台寫答案。
 
 ## 授權
 
 - 程式碼 MIT。
-- 知識內容整理自 [Pikipedia](https://www.pikminwiki.com/)(CC BY-SA 4.0),本站整理文字同樣採 CC BY-SA 4.0;每條卡片底部有出處、修訂版號與查閱日。
-- Pikmin／皮克敏為任天堂商標。本站為粉絲整理的非官方資源,與任天堂無任何關聯。
+- 本站文字與插畫採 CC BY-SA 4.0;部分內容轉述自 [Pikipedia](https://www.pikminwiki.com/)(CC BY-SA 4.0)與官方說明,每條都附出處。
+- 非官方粉絲網站,與任天堂、Niantic、Scopely 無關。Pikmin Bloom 遊戲 © Niantic / Scopely;皮克敏角色、美術、音樂 © Nintendo。

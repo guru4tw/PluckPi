@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-22 -22 164 172" role="img"><title>芽芽(開花)</title>
+  <ellipse cx="60" cy="26" rx="15" ry="26" fill="#FFF6E3" stroke="#2E5E3E" stroke-width="2.5" transform="rotate(0 60 78)"/>
+  <ellipse cx="60" cy="26" rx="15" ry="26" fill="#FFF6E3" stroke="#2E5E3E" stroke-width="2.5" transform="rotate(45 60 78)"/>
+  <ellipse cx="60" cy="26" rx="15" ry="26" fill="#FFF6E3" stroke="#2E5E3E" stroke-width="2.5" transform="rotate(90 60 78)"/>
+  <ellipse cx="60" cy="26" rx="15" ry="26" fill="#FFF6E3" stroke="#2E5E3E" stroke-width="2.5" transform="rotate(135 60 78)"/>
+  <ellipse cx="60" cy="26" rx="15" ry="26" fill="#FFF6E3" stroke="#2E5E3E" stroke-width="2.5" transform="rotate(180 60 78)"/>
+  <ellipse cx="60" cy="26" rx="15" ry="26" fill="#FFF6E3" stroke="#2E5E3E" stroke-width="2.5" transform="rotate(225 60 78)"/>
+  <ellipse cx="60" cy="26" rx="15" ry="26" fill="#FFF6E3" stroke="#2E5E3E" stroke-width="2.5" transform="rotate(270 60 78)"/>
+  <ellipse cx="60" cy="26" rx="15" ry="26" fill="#FFF6E3" stroke="#2E5E3E" stroke-width="2.5" transform="rotate(315 60 78)"/>
+  <!-- 小腳 -->
+  <ellipse cx="48" cy="128" rx="10" ry="6" fill="#2E5E3E"/>
+  <ellipse cx="72" cy="128" rx="10" ry="6" fill="#2E5E3E"/>
+  <!-- 葉子手 -->
+  <path d="M30 88 C14 80 8 92 12 100 C20 102 28 98 30 88 Z" fill="#5BA56B" stroke="#2E5E3E" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M90 88 C106 80 112 92 108 100 C100 102 92 98 90 88 Z" fill="#5BA56B" stroke="#2E5E3E" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- 花苞身體:上尖下圓,頭頂沒有莖 -->
+  <path d="M60 22 C80 40 96 66 94 94 C92 118 76 126 60 126 C44 126 28 118 26 94 C24 66 40 40 60 22 Z" fill="#F6B49A" stroke="#2E5E3E" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M60 22 C56 34 56 46 62 56" fill="none" stroke="#F07C6C" stroke-width="3" stroke-linecap="round"/>
+  <!-- 花萼 -->
+  <path d="M30 108 L40 100 L48 110 L60 100 L72 110 L80 100 L90 108 C86 122 74 126 60 126 C46 126 34 122 30 108 Z" fill="#5BA56B" stroke="#2E5E3E" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- 臉 -->
+  <ellipse cx="44" cy="86" rx="6" ry="4" fill="#F07C6C" opacity=".55"/>
+  <ellipse cx="76" cy="86" rx="6" ry="4" fill="#F07C6C" opacity=".55"/>
+  <circle cx="49" cy="78" r="4" fill="#2E5E3E"/><circle cx="50.5" cy="76.5" r="1.3" fill="#fff"/>
+  <circle cx="71" cy="78" r="4" fill="#2E5E3E"/><circle cx="72.5" cy="76.5" r="1.3" fill="#fff"/>
+  <path d="M52 89 Q60 99 68 89 Z" fill="#2E5E3E"/>
+</svg>

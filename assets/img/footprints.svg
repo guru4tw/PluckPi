@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 100" role="img"><title>兩個腳印</title>
+  <g fill="#2E5E3E" opacity=".85">
+    <ellipse cx="26" cy="70" rx="9" ry="14"/><ellipse cx="26" cy="90" rx="7" ry="6"/>
+    <ellipse cx="54" cy="30" rx="9" ry="14"/><ellipse cx="54" cy="50" rx="7" ry="6"/>
+  </g>
+</svg>
