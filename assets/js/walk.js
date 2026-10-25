@@ -95,8 +95,10 @@
   field.addEventListener("pointerup", () => { down = false; last = null; });
   field.addEventListener("pointerleave", () => { last = null; });
 
-  // 不能滑動的人(鍵盤、輔助科技)用按鈕走路
-  field.querySelector(".walk-btn").addEventListener("click", e => {
+  // 不能滑動的人(鍵盤、輔助科技)用按鈕走路。擋掉 pointerdown,不然 field 的 setPointerCapture 會把 click 搶走
+  const walkBtn = field.querySelector(".walk-btn");
+  walkBtn.addEventListener("pointerdown", e => e.stopPropagation());
+  walkBtn.addEventListener("click", e => {
     e.stopPropagation();
     const r = field.getBoundingClientRect();
     let x = 40 + Math.random() * (r.width - 80), y = 60 + Math.random() * (r.height - 120);

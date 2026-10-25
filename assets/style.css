@@ -19,6 +19,7 @@ a{color:var(--forest)}
 
 /* 頁首 */
 .head{padding:14px 0 6px}
+.head h1{margin:0;font-size:inherit;font-weight:inherit;display:block}  /* 首頁站名是 h1,外觀跟其他頁一樣 */
 .brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink)}
 .brand img{width:34px;height:40px}
 .brand b{font-size:1.25rem;letter-spacing:.04em}
@@ -44,7 +45,7 @@ a{color:var(--forest)}
   font-variant-numeric:tabular-nums}
 .bar{flex:1;height:8px;background:var(--card);border-radius:99px;overflow:hidden;border:1px solid var(--line)}
 .bar i{display:block;height:100%;width:0;background:var(--leaf);transition:width .2s}
-.hint{position:absolute;inset:auto 0 14px 0;text-align:center;color:var(--muted);font-size:.9rem;pointer-events:none;z-index:3}
+.hint{position:absolute;inset:auto 0 14px 0;text-align:center;color:var(--forest);font-size:.9rem;pointer-events:none;z-index:3}
 .walk-btn{position:absolute;right:12px;bottom:12px;z-index:4;font:inherit;font-size:.85rem;border:1px solid var(--line);
   background:var(--card);color:var(--ink);border-radius:999px;padding:4px 12px;cursor:pointer}
 .sprite{position:absolute;pointer-events:none;transform:translate(-50%,-50%)}

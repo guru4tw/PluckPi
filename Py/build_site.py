@@ -110,6 +110,10 @@ def page(title: str, desc: str, path: str, body: str, crumbs: List[tuple] = (), 
                  + "".join(f' › <a href="{rel}{esc(p)}">{esc(n)}</a>' for n, p in crumbs[:-1])
                  + f" › {esc(crumbs[-1][0])}</p>")
     full = SITE_NAME if home else f"{title} ｜ 拔拔道場"
+    brand = (f'<a class="brand" href="{rel or "./"}"><img src="{rel}assets/img/mascot-bud.svg" alt="">'
+             f'<b>拔拔道場</b><span>Pikmin Bloom 玩法筆記</span></a>')
+    if home:  # 首頁沒有其他 h1,站名就是頁面標題
+        brand = f"<h1>{brand}</h1>"
     return f"""<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -127,7 +131,7 @@ def page(title: str, desc: str, path: str, body: str, crumbs: List[tuple] = (), 
 {ld}
 </head>
 <body><div class="wrap">
-<header class="head"><a class="brand" href="{rel or './'}"><img src="{rel}assets/img/mascot-bud.svg" alt=""><b>拔拔道場</b><span>Pikmin Bloom 玩法筆記</span></a>{trail}</header>
+<header class="head">{brand}{trail}</header>
 <main>
 {body}
 </main>
@@ -153,7 +157,7 @@ def build_index(cats: List[Category], done: Dict[str, dict], total: int, site_da
     field = """<section class="field" id="field" data-img="assets/img" aria-label="走路小遊戲:在這裡滑動手指">
   <div class="hud"><span class="pill">步數 <b data-steps>0</b></span><span class="bar" aria-hidden="true"><i></i></span>
     <img src="assets/img/seedling.svg" alt="" width="22"></div>
-  <p class="hint">用手指在這裡走走看</p>
+  <p class="hint" aria-live="polite">用手指在這裡走走看</p>
   <button class="walk-btn" type="button">走一段</button>
 </section>"""
     cards = "".join(f"""<li class="cat" id="{c.slug}">
