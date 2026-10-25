@@ -14,7 +14,7 @@
       "slug": "what-is-bloom",
       "url": "https://pikminbloom.com/zh_hant/",
       "ok": true,
-      "status": 308
+      "status": 200
     },
     {
       "slug": "is-it-free",
@@ -62,7 +62,7 @@
       "slug": "first-day-todo",
       "url": "https://pikminbloom.com/zh_hant/",
       "ok": true,
-      "status": 308
+      "status": 200
     },
     {
       "slug": "map-screen",
@@ -128,7 +128,7 @@
       "slug": "after-pluck",
       "url": "https://pikminbloom.com/zh_hant/",
       "ok": true,
-      "status": 308
+      "status": 200
     },
     {
       "slug": "after-pluck",
@@ -146,7 +146,7 @@
       "slug": "nectar-sources",
       "url": "https://pikminbloom.com/zh_hant/",
       "ok": true,
-      "status": 308
+      "status": 200
     },
     {
       "slug": "nectar-sources",
@@ -158,7 +158,7 @@
       "slug": "why-plant",
       "url": "https://pikminbloom.com/zh_hant/",
       "ok": true,
-      "status": 308
+      "status": 200
     },
     {
       "slug": "why-plant",
@@ -212,13 +212,13 @@
       "slug": "raise-friendship",
       "url": "https://pikminbloom.com/zh_hant/",
       "ok": true,
-      "status": 308
+      "status": 200
     },
     {
       "slug": "what-is-decor",
       "url": "https://pikminbloom.com/zh_hant/",
       "ok": true,
-      "status": 308
+      "status": 200
     },
     {
       "slug": "what-is-decor",
@@ -260,7 +260,7 @@
       "slug": "what-is-expedition",
       "url": "https://pikminbloom.com/zh_hant/",
       "ok": true,
-      "status": 308
+      "status": 200
     },
     {
       "slug": "mushroom-battle",
@@ -272,7 +272,7 @@
       "slug": "mushroom-battle",
       "url": "https://pikminbloom.com/zh_hant/",
       "ok": true,
-      "status": 308
+      "status": 200
     },
     {
       "slug": "mushroom-rewards",
@@ -290,7 +290,7 @@
       "slug": "mushroom-rewards",
       "url": "https://pikminbloom.com/zh_hant/",
       "ok": true,
-      "status": 308
+      "status": 200
     },
     {
       "slug": "bloom-big-flower",
@@ -302,7 +302,7 @@
       "slug": "bloom-big-flower",
       "url": "https://pikminbloom.com/zh_hant/",
       "ok": true,
-      "status": 308
+      "status": 200
     },
     {
       "slug": "bloom-big-flower",
@@ -320,7 +320,7 @@
       "slug": "weekly-challenge",
       "url": "https://pikminbloom.com/zh_hant/",
       "ok": true,
-      "status": 308
+      "status": 200
     },
     {
       "slug": "weekly-challenge",
@@ -368,7 +368,7 @@
       "slug": "what-is-lifelog",
       "url": "https://pikminbloom.com/zh_hant/",
       "ok": true,
-      "status": 308
+      "status": 200
     },
     {
       "slug": "what-is-lifelog",
@@ -392,7 +392,7 @@
       "slug": "send-postcard",
       "url": "https://pikminbloom.com/zh_hant/",
       "ok": true,
-      "status": 308
+      "status": 200
     },
     {
       "slug": "send-postcard",
