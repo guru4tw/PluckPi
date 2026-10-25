@@ -2,6 +2,7 @@
 
 精簡紀錄有意義的改動;逐 commit 細節看 `git log`。
 
+- 2026-10-25 P1 前置:`topics.md` parser 改寫 —— 支援 `>> en:` 英文行與 `先讀=` 具名欄位,認不得的行報錯(附行號)不再默默吞掉;新增 `tests/test_topics.py`(21 項)。現有 topics.md 解析結果與建站輸出不變。
 - 2026-10-24 P0 地基:每條知識有獨立網址 `zh-hant/k/{slug}/`(slug 由 collect 產生並回填 19 筆),主題頁搬到 `zh-hant/topics/{slug}/`,舊 `topics/*.html`、`sources/` 改為 build 產的轉址頁(保留 #錨點);首頁拿掉 JS 卡片渲染與難度/本週新增鈕,只留搜尋清單;build 不再讀系統日期,可重現。
 - 2026-10-24 新增 `Docs/design.md` 網站設計書:每語言獨立網址(`/zh-hant/`、`/en/`,根網址自動判斷)、卡片四層撥洋蔥 + 難度三圈、單一 SSG 卡片渲染器、grounding 對原文查核、CI 預算;尚未實作。
 - 2026-10-21 專案改名 PluckSkill → PluckPi:資料夾、網址(guru4tw.github.io/PluckPi)、bot UA、workflow 與 launch 名稱全部同步;中文名「拔拔道場」不變。

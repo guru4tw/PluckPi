@@ -30,8 +30,15 @@ TODAY = datetime.date.today().isoformat()
 
 # ## 1. 入門基礎 (basics) · 入門
 HEADING_RE = re.compile(r"^##\s+(\d+)\.\s*(.+?)\s*\(([a-z0-9_-]+)\)\s*(?:[·・]\s*(入門|進階|達人))?\s*$")
-# - Red Pikmin | 紅色皮克敏 | 進階
-ITEM_RE = re.compile(r"^-\s+(.+?)\s*\|\s*(.+?)(?:\s*\|\s*(入門|進階|達人))?\s*$")
+# >> en: Pikmin Types — Each Pikmin type's traits, immunities and uses.
+LANG_RE = re.compile(r"^>>\s*([a-z-]+)\s*:\s*(.+?)\s*$")
+# 標題裡出現這些符號,多半是把英文名寫進來了(英文要寫在 >> en: 行)
+NAME_BAD = ("|", "｜", "/", "—")
+ITEM_KEYS = {"先讀": "prereq"}     # 條目行的具名欄位 → QueueItem 屬性
+
+
+class TopicsFormatError(ValueError):
+    """topics.md 有無法解析的行。訊息帶「檔名:行號」,寧可擋下建站也不默默吞掉。"""
 
 
 @dataclass
@@ -41,6 +48,8 @@ class Topic:
     slug: str
     level: str = "入門"
     desc: str = ""
+    name_en: str = ""
+    desc_en: str = ""
     items: List["QueueItem"] = field(default_factory=list)
 
 
@@ -50,29 +59,73 @@ class QueueItem:
     title_zh: str
     topic: str        # slug
     level: str
+    prereq: Optional[str] = None   # 先讀=頁名(跨主題前置,選配)
+
+
+def parse_item(body: str, cur: Topic, fail) -> QueueItem:
+    """`頁名 | 中文標題 | 難度(可省) | key=value ...` → QueueItem。難度只能在第 3 欄,具名欄位之後不能再有位置欄。"""
+    cols = [c.strip() for c in body.split("|")]
+    if len(cols) < 2 or not all(cols):
+        fail("條目要寫成「- 頁名 | 中文標題 | 難度(可省)」,且每欄不可空白")
+    item = QueueItem(title=cols[0], title_zh=cols[1], topic=cur.slug, level=cur.level)
+    for i, col in enumerate(cols[2:], start=2):
+        if "=" in col:
+            key, _, val = (x.strip() for x in col.partition("="))
+            if key not in ITEM_KEYS or not val:
+                fail(f"不認得的欄位「{col}」(可用:{'、'.join(ITEM_KEYS)})")
+            setattr(item, ITEM_KEYS[key], val)
+        elif i == 2 and col in LEVELS:
+            item.level = col
+        else:
+            fail(f"第 {i + 1} 欄「{col}」不是難度({'/'.join(LEVELS)},只能放第 3 欄)也不是 key=value")
+    return item
+
+
+def parse_topics_text(text: str, src: str = "topics.md") -> List[Topic]:
+    """解析 topics.md 內容 → Topic 清單(含各自的佇列),依主題編號排序。
+
+    第一個 `##` 之前是檔頭說明,不解析;之後每一行都要認得,認不得就丟 TopicsFormatError。
+    """
+    topics: List[Topic] = []
+    cur: Optional[Topic] = None
+    for n, raw in enumerate(text.splitlines(), start=1):
+        line = raw.strip()
+        def fail(msg: str):
+            raise TopicsFormatError(f"{src}:{n}: {msg}\n  {line}")
+        if line.startswith("##"):
+            m = HEADING_RE.match(line)
+            if not m:
+                fail("主題標題要寫成「## 數字. 中文名 (slug) · 預設難度(可省)」")
+            name = m.group(2)
+            if any(ch in name for ch in NAME_BAD):
+                fail("主題名只放中文;英文名請寫在下一行「>> en: 英文名 — 英文說明」")
+            if any(t.slug == m.group(3) for t in topics):
+                fail(f"主題 slug「{m.group(3)}」重複")
+            cur = Topic(order=int(m.group(1)), name=name, slug=m.group(3), level=m.group(4) or "入門")
+            topics.append(cur)
+        elif cur is None or not line:
+            continue
+        elif line.startswith(">>"):
+            m = LANG_RE.match(line)
+            if not m or m.group(1) != "en":
+                fail("語系行目前只支援「>> en: 英文名 — 英文說明」")
+            if cur.name_en:
+                fail("同一主題只能有一行 >> en:")
+            name_en, _, desc_en = m.group(2).partition("—")
+            cur.name_en, cur.desc_en = name_en.strip(), desc_en.strip()
+        elif line.startswith(">"):
+            if cur.desc:
+                fail("主題說明只能一行(第一行 > 之後不能再有 >)")
+            cur.desc = line[1:].strip()
+        elif line.startswith("- "):
+            cur.items.append(parse_item(line[2:], cur, fail))
+        else:
+            fail("認不得這行:主題內只能有 > 說明、>> en: 英文、- 條目")
+    return sorted(topics, key=lambda t: t.order)
 
 
 def parse_topics(path: Path = TOPICS_MD) -> List[Topic]:
-    """解析 topics.md → Topic 清單(含各自的佇列)。格式錯的行直接略過,不中斷。"""
-    topics: List[Topic] = []
-    cur: Optional[Topic] = None
-    for raw in path.read_text(encoding="utf-8").splitlines():
-        line = raw.rstrip()
-        m = HEADING_RE.match(line)
-        if m:
-            cur = Topic(order=int(m.group(1)), name=m.group(2), slug=m.group(3), level=m.group(4) or "入門")
-            topics.append(cur)
-            continue
-        if cur is None:
-            continue
-        if line.startswith(">") and not cur.desc:
-            cur.desc = line.lstrip("> ").strip()
-            continue
-        m = ITEM_RE.match(line)
-        if m:
-            cur.items.append(QueueItem(title=m.group(1).strip(), title_zh=m.group(2).strip(),
-                                       topic=cur.slug, level=m.group(3) or cur.level))
-    return sorted(topics, key=lambda t: t.order)
+    return parse_topics_text(path.read_text(encoding="utf-8"), path.name)
 
 
 def queue_items(topics: List[Topic]) -> List[QueueItem]:

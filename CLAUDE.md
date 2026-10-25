@@ -38,12 +38,13 @@
 
 | 檔 | 狀態 | 說明 |
 |---|---|---|
-| `Docs/topics.md` | **人工維護** | 主題脈絡 + 收集佇列。`## 數字. 中文名 (slug) · 預設難度`,底下 `- Pikipedia 頁名 \| 中文標題 \| 難度(可省)` |
+| `Docs/topics.md` | **人工維護** | 主題脈絡 + 收集佇列。`## 數字. 中文名 (slug) · 預設難度`,底下 `- Pikipedia 頁名 \| 中文標題 \| 難度(可省) \| 先讀=頁名(選配)`;選配 `>> en: 英文名 — 英文說明`。格式錯直接報錯 |
 | `Docs/design.md` | 設計書 | 下一版網站設計:極簡 UI、中英語系、撥洋蔥教學、預算與驗收、實施順序 P0–P4 |
 | `Docs/sources.md` | **人工維護** | 允許的來源、授權、抓取方式、狀態(`ready`/`todo`/`link-only`) |
 | `Docs/knowledge.json` | 腳本合併寫入 | 原始條目(扁平陣列)。中文整理欄位可人工填,收集時不會被洗掉 |
 | `Docs/link_report.json` | 自動產生 | 出處連結驗證報告 |
-| `Py/common.py` | 已建 | 共用:路徑、`topics.md` 解析、knowledge 讀寫、排序 |
+| `Py/common.py` | 已建 | 共用:路徑、`topics.md` 解析(`parse_topics`,錯行丟 `TopicsFormatError`)、knowledge 讀寫、排序 |
+| `tests/` | 已建 | `unittest`(標準庫):`python3 -m unittest discover -s tests`。改 `topics.md` 格式或 parser 前後都跑 |
 | `Py/collect_pikipedia.py` | 已建 | Pikipedia 收集器(urllib,零依賴)。`--limit N` / `--refresh` / `--dry-run` |
 | `Py/curate.py` | 已建、**未實測** | 選配 Claude 整理(`anthropic` SDK,`claude-opus-5-5`,JSON Schema 結構化輸出,含 server-side fallback) |
 | `Py/verify_sources.py` | 已建 | 出處連結驗證。exit 0 全通過 / 2 有失效 / 1 讀檔失敗 |
