@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UI 草稿・手動收集 + STE100 ｜ 拔拔道場</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<style>
+/* 草稿專用樣式:只在本頁,定案後再併入 assets/style.css */
+.tabs{display:flex;gap:6px;margin:18px 0 0;border-bottom:1px solid var(--line)}
+.tabs button{font:inherit;background:none;border:1px solid transparent;border-bottom:none;border-radius:8px 8px 0 0;padding:8px 16px;color:var(--muted);cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--card);border-color:var(--line);color:var(--ink);font-weight:700;margin-bottom:-1px}
+.pane{display:none;padding:20px 0}.pane.on{display:block}
+.note{background:var(--accent-soft);border-radius:8px;padding:10px 14px;font-size:.9rem;margin:0 0 16px}
+
+/* STE100 卡片 */
+.ste h3{font-size:1.15rem}
+.ste .facts{margin:0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:4px}
+.ste .facts li{padding-left:14px;position:relative}
+.ste .facts li::before{content:"";position:absolute;left:0;top:.7em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.ste .label{font-size:.75rem;color:var(--muted);letter-spacing:.05em}
+.ste ol{margin:4px 0 0;padding-left:20px}
+.terms{display:flex;gap:6px;flex-wrap:wrap}
+.terms span{font-size:.75rem;background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:0 6px}
+.terms b{font-weight:600}
+
+/* 收集台 */
+.desk{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:20px}
+@media (max-width:860px){.desk{grid-template-columns:1fr}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;margin-bottom:12px}
+.step h4{margin:0 0 10px;font-size:1rem;display:flex;gap:8px;align-items:center}
+.step h4 .no{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font-size:.8rem}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.row label{font-size:.85rem;color:var(--muted);min-width:64px}
+.desk input,.desk select,.desk textarea{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);flex:1 1 160px}
+.desk textarea{width:100%;min-height:96px;resize:vertical;line-height:1.6}
+.btn{font:inherit;border:1px solid var(--accent);background:var(--accent);color:#fff;border-radius:8px;padding:7px 14px;cursor:pointer}
+.btn.ghost{background:none;color:var(--accent)}
+.meta{font-size:.82rem;color:var(--muted);background:var(--bg);border-radius:8px;padding:8px 10px}
+.meta code{font-size:.8rem}
+.excerpt{font-size:.85rem;color:var(--muted);max-height:120px;overflow:auto;border-left:3px solid var(--line);padding-left:10px;margin-top:8px}
+.lint{list-style:none;margin:0;padding:0;font-size:.85rem}
+.lint li{padding:4px 0;border-bottom:1px dashed var(--line)}
+.lint .pass{color:var(--accent)}.lint .fail{color:var(--lv2)}
+.sticky{position:sticky;top:12px}
+.json{font:12px/1.5 ui-monospace,Menlo,monospace;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px;white-space:pre-wrap;max-height:220px;overflow:auto}
+.queue{list-style:none;margin:0;padding:0;font-size:.9rem}
+.queue li{display:flex;gap:8px;padding:6px 0;border-bottom:1px solid var(--line)}
+.queue .st{margin-left:auto;font-size:.75rem;border-radius:6px;padding:0 6px;border:1px solid var(--line);color:var(--muted)}
+.queue .st.done{border-color:var(--accent);color:var(--accent)}
+</style>
+</head>
+<body>
+<header class="site-head"><div class="wrap">
+  <div class="brand"><h1>拔拔道場</h1><span class="en">PluckPi</span>
+    <span class="dots"><span class="r"></span><span class="y"></span><span class="b"></span></span></div>
+  <p class="crumbs">UI 草稿 v0・手動收集 + STE100-Brief 寫法(不會上站)</p>
+  <div class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-p="front">① 前台:條目卡(讀者看到的)</button>
+    <button role="tab" aria-selected="false" data-p="desk">② 收集台(你手動新增條目)</button>
+    <button role="tab" aria-selected="false" data-p="rules">③ STE100 寫作規則</button>
+  </div>
+</div></header>
+
+<main class="wrap">
+
+<!-- ① 前台 -->
+<section class="pane on" id="front">
+  <p class="note">左邊是現在的寫法,右邊是 STE100-Brief 寫法。同一筆資料,出處欄不變。</p>
+  <div class="cards">
+    <article class="card">
+      <div class="head"><span class="lv" data-lv="入門">入門</span><span class="raw">現行寫法</span></div>
+      <h3>紅色皮克敏<span class="en">Red Pikmin</span></h3>
+      <p class="sum">紅色皮克敏耐火、攻擊力強,是每一代最先遇到的皮克敏,公認的「基本款」。</p>
+      <details open><summary>重點</summary><ul><li>免疫火焰</li><li>攻擊力強</li><li>由紅色洋蔥培育,花苞與花朵為白色</li><li>全系列所有模式都登場,僅四代夜間探索(發光皮克敏專屬)除外</li></ul></details>
+      <div class="src">出處:<a href="https://www.pikminwiki.com/Red_Pikmin">Pikipedia〈Red Pikmin〉</a>・版本 353014・CC BY-SA 4.0・查閱 2026-10-18</div>
+    </article>
+
+    <article class="card ste">
+      <div class="head"><span class="lv" data-lv="入門">入門</span><span class="raw">STE100</span></div>
+      <h3>紅色皮克敏:不怕火,攻擊力高<span class="en">Red Pikmin</span></h3>
+      <ul class="facts">
+        <li>紅色皮克敏不受火傷害。</li>
+        <li>紅色皮克敏的攻擊力比其他皮克敏高。</li>
+        <li>玩家在每一代都先找到紅色皮克敏。</li>
+      </ul>
+      <div><span class="label">怎麼用</span>
+        <ol><li>派紅色皮克敏攻擊噴火的敵人。</li><li>派紅色皮克敏打開火焰閘門。</li></ol></div>
+      <div><span class="label">例外</span>
+        <ul class="facts"><li>四代夜間探索不使用紅色皮克敏。</li></ul></div>
+      <div class="terms"><span><b>洋蔥</b> 培育皮克敏的母艦</span><span><b>夜間探索</b> 四代的晚上關卡</span></div>
+      <div class="src">出處:<a href="https://www.pikminwiki.com/Red_Pikmin">Pikipedia〈Red Pikmin〉</a>・版本 353014・CC BY-SA 4.0・查閱 2026-10-18 <span class="ok">✓ 連結已驗證</span></div>
+    </article>
+
+    <article class="card ste">
+      <div class="head"><span class="lv" data-lv="入門">入門</span><span class="raw">STE100</span></div>
+      <h3>一天:白天探索,日落前回到洋蔥<span class="en">Day</span></h3>
+      <ul class="facts">
+        <li>遊戲用「一天」計算時間。</li>
+        <li>危險生物在晚上出現。</li>
+        <li>玩家只在白天探索。</li>
+        <li>一代的天數上限是 30 天。</li>
+        <li>三代的天數上限由果汁瓶數決定,最多 99 天。</li>
+        <li>二代與四代沒有天數上限。</li>
+      </ul>
+      <div><span class="label">怎麼用</span>
+        <ol><li>看畫面上方的太陽計量表。</li><li>在日落前把皮克敏帶回洋蔥。</li></ol></div>
+      <div class="terms"><span><b>太陽計量表</b> 顯示剩下多少白天</span></div>
+      <div class="src">出處:<a href="https://www.pikminwiki.com/Day">Pikipedia〈Day〉</a>・版本 353816・CC BY-SA 4.0・查閱 2026-10-18 <span class="ok">✓ 連結已驗證</span></div>
+    </article>
+  </div>
+</section>
+
+<!-- ② 收集台 -->
+<section class="pane" id="desk">
+  <p class="note">取代每週自動收集。你挑一個頁面,工具抓原文與版號,你用 STE100 寫中文,檢查通過才能存。</p>
+  <div class="desk">
+    <div>
+      <div class="step">
+        <h4><span class="no">1</span>選來源頁面</h4>
+        <div class="row"><label>來源</label><select><option>Pikipedia</option><option disabled>其他(見 sources.md)</option></select></div>
+        <div class="row"><label>頁名</label><input value="Yellow Pikmin"><button class="btn ghost">抓取原文</button></div>
+        <div class="meta">版本 <code>352870</code>・CC BY-SA 4.0・查閱 2026-10-25・網址 <code>pikminwiki.com/Yellow_Pikmin</code>・出現作品 4 款</div>
+        <div class="excerpt">Yellow Pikmin are a yellow species of Pikmin. They can be thrown higher than other Pikmin, are resistant to electricity, and ...(原文唯讀,只供對照)</div>
+      </div>
+
+      <div class="step">
+        <h4><span class="no">2</span>放進道場地圖</h4>
+        <div class="row"><label>主題</label><select><option>2. 皮克敏圖鑑 (pikmin)</option><option>1. 入門基礎 (basics)</option><option>3. 原生生物 (creatures)</option><option>4. 寶物與收集</option><option>5. 戰術與攻略</option></select>
+          <label>難度</label><select><option>入門</option><option>進階</option><option>達人</option></select></div>
+        <div class="row"><label>先讀</label><input placeholder="選填,例:Red Pikmin"></div>
+      </div>
+
+      <div class="step">
+        <h4><span class="no">3</span>用 STE100 寫中文</h4>
+        <div class="row"><label>標題</label><input id="t" value="黃色皮克敏:不怕電,丟得高"></div>
+        <div class="row" style="font-size:.8rem;color:var(--muted)">格式:〈名稱〉:〈最重要的兩個特性〉。不用比喻,不用「最強」「必備」。</div>
+        <label class="label">事實(一行一句,一句一件事)</label>
+        <textarea id="f">黃色皮克敏不受電傷害。
+玩家可以把黃色皮克敏丟得比其他皮克敏高。
+黃色皮克敏像小炸彈一樣被用來炸牆,並且可以挖洞。</textarea>
+        <label class="label">怎麼用(步驟,一行一步,動詞開頭)</label>
+        <textarea id="u" style="min-height:64px">派黃色皮克敏攻擊有電的敵人。
+把黃色皮克敏丟到高台上。</textarea>
+        <label class="label">詞彙(本條第一次出現的術語)</label>
+        <div class="row"><input value="高台 = 一般皮克敏丟不上去的地形"></div>
+      </div>
+    </div>
+
+    <div class="sticky">
+      <div class="step">
+        <h4>STE100 檢查</h4>
+        <ul class="lint" id="lint"></ul>
+      </div>
+      <div class="step">
+        <h4>卡片預覽</h4>
+        <article class="card ste" style="border:none;padding:0">
+          <div class="head"><span class="lv" data-lv="入門">入門</span></div>
+          <h3 id="pt"></h3>
+          <ul class="facts" id="pf"></ul>
+          <div><span class="label">怎麼用</span><ol id="pu"></ol></div>
+          <div class="src">出處:Pikipedia〈Yellow Pikmin〉・版本 352870・CC BY-SA 4.0・查閱 2026-10-25</div>
+        </article>
+      </div>
+      <div class="row">
+        <button class="btn" id="save" disabled>存入 knowledge.json</button>
+        <button class="btn ghost">存草稿</button>
+      </div>
+      <div class="step">
+        <h4>佇列(topics.md 尚未收集)</h4>
+        <ul class="queue">
+          <li>Yellow Pikmin<span class="st">編輯中</span></li>
+          <li>Breadbug<span class="st">未收集</span></li>
+          <li>Burrowing Snagret<span class="st">未收集</span></li>
+          <li>Red Pikmin<span class="st done">已收集</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ③ 規則 -->
+<section class="pane" id="rules">
+  <div class="cards">
+    <article class="card"><h3>標題</h3><ul>
+      <li>格式:〈名稱〉:〈最重要的兩個特性〉。</li>
+      <li>特性用動作或狀態寫,例:「不怕火」「丟得高」。</li>
+      <li>不用比喻。不用「最強」「必備」「神級」。</li></ul></article>
+    <article class="card"><h3>事實句</h3><ul>
+      <li>一句只寫一件事。</li>
+      <li>一句最多 25 字。</li>
+      <li>用主動語態:寫「玩家丟皮克敏」,不寫「皮克敏被丟」。</li>
+      <li>主詞寫全名,不寫「它」「牠」。</li></ul></article>
+    <article class="card"><h3>怎麼用</h3><ul>
+      <li>一行一個步驟。</li>
+      <li>動詞開頭:派、丟、看、帶回。</li>
+      <li>最多 3 步。</li></ul></article>
+    <article class="card"><h3>詞彙表(一詞一義)</h3><ul>
+      <li>洋蔥 ≠ 母艦 ≠ 飛船:全站只用「洋蔥」。</li>
+      <li>隊長 ≠ 主角 ≠ 玩家角色:全站只用「隊長」。</li>
+      <li>原生生物 ≠ 怪物 ≠ 敵人:條目用「原生生物」,步驟可用「敵人」。</li>
+      <li>詞彙表定案後放 <code>Docs/glossary.md</code>,檢查器讀它。</li></ul></article>
+  </div>
+</section>
+
+</main>
+<footer class="site-foot"><div class="wrap"><p>草稿頁,只在本機預覽。定案後再改 build_site.py 的 card_html()。</p></div></footer>
+
+<script>
+// 分頁
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-selected',x===b));
+  document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('on',p.id===b.dataset.p));
+});
+
+// STE100 檢查(草稿版規則,示意用)
+const BAN_HYPE=/最強|必備|神級|超好用/, METAPHOR=/像|如同|宛如|好比/, PASSIVE=/被/,
+      MULTI=/並且|而且|同時|,並|以及/, PRONOUN=/^(它|牠|他們|它們)/,
+      SYN=/母艦|飛船|主角|怪物/;
+function lines(id){return document.getElementById(id).value.split('\n').map(s=>s.trim()).filter(Boolean)}
+function check(){
+  const t=document.getElementById('t').value.trim(), f=lines('f'), u=lines('u'), out=[];
+  const add=(ok,msg)=>out.push(`<li class="${ok?'pass':'fail'}">${ok?'✓':'✗'} ${msg}</li>`);
+  add(/^[^:]+:.+/.test(t),'標題符合〈名稱〉:〈特性〉格式');
+  add(!BAN_HYPE.test(t+f.join('')),'沒有誇張用語');
+  f.forEach((s,i)=>{
+    const n=i+1;
+    if(s.length>25) add(false,`事實 ${n} 有 ${s.length} 字,上限 25`);
+    if(METAPHOR.test(s)) add(false,`事實 ${n} 用了比喻(「${s.match(METAPHOR)[0]}」)`);
+    if(PASSIVE.test(s)) add(false,`事實 ${n} 是被動語態(「被」),改成主動`);
+    if(MULTI.test(s)) add(false,`事實 ${n} 寫了兩件事,拆成兩句`);
+    if(PRONOUN.test(s)) add(false,`事實 ${n} 用代名詞開頭,改寫全名`);
+    if(SYN.test(s)) add(false,`事實 ${n} 用了非詞彙表用語(「${s.match(SYN)[0]}」)`);
+  });
+  add(u.length<=3,`怎麼用 ${u.length} 步,上限 3`);
+  if(!out.some(x=>x.includes('fail')) ) add(true,'全部事實句通過');
+  document.getElementById('lint').innerHTML=out.join('');
+  document.getElementById('save').disabled=out.some(x=>x.includes('fail'));
+  document.getElementById('pt').textContent=t;
+  document.getElementById('pf').innerHTML=f.map(s=>`<li>${s}</li>`).join('');
+  document.getElementById('pu').innerHTML=u.map(s=>`<li>${s}</li>`).join('');
+}
+['t','f','u'].forEach(id=>document.getElementById(id).addEventListener('input',check));
+check();
+</script>
+</body>
+</html>
