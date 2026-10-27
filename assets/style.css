@@ -25,6 +25,34 @@ a{color:var(--forest)}
 .brand b{font-size:1.25rem;letter-spacing:.04em}
 .brand span{color:var(--muted);font-size:.85rem}
 .crumbs{font-size:.85rem;color:var(--muted);margin:8px 0 0}
+
+/* 首頁站名下的「X版:一句話」(quip.js 每分鐘換句、隨機換場特效) */
+.quip{margin:2px 0 10px 42px;min-height:3.2em;font-size:.9rem;line-height:1.6;color:var(--ink)}
+.quip b{display:inline-block;font-size:.75rem;font-weight:600;color:var(--forest);background:var(--field);
+  border:1px solid var(--line);border-radius:999px;padding:0 8px;margin-right:6px;vertical-align:1px}
+.quip .q span{display:inline-block;white-space:pre}
+.qnav{font:inherit;font-size:1rem;line-height:1;width:1.6em;height:1.6em;padding:0;border-radius:50%;cursor:pointer;
+  color:var(--forest);background:none;border:1px solid transparent;vertical-align:-1px;margin:0 2px}
+.qnav:hover,.qnav:focus-visible{background:var(--field);border-color:var(--line)}
+.qnav[data-step="-1"]{margin-left:-1.8em}  /* 頭的 ‹ 掛在左邊空白裡,句子對齊不變 */
+.quip.out .q{transition:transform .35s ease-in,opacity .35s;transform:translateY(-14px) rotate(-3deg);opacity:0}
+.quip.out b{transition:opacity .3s;opacity:0}
+.quip b.pop{animation:q-pop .45s cubic-bezier(.3,1.6,.5,1)}
+.fx-sprout span{animation:q-sprout .5s cubic-bezier(.3,1.5,.5,1) both;animation-delay:calc(var(--i)*28ms);transform-origin:50% 100%}
+.fx-petals span{animation:q-petals .9s cubic-bezier(.2,.8,.3,1) both;animation-delay:calc(var(--i)*12ms)}
+.fx-hop span{animation:q-hop .42s ease-out both;animation-delay:calc(var(--i)*40ms)}
+.fx-drop{display:inline-block;animation:q-drop .7s cubic-bezier(.3,1.7,.5,1) both}
+.fx-type span{opacity:0}
+.fx-type span.on{opacity:1}
+.fx-scramble span{color:var(--leaf)}
+.brand img.hop{animation:q-hop .5s ease-out}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@keyframes q-pop{from{transform:scale(.4)}}
+@keyframes q-sprout{from{transform:scaleY(0) translateY(.6em);opacity:0}}
+@keyframes q-petals{from{transform:translate(var(--dx),var(--dy)) rotate(var(--r)) scale(.3);opacity:0}}
+@keyframes q-hop{0%{transform:translate(-.6em,0);opacity:0}50%{transform:translate(0,-.45em);opacity:1}100%{transform:none}}
+@keyframes q-drop{from{transform:translateY(-1.6em);opacity:0}}
+@media (max-width:480px){.quip{margin-left:0;font-size:.85rem}.qnav[data-step="-1"]{margin-left:0}}
 .crumbs a{color:var(--muted)}
 
 /* 大分類快捷列:不用捲到底就能到任何一個大分類 */

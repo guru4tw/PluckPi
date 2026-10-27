@@ -26,6 +26,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import shutil
 import sys
 from typing import Dict, List, Optional
@@ -39,6 +40,7 @@ OLD_TOPICS_DIR = ROOT / "topics"      # 最早期網址 topics/{slug}.html,只�
 OLD_SOURCES_DIR = ROOT / "sources"
 RETIRED_JSON = DOCS / "retired.json"  # {"entries": {slug: 站內路徑}, "topics": {slug: 站內路徑}}
 SITEMAP = ROOT / "sitemap.xml"
+ONELINERS = DOCS / "pikmin_bloom_oneliners.md"  # 首頁站名下輪播的「X版:一句話」
 INDEX = ROOT / "index.html"
 LICENSE = {"name": "CC BY-SA 4.0", "url": "https://creativecommons.org/licenses/by-sa/4.0/"}
 COLORS = ("coral", "lilac", "sun", "mint")     # 大分類的花色依序輪替(調色盤見 Docs/images.md)
@@ -150,6 +152,33 @@ def subs_html(c: Category, rel: str) -> str:
         f'{esc(t.name)}</a></li>' for t in c.topics) + "</ul>"
 
 
+def load_oneliners(path=ONELINERS) -> List[tuple]:
+    """讀 oneliners 檔「## 31 句」底下的 `N. **X版:** 句子`,回傳 [(X版, 句子)];拿掉編號。"""
+    out, on = [], False
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if line.startswith("## "):
+            on = "句" in line and "梗" not in line
+            continue
+        m = on and re.match(r"\d+\.\s+\*\*(.+?)[:：]\*\*\s*(.+)$", line.strip())
+        if m:
+            out.append((m.group(1).strip(), m.group(2).strip()))
+    if not out:
+        raise ValueError(f"{path} 找不到一句話清單")
+    return out
+
+
+def quip_html(quips: List[tuple]) -> str:
+    """首頁站名下的子說明:先放第一句(關掉 JS 也看得到),quip.js 每分鐘隨機換一句。
+    前後的 ‹ › 切換上一句/下一句;沒有 JS 就按不了,所以先 hidden,由 quip.js 打開。"""
+    label, text = quips[0]
+    data = esc(json.dumps([[a, b] for a, b in quips], ensure_ascii=False))
+    return (f'<p class="quip" data-quips="{data}">'
+            f'<button class="qnav" type="button" data-step="-1" aria-label="上一句" hidden>‹</button>'
+            f'<span class="sr">{esc(label)}:{esc(text)}</span>'
+            f'<b aria-hidden="true">{esc(label)}</b><span class="q" aria-hidden="true">{esc(text)}</span>'
+            f'<button class="qnav" type="button" data-step="1" aria-label="下一句" hidden>›</button></p>')
+
+
 def build_index(cats: List[Category], done: Dict[str, dict], total: int, site_date: str) -> str:
     chips = '<nav class="chips" aria-label="大分類">' + "".join(
         f'<a href="#{c.slug}"><i style="background:var(--{COLORS[(c.order - 1) % 4]})"></i>{c.order} {esc(c.name)}</a>'
@@ -166,13 +195,14 @@ def build_index(cats: List[Category], done: Dict[str, dict], total: int, site_da
   {subs_html(c, '')}
   <a class="more" href="{cat_path(c.slug)}">看大綱與閱讀順序 →</a> <small data-count-read="{','.join(t.slug for t in c.topics)}"></small>
 </li>""" for c in cats)
-    body = f"""{chips}
+    body = f"""{quip_html(load_oneliners())}
+{chips}
 {field}
 <h2 class="sec">道場地圖</h2>
 <ul class="map">{cards}</ul>
 <p class="stats">已回答 {len(done)}/{total} 個玩家問題・最近更新 {esc(site_date)}・<a href="{SOURCES_PATH}">引用來源總表</a></p>"""
     desc = "Pikmin Bloom 玩法筆記:走路、花苗、飾品皮克敏、蘑菇、明信片。每個玩家問題用一句一件事的中文回答,每條附出處。"
-    return page("首頁", desc, "", body, scripts=("walk.js", "progress.js"), home=True,
+    return page("首頁", desc, "", body, scripts=("walk.js", "progress.js", "quip.js"), home=True,
                 jsonld={"@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME, "url": SITE_BASE})
 
 

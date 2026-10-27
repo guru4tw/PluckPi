@@ -70,6 +70,7 @@
 | 檔 | 狀態 | 說明 |
 |---|---|---|
 | `Docs/topics.md` | **人工維護** | 三層:`# 數字. 大分類 (slug)` + `> 一行大綱`;`## 大.子 子分類 (slug) · 預設難度` + `> 一句話`;`- 玩家問題 (條目slug) \| pikipedia:頁名; 網址 \| 難度(可省) \| 先讀=/狀態=待證/期限=`。`parse_categories()` 解析,格式錯直接報錯 |
+| `Docs/pikmin_bloom_oneliners.md` | **人工維護** | 首頁輪播的 31 句「X版:一句話」,`## 31 句` 底下 `N. **X版:** 句子`;`build_site.load_oneliners()` 解析 |
 | `Docs/glossary.md` | **人工維護** | STE100 詞彙表 `- 標準詞 \| 禁用詞 \| 白話定義`;標準詞以官方繁中用語為準,找不到的標(待確認) |
 | `Docs/research/why_fun.md` | 研究 | 為什麼好玩、為什麼紅(MDA、數據、top tasks)。給團隊理解,不上站 |
 | `Docs/images.md` | 規則 | 圖片策略:授權決策樹、原創界線、調色盤;截圖決定 A+C(只放手機系統設定截圖) |
@@ -86,7 +87,7 @@
 | `Py/verify_sources.py` | 已建 | 逐一連回每個出處(同網址只查一次),寫各來源 `ok` 與條目 `link_ok`。exit 0 全通過 / 2 有失效 / 1 讀檔失敗 |
 | `Py/collect_pikipedia.py` | 只剩函式 | `fetch_pages()` 給收集台用;直接執行只印說明 |
 | `Py/curate.py` | **舊、不相容** | 主機版時期的 Claude 整理腳本,產舊格式 `summary_zh`,不要用 |
-| `assets/style.css`、`assets/js/` | 手寫 | 全站樣式(含暗色、reduced-motion);`walk.js` 首頁小遊戲、`progress.js` 讀完種花(localStorage) |
+| `assets/style.css`、`assets/js/` | 手寫 | 全站樣式(含暗色、reduced-motion);`walk.js` 首頁小遊戲、`progress.js` 讀完種花(localStorage)、`quip.js` 首頁站名下一句話輪播 |
 | `index.html`、`zh-hant/`、`knowledge.json`(根)、`sitemap.xml`、`topics/*.html`、`sources/` | 自動產生 | 勿手改 |
 | `tests/` | 已建 | `python3 -m unittest discover -s tests`:topics 解析、STE100、收集台存檔、條目頁、圖片登記 |
 | `Log/history.md` | 人工 | 精簡修改 log |

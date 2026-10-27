@@ -2,6 +2,7 @@
 
 精簡紀錄有意義的改動;逐 commit 細節看 `git log`。
 
+- 2026-10-25 首頁站名下加「X版:一句話」輪播:`build_site.py` 從 `Docs/pikmin_bloom_oneliners.md` 讀 31 句放進 `data-quips`(關掉 JS 顯示第一句);`assets/js/quip.js` 每 1 分鐘自動換一句(洗牌輪完才重複),前後 ‹ › 可手動切上一句/下一句(按過就重新計時),換場特效從冒芽/花瓣/跳步/掉落/打字/亂碼六種隨機抽、不連續重複,吉祥物同步跳一下;reduced-motion 只換字。新增 `tests/test_quips.py`。
 - 2026-10-25 首頁健檢修正:「走一段」按鈕擋掉 pointerdown,點擊不再被遊戲區的 pointer capture 搶走(之前只有鍵盤能用);小遊戲提示加 `aria-live`;首頁站名包成 `<h1>`(外觀不變);提示字改 `--forest`,對比 4.18 → 6.48(亮)/ 9.98(暗)。
 - 2026-10-25 階段 5 上站:`build_site.py` 重寫(首頁走路小遊戲 + 網站地圖、大綱頁、子分類頁、條目頁、來源總表、轉址);收集台改以條目 slug 為鍵、來源分級 A/B;`ste.py` 步驟上限 3 → 6、標題檢查改選配;`verify_sources.py` 支援多出處;Claude 起草 44 題(32 題待證)經 STE100 檢查存入;主機版 19 條移除並由 `retired.json` 轉址;詞彙表加入官方用字「私人區域」「花徑」「冰凍皮克敏」。
 - 2026-10-25 階段 4 網站體驗草稿 `Docs/mockup/bloom/`:`_gen.py` 讀 topics.md 產出首頁(走路小遊戲 + 道場地圖 + 大分類快捷列)、7 個大綱頁、24 個子分類頁(讀完種花,存 localStorage)、1 個範例條目(iPhone 計步權限,依官方說明中心);`bloom.css` 新調色盤含暗色模式與 reduced-motion。截圖決定 A+C 已寫進 images.md 與測試。
