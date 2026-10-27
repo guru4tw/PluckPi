@@ -25,10 +25,12 @@ build_site.py — 把 Docs/topics.md + Docs/knowledge.json 靜態生成整個網
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import shutil
 import sys
+from functools import lru_cache
 from typing import Dict, List, Optional
 
 from common import (DOCS, ROOT, SITE_BASE, SITE_JSON, SITE_NAME, Category, QueueItem, Topic,
@@ -53,6 +55,12 @@ GRADE_NAME = {"A": "A 官方", "B": "B Pikipedia"}
 def esc(s) -> str:
     return (str(s if s is not None else "").replace("&", "&amp;").replace("<", "&lt;")
             .replace(">", "&gt;").replace('"', "&quot;"))
+
+
+@lru_cache(maxsize=None)
+def asset(path: str) -> str:
+    """CSS/JS 網址加上內容雜湊 ?v=,檔案一改網址就變,瀏覽器不會拿快取的舊檔配新 HTML。"""
+    return f"{path}?v={hashlib.sha1((ROOT / path).read_bytes()).hexdigest()[:8]}"
 
 
 # ── 網址(站內路徑,相對於站根)────────────────────────────────────────────
@@ -105,7 +113,7 @@ def page(title: str, desc: str, path: str, body: str, crumbs: List[tuple] = (), 
     """path 是本頁站內路徑(首頁為空字串),據此算 canonical 與回站根的相對路徑。"""
     rel = "../" * path.count("/")
     ld = f'<script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>' if jsonld else ""
-    js = "".join(f'<script src="{rel}assets/js/{s}" defer></script>' for s in scripts)
+    js = "".join(f'<script src="{rel}{asset("assets/js/" + s)}" defer></script>' for s in scripts)
     trail = ""
     if crumbs:
         trail = ('<p class="crumbs"><a href="' + (rel or "./") + '">道場地圖</a>'
@@ -129,7 +137,7 @@ def page(title: str, desc: str, path: str, body: str, crumbs: List[tuple] = (), 
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{esc(SITE_BASE + path)}">
 <link rel="icon" href="{rel}assets/img/mascot-bud.svg" type="image/svg+xml">
-<link rel="stylesheet" href="{rel}assets/style.css">{js}
+<link rel="stylesheet" href="{rel}{asset("assets/style.css")}">{js}
 {ld}
 </head>
 <body><div class="wrap">

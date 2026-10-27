@@ -11,6 +11,7 @@ on:
       - "Docs/knowledge.json"
       - "Docs/topics.md"
       - "Docs/retired.json"
+      - "Docs/pikmin_bloom_oneliners.md"
       - "Py/build_site.py"
       - "assets/**"
   workflow_dispatch:
